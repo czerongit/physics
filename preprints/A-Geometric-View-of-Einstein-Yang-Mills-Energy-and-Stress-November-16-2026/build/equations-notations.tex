@@ -1,0 +1,2047 @@
+% Canonical equations and notation. Imported by main.tex.
+% Active semantic definitions for the source-derived manuscript.
+% Explanatory underbraces and uniform boxes for principal equations.
+\newcommand{\ExplainTerm}[2]{\underbrace{#1}_{\text{\scriptsize #2}}}
+\newcommand{\KeyMath}[1]{\boxed{\begin{gathered}#1\end{gathered}}}
+
+
+\newcommand{\PhaseGroup}{\mathrm{U}(1)}
+\newcommand{\PairGroup}{\mathrm{SU}(2)}
+\newcommand{\ColorGroup}{\mathrm{SU}(3)}
+\newcommand{\ColorAlgebra}{\mathfrak{su}(3)}
+\newcommand{\SourceCoupling}{\Lambda}
+
+
+\newcommand{\SourcePlaneBasis}{(e_r,e_\perp)}
+
+\newcommand{\ComparisonSpace}{{\mathcal V}}
+\newcommand{\CouplingMap}{\Lambda}
+\newcommand{\SourceFamily}{X}
+\newcommand{\SourcePairing}{\langle\,\cdot\,,\,\cdot\,\rangle_{\mathrm F}}
+\newcommand{\PlaneInjection}{{\mathsf V}\colon\mathbb R^2\to {\mathcal V}}
+\newcommand{\TwoColumnFrame}{{\mathsf V}}
+
+
+\newcommand{\FirstColumn}{{\mathsf V_0}}
+\newcommand{\NormalColumn}{{\mathsf V_1}}
+
+
+\newcommand{\RealFrame}{\mathsf E}
+\newcommand{\BlockComplexStructure}{J}
+
+
+\newcommand{\LastPairGroup}{\mathrm{SU}(2)_{23}}
+\newcommand{\MatrixUnit}{E_{ij}}
+
+\newcommand{\DisplaySize}{\ell}
+
+\newcommand{\TotalDefect}{4\pi}
+
+\newcommand{\FamilyIndex}{p}
+\newcommand{\PerturbationSymbol}{\delta X}
+\newcommand{\VertexPairOne}{\pm e_1}
+\newcommand{\VertexLabel}[2]{#2e_{#1}}
+\newcommand{\PhaseRotation}{\mathsf R(\theta)}
+
+\newcommand{\UnitaryConnectionEquation}{\nabla=d+i\,a,\qquad F_\nabla=i\,da}
+\newcommand{\PhaseGaugeEquation}{a\longmapsto a+d\chi,\qquad da\longmapsto da}
+\newcommand{\LoopPhaseEquation}{\exp\!\left(i\oint_{\partial \mathcal S}a\right)=\exp\!\left(i\int_{\mathcal S} da\right)}
+
+\newcommand{\TripleLiftEquation}{\begin{aligned}\iota{}v&=(v,{L_X}v,{L_Y}{L_X}v),\\{\iota_1^\perp}v&=(-{L_X}^*v,v,0),\qquad{\iota_2^\perp}v=(0,-{L_Y}^*v,v),\end{aligned}}
+\newcommand{\OrthogonalColumnsEquation}{\begin{gathered}{\mathsf V_0}=\iota{}{\mathsf V},\qquad {\mathsf V_1}={\iota_1^\perp}{\mathsf V},\qquad {\mathsf W_2}={\iota_2^\perp}{\mathsf V},\\{\mathsf V_2}={\mathsf W_2}-{\mathsf V_1}({\mathsf V_1}^*{\mathsf V_1})^{-1}{\mathsf V_1}^*{\mathsf W_2}\end{gathered}}
+
+\newcommand{\CompatibleConnectionEquation}{\Omega_{\mathbb R}=\mathsf E^*d\mathsf E,\qquad A_J=\tfrac12(\Omega_{\mathbb R}-J\Omega_{\mathbb R} J),\qquad A=A_J-\tfrac13\operatorname{tr}_{\mathbb C}(A_J)I_3}
+\newcommand{\PairGroupEquation}{\begin{pmatrix}\alpha&\beta\\-\bar\beta&\bar\alpha\end{pmatrix},\qquad |\alpha|^2+|\beta|^2=1}
+
+\newcommand{\GeneratorDefinitionEquation}{\mathsf A_{ij}=E_{ij}-E_{ji},\quad \mathsf B_{ij}=i(E_{ij}+E_{ji}),\quad \mathsf H_{ij}=i(E_{ii}-E_{jj})\quad(i<j)}
+
+\newcommand{\CrossPairEquation}{[\mathsf A_{12},\mathsf A_{23}]=\mathsf A_{13},\qquad[\mathsf A_{12},\mathsf B_{23}]=\mathsf B_{13}}
+\newcommand{\DiagonalDependenceEquation}{\mathsf H_{13}=\mathsf H_{12}+\mathsf H_{23}}
+
+\newcommand{\DiagonalModesEquation}{\frac{\lambda_3}{\sqrt2}=\frac{E_{11}-E_{22}}{\sqrt2},\qquad \frac{\lambda_8}{\sqrt2}=\frac{E_{11}+E_{22}-2E_{33}}{\sqrt6},\qquad \tfrac12\operatorname{tr}(\lambda_a\lambda_b)=\delta_{ab}\quad(a,b\in\{3,8\})}
+
+\newcommand{\PolynomialCouplingEquation}{\Lambda(X)_p=w_p(X)X_p,\qquad w_p(X)=\sum_{j\ne p}\langle X_p,X_j\rangle_{\mathrm F}}
+\newcommand{\CouplingDifferentialEquation}{(D\Lambda(X)\delta X)_p=w_p(X)(\delta X)_p+X_p\sum_{j\ne p}\bigl[\langle (\delta X)_p,X_j\rangle_{\mathrm F}+\langle X_p,(\delta X)_j\rangle_{\mathrm F}\bigr]}
+\newcommand{\FullChainRuleEquation}{DY[\eta]={L_X}\,DX[\eta],\quad DZ[\eta]={L_Y}{L_X}\,DX[\eta],\quad d{L_Y}[\eta]=D^2\Lambda(Y)[{L_X}\,DX[\eta],\,\cdot\,]}
+
+%
+
+
+%
+
+% Explicit field dependence, induced phase connection and compatibility.
+
+\newcommand{\CompatibleFieldCurve}{X(s)}
+
+\newcommand{\CouplingWeightDifferential}{Dw_p(X)[\delta X]}
+\newcommand{\SecondPerturbationSymbol}{\delta_2X}
+\newcommand{\CouplingSecondDifferentialEquation}{\begin{aligned}
+(D^2\Lambda(X)[\delta_1X,\delta_2X])_p={}&Dw_p(X)[\delta_1X](\delta_2X)_p+Dw_p(X)[\delta_2X](\delta_1X)_p\\
+&+X_p\sum_{j\ne p}\bigl[\langle(\delta_1X)_p,(\delta_2X)_j\rangle_{\mathrm F}+\langle(\delta_2X)_p,(\delta_1X)_j\rangle_{\mathrm F}\bigr].
+\end{aligned}}
+\newcommand{\BothDifferentialVariationsEquation}{\begin{aligned}d{L_X}[\eta]&=D^2\Lambda(X)[DX[\eta],\,\cdot\,],\\d{L_Y}[\eta]&=D^2\Lambda(Y)[{L_X}\,DX[\eta],\,\cdot\,],\\d({L_Y}{L_X}v)&=(d{L_Y}){L_X}v+{L_Y}(d{L_X})v+{L_Y}{L_X}\,dv.\end{aligned}}
+\newcommand{\CombinedFieldMap}{\Phi(X)}
+\newcommand{\CompatibilityEquality}{f(\Phi(X))=0}
+\newcommand{\FieldVelocityAcceleration}{\delta X=\dot X(0)}
+\newcommand{\PropagatedCompatibilityEquation}{\begin{aligned}Df\,D\Phi\,\delta X&=0,\\Df\bigl(D\Phi\,\ddot X(0)+D^2\Phi[\delta X,\delta X]\bigr)&+D^2f[D\Phi\,\delta X,D\Phi\,\delta X]=0.\end{aligned}}
+\newcommand{\CompatibilityInequality}{\varphi(\Phi(X))\ge0}
+\newcommand{\ContactDerivativeEquation}{\left.\frac{d}{ds}\varphi(\Phi(X(s)))\right|_{s=0}=D\varphi\,D\Phi\,\delta X\ge0}
+
+\newcommand{\TripleComparisonSpace}{{\mathcal V}\oplus {\mathcal V}\oplus {\mathcal V}}
+
+% Equations for the author-requested two-page Phase/Coupling insert.
+\newcommand{\DraftTransverseEquation}{X_{i\perp p}=X_i-\frac{\langle X_p,X_i\rangle_{\mathrm F}}{\langle X_p,X_p\rangle_{\mathrm F}}X_p}
+\newcommand{\DraftNormalizationEquation}{{e_r}=\frac{X_p}{\|X_p\|_{\mathrm F}},\qquad {e_\perp}=\frac{X_{i\perp p}}{\|X_{i\perp p}\|_{\mathrm F}},\qquad\langle {e_r},{e_\perp}\rangle_{\mathrm F}=0}
+\newcommand{\DraftComplexStructureEquation}{J{e_r}={e_\perp},\qquad J{e_\perp}=-{e_r},\qquad J^2=-I}
+\newcommand{\DraftRotationEquation}{\mathsf R(\theta)=\cos\theta\,I+\sin\theta\,J}
+\newcommand{\DraftPhaseConnectionEquation}{a=\langle {e_\perp},d e_r\rangle_{\mathrm F}}
+\newcommand{\DraftProjectedDerivativesEquation}{(d e_r)_{\parallel}=a\,{e_\perp},\qquad(d e_\perp)_{\parallel}=-a\,{e_r}}
+\newcommand{\DraftCouplingEquation}{Y=\Lambda(X),\qquad\Lambda(X)_p=w_p(X)X_p,\qquad w_p(X)=\sum_{j\ne p}\langle X_p,X_j\rangle_{\mathrm F}}
+\newcommand{\DraftCouplingResponseEquation}{({L_X}\delta X)_p=w_p(X)(\delta X)_p+X_p\sum_{j\ne p}\left[\langle (\delta X)_p,X_j\rangle_{\mathrm F}+\langle X_p,(\delta X)_j\rangle_{\mathrm F}\right],\qquad {L_X}=D\Lambda(X)}
+\newcommand{\DraftPairLiftEquation}{{\iota_{L_X}}v=(v,{L_X}v),\qquad{\iota_{L_X}^{\perp}}w=(-{L_X}^*w,w)}
+\newcommand{\DraftPairOrthogonalityEquation}{\begin{aligned}\langle{\iota_{L_X}}v,{\iota_{L_X}^{\perp}}w\rangle&=-\langle v,{L_X}^*w\rangle+\langle {L_X}v,w\rangle\\&=0.\end{aligned}}
+\newcommand{\DraftPairColumnsEquation}{{\mathsf V_0}={\iota_{L_X}}{\mathsf V},\qquad {\mathsf V_1}={\iota_{L_X}^{\perp}}{\mathsf V}}
+\newcommand{\DraftPairGramEquation}{{\mathsf V_0}^*{\mathsf V_1}=0,\qquad {\mathsf V_0}^*{\mathsf V_0}={\mathsf V}^*(I+{L_X}^*{L_X}){\mathsf V}>0,\qquad {\mathsf V_1}^*{\mathsf V_1}={\mathsf V}^*(I+{L_X}{L_X}^*){\mathsf V}>0}
+\newcommand{\DraftNextCoupling}{Z=\Lambda(Y)}
+
+% Equations for the additive Algebra draft.
+\newcommand{\DraftThreeLevelVariation}{\delta X\longmapsto(\delta X,{L_X}\delta X,{L_Y}{L_X}\delta X)}
+\newcommand{\DraftJointOrthogonality}{{\mathsf V_0}^*{\mathsf V_1}={\mathsf V_0}^*{\mathsf V_2}={\mathsf V_1}^*{\mathsf V_2}=0}
+\newcommand{\DraftConnectionMatrix}{A=\begin{pmatrix}ia_1&A_{12}&A_{13}\\-\overline{A_{12}}&ia_2&A_{23}\\-\overline{A_{13}}&-\overline{A_{23}}&ia_3\end{pmatrix},\qquad a_1+a_2+a_3=0}
+\newcommand{\DraftGaugeCurvature}{F_A=dA+A\wedge A}
+\newcommand{\DraftCrossCurvature}{(F_A)_{13}=dA_{13}+i(a_1-a_3)\wedge A_{13}+A_{12}\wedge A_{23}}
+
+% Equations for the additive Curvature draft.
+\newcommand{\DraftSignedEndpoints}{\pm\ell e_1,\qquad\pm\ell e_2,\qquad\pm\ell e_3,\qquad\ell>0}
+\newcommand{\DraftOctahedralHull}{P_\ell=\operatorname{conv}\{\pm\ell e_1,\pm\ell e_2,\pm\ell e_3\}}
+\newcommand{\DraftOctahedralFaces}{\tau_s=\operatorname{conv}\{\ell s_1e_1,\ell s_2e_2,\ell s_3e_3\},\qquad s\in\{-1,+1\}^{3}}
+\newcommand{\DraftClosedSurface}{\partial\!\left(\sum_s \tau_s\right)=0}
+\newcommand{\DraftAngularDefect}{\delta_v=2\pi-\sum_{f\ni v}\theta_{vf}}
+\newcommand{\DraftRegularDefect}{\delta_v=2\pi-4\frac{\pi}{3}=\frac{2\pi}{3}}
+\newcommand{\DraftTotalDefect}{\sum_v\delta_v=4\pi}
+\newcommand{\DraftInvariantDefect}{\sum_v\delta_v=2\pi\cdot6-\pi\cdot8=4\pi}
+
+% Equations for the additive Energy draft.
+
+\newcommand{\DraftTotalMassRelation}{M^2c^4=E^2-c^2|\mathbf P|^2,\qquad E_0=E\big|_{\mathbf P=0}=Mc^2}
+
+
+% Equations for the additive Spectrum draft.
+
+
+% Scale notation for the consolidated Curvature section.
+
+% Inline field, geometric, energy and spectral notation.
+\newcommand{\IntermediateField}{Y}
+\newcommand{\SecondCouplingDifferential}{{L_Y}=D\Lambda(Y)}
+\newcommand{\CoupledVariation}{{L_X}\delta X}
+\newcommand{\FirstAdjacentGroup}{\mathrm{SU}(2)_{12}}
+\newcommand{\ColumnIndex}{j}
+\newcommand{\RowIndex}{i}
+\newcommand{\DiagonalConnectionForms}{a_1,a_2,a_3}
+\newcommand{\OffDiagonalConnectionForms}{A_{12},A_{23},A_{13}}
+\newcommand{\HermitianConversionFactor}{-i}
+\newcommand{\FirstCouplingLabel}{\SourceCoupling}
+\newcommand{\SecondCouplingLabel}{\SourceCoupling}
+\newcommand{\FirstDifferential}{{L_X}}
+\newcommand{\PairComparisonSpace}{{\mathcal V}\oplus {\mathcal V}}
+\newcommand{\FirstDifferentialAdjoint}{{L_X}^*}
+\newcommand{\FirstCouplingDifferential}{{L_X}=D\Lambda(X)}
+\newcommand{\SurfaceVertex}{v}
+\newcommand{\VertexFaceAngle}{\theta_{vf}}
+\newcommand{\SurfaceFace}{f}
+
+\newcommand{\RadialFieldComponent}{X_p}
+\newcommand{\TransverseFieldComponent}{X_i}
+\newcommand{\TransverseDirection}{X_{i\perp p}}
+\newcommand{\SpanningSurface}{\mathcal S}
+\newcommand{\PhaseCurvatureForm}{da}
+
+% Mathematical figure labels; TikZ geometry remains in figures/.
+\newcommand{\DisplayDirection}[1]{\ifcase#1\or x\or y\or z\fi}
+\newcommand{\CarrierDirectionLabel}[1]{\DisplayDirection{#1}}
+\newcommand{\FieldSpatialCoordinates}{(x,y,z)}
+\newcommand{\FieldSpatialPhase}{a_{\mathrm{sp}}}
+\newcommand{\FieldSpatialAngle}{\chi(x,y,z)}
+\newcommand{\FieldSpatialConnectionDisplay}{%
+\begin{equation}
+a_{\mathrm{sp}}=a_x\,dx+a_y\,dy+a_z\,dz,\qquad
+D_j=\partial_j+ia_j,\quad j\in\{x,y,z\}.
+\label{eq:one-field-spatial-connection}
+\end{equation}%
+}
+\newcommand{\FieldSpatialGaugeDisplay}{%
+\begin{equation}
+\widetilde a_{\mathrm{sp}}=a_{\mathrm{sp}}+d\chi,\qquad
+\widetilde a_j=a_j+\partial_j\chi,\quad j\in\{x,y,z\}.
+\label{eq:one-field-spatial-gauge}
+\end{equation}%
+}
+\newcommand{\FieldSpatialCurvatureDisplay}{%
+\begin{equation}
+\begin{aligned}
+d a_{\mathrm{sp}}={}&(\partial_xa_y-\partial_ya_x)\,dx\wedge dy\\
+&+(\partial_ya_z-\partial_za_y)\,dy\wedge dz\\
+&+(\partial_za_x-\partial_xa_z)\,dz\wedge dx.
+\end{aligned}
+\label{eq:one-field-spatial-curvature}
+\end{equation}%
+}
+\newcommand{\FirstPairFigureLabel}{X\xrightarrow{\Lambda}Y\quad\PairGroup_{12}}
+\newcommand{\AdjacentPairsFigureLabel}{X\xrightarrow{\Lambda}Y\xrightarrow{\Lambda}Z\quad\PairGroup_{12},\PairGroup_{23}}
+\newcommand{\RedAntiGreen}{r\bar g}
+\newcommand{\GreenAntiRed}{g\bar r}
+\newcommand{\GreenAntiBlue}{g\bar b}
+\newcommand{\BlueAntiGreen}{b\bar g}
+\newcommand{\RedAntiBlue}{r\bar b}
+\newcommand{\BlueAntiRed}{b\bar r}
+\newcommand{\FirstDiagonalModeLabel}{\lambda_3/\sqrt2}
+\newcommand{\SecondDiagonalModeLabel}{\lambda_8/\sqrt2}
+\newcommand{\RedAntiGreenSigns}{+--}
+\newcommand{\GreenAntiRedSigns}{-++}
+\newcommand{\GreenAntiBlueSigns}{-+-}
+\newcommand{\BlueAntiGreenSigns}{+-+}
+\newcommand{\RedAntiBlueSigns}{++-}
+\newcommand{\BlueAntiRedSigns}{--+}
+\newcommand{\FirstDiagonalSigns}{+++}
+\newcommand{\SecondDiagonalSigns}{---}
+
+% Complete displayed equations, labels and punctuation in manuscript order.
+
+% Phase
+\newcommand{\PhaseTransverseDisplay}{%
+\begin{equation}
+\begin{gathered}
+\ExplainTerm{X_{i\perp p}}{transverse component}
+=\ExplainTerm{X_i}{original component}
+-\ExplainTerm{\frac{\langle X_p,X_i\rangle_{\mathrm F}}{\langle X_p,X_p\rangle_{\mathrm F}}X_p}{projection along the radial component}
+\end{gathered}
+\label{eq:radial-tangent}
+\end{equation}%
+}
+\newcommand{\PhaseNormalizationDisplay}{%
+\begin{equation}
+\DraftNormalizationEquation.
+\end{equation}%
+}
+\newcommand{\PhaseComplexStructureDisplay}{%
+\begin{equation}
+\DraftComplexStructureEquation.
+\label{eq:phase}
+\end{equation}%
+}
+\newcommand{\PhaseRotationDisplay}{%
+\begin{equation}
+\DraftRotationEquation,
+\end{equation}%
+}
+\newcommand{\PhasePhaseConnectionDisplay}{%
+\begin{equation}
+\begin{gathered}
+\ExplainTerm{a}{phase connection}
+=\ExplainTerm{\langle e_\perp,de_r\rangle_{\mathrm F}}{radial change along the transverse direction}
+\end{gathered}
+\end{equation}%
+}
+\newcommand{\PhaseProjectedDerivativesDisplay}{%
+\begin{equation}
+\DraftProjectedDerivativesEquation.
+\end{equation}%
+}
+\newcommand{\PhaseUnitaryConnectionDisplay}{%
+\begin{equation}
+\UnitaryConnectionEquation.
+\label{eq:unitary}
+\end{equation}%
+}
+\newcommand{\PhaseLoopPhaseDisplay}{%
+\begin{equation}
+\LoopPhaseEquation,
+\label{eq:loop}
+\end{equation}%
+}
+\newcommand{\PhasePhaseGaugeDisplay}{%
+\begin{equation}
+\PhaseGaugeEquation.
+\label{eq:phase-gauge}
+\end{equation}%
+}
+
+% Coupling
+\newcommand{\CouplingCouplingDisplay}{%
+\begin{equation}
+\KeyMath{
+\ExplainTerm{Y=\Lambda(X)}{coupled response},\qquad
+\ExplainTerm{\Lambda(X)_p=w_p(X)X_p}{component response},\\
+\ExplainTerm{w_p(X)=\sum_{j\ne p}\langle X_p,X_j\rangle_{\mathrm F}}{total pairing with the other components}
+}
+\label{eq:successive}
+\end{equation}%
+}
+\newcommand{\CouplingCouplingResponseDisplay}{%
+\begin{equation}
+\KeyMath{
+\ExplainTerm{L_X=D\Lambda(X)}{derivative at the field},\\
+(L_X\delta X)_p=
+\ExplainTerm{w_p(X)(\delta X)_p}{component change}
++\ExplainTerm{X_p\sum_{j\ne p}\bigl[\langle(\delta X)_p,X_j\rangle_{\mathrm F}+\langle X_p,(\delta X)_j\rangle_{\mathrm F}\bigr]}{coupling-weight change}
+}
+\label{eq:coupling-response}
+\end{equation}%
+}
+\newcommand{\CouplingPairLiftDisplay}{%
+\begin{equation}
+\begin{gathered}
+\ExplainTerm{\iota_{L_X}v=(v,L_Xv)}{field and its response},\qquad
+\ExplainTerm{\iota_{L_X}^{\perp}w=(-L_X^*w,w)}{perpendicular compensation}
+\end{gathered}
+\label{eq:pair}
+\end{equation}%
+}
+\newcommand{\CouplingPairOrthogonalityDisplay}{%
+\begin{equation}
+\DraftPairOrthogonalityEquation
+\end{equation}%
+}
+\newcommand{\CouplingPairColumnsDisplay}{%
+\begin{equation}
+\DraftPairColumnsEquation.
+\end{equation}%
+}
+\newcommand{\CouplingPairGramDisplay}{%
+\begin{equation}
+\DraftPairGramEquation.
+\end{equation}%
+}
+\newcommand{\CouplingPairGroupDisplay}{%
+\begin{equation}
+U=\PairGroupEquation.
+\end{equation}%
+}
+
+% Algebra
+\newcommand{\AlgebraThreeLevelVariationDisplay}{%
+\begin{equation}
+\KeyMath{
+\delta X\longmapsto
+(\ExplainTerm{\delta X}{field change},\ExplainTerm{L_X\delta X}{first response},\ExplainTerm{L_YL_X\delta X}{second response})
+}
+\end{equation}%
+}
+\newcommand{\AlgebraTripleLiftDisplay}{%
+\begin{equation}
+\TripleLiftEquation
+\label{eq:lifts}
+\end{equation}%
+}
+\newcommand{\AlgebraOrthogonalColumnsDisplay}{%
+\begin{equation}
+\OrthogonalColumnsEquation.
+\label{eq:response-plane-projection}
+\end{equation}%
+}
+\newcommand{\AlgebraJointOrthogonalityDisplay}{%
+\begin{equation}
+\DraftJointOrthogonality.
+\end{equation}%
+}
+\newcommand{\AlgebraGeneratorDefinitionDisplay}{%
+\begin{equation}
+\GeneratorDefinitionEquation.
+\label{eq:generators}
+\end{equation}%
+}
+\newcommand{\AlgebraCrossPairDisplay}{%
+\begin{equation}
+\CrossPairEquation.
+\label{eq:cross-brackets}
+\end{equation}%
+}
+\newcommand{\AlgebraDiagonalDependenceDisplay}{%
+\begin{equation}
+\DiagonalDependenceEquation,
+\end{equation}%
+}
+\newcommand{\AlgebraCompatibleConnectionDisplay}{%
+\begin{equation}
+\CompatibleConnectionEquation.
+\label{eq:compatible}
+\end{equation}%
+}
+\newcommand{\AlgebraConnectionMatrixDisplay}{%
+\begin{equation}
+\DraftConnectionMatrix,
+\label{eq:connection}
+\end{equation}%
+}
+\newcommand{\AlgebraGaugeCurvatureDisplay}{%
+\begin{equation}
+\DraftGaugeCurvature.
+\end{equation}%
+}
+\newcommand{\AlgebraCrossCurvatureDisplay}{%
+\begin{equation}
+\DraftCrossCurvature.
+\label{eq:curvature}
+\end{equation}%
+}
+\newcommand{\AlgebraDiagonalModesDisplay}{%
+\begin{equation}
+\DiagonalModesEquation.
+\label{eq:diagonals}
+\end{equation}%
+}
+
+% Curvature
+\newcommand{\CurvatureSignedEndpointsDisplay}{%
+\begin{equation}
+\DraftSignedEndpoints.
+\end{equation}%
+}
+\newcommand{\CurvatureOctahedralHullDisplay}{%
+\begin{equation}
+\DraftOctahedralHull.
+\label{eq:octahedron}
+\end{equation}%
+}
+\newcommand{\CurvatureOctahedralFacesDisplay}{%
+\begin{equation}
+\DraftOctahedralFaces.
+\end{equation}%
+}
+\newcommand{\CurvatureClosedSurfaceDisplay}{%
+\begin{equation}
+\KeyMath{
+\ExplainTerm{\partial\!\left(\sum_s\tau_s\right)}{boundary of the assembled faces}
+=\ExplainTerm{0}{shared edges cancel}
+}
+\end{equation}%
+}
+\newcommand{\CurvatureAngularDefectDisplay}{%
+\begin{equation}
+\DraftAngularDefect,
+\end{equation}%
+}
+\newcommand{\CurvatureRegularDefectDisplay}{%
+\begin{equation}
+\DraftRegularDefect.
+\end{equation}%
+}
+\newcommand{\CurvatureTotalDefectDisplay}{%
+\begin{equation}
+\DraftTotalDefect.
+\label{eq:octahedral-total-defect}
+\end{equation}%
+}
+\newcommand{\CurvatureInvariantDefectDisplay}{%
+\begin{equation}
+\DraftInvariantDefect.
+\label{eq:defect}
+\end{equation}%
+}
+
+% Energy
+
+\newcommand{\EnergyTotalMassRelationDisplay}{%
+\begin{equation}
+\DraftTotalMassRelation.
+\label{eq:mass}
+\end{equation}%
+}
+
+
+% Spectrum
+
+
+% CouplingMap
+\newcommand{\CouplingMapPolynomialCouplingDisplay}{%
+\begin{equation}
+\PolynomialCouplingEquation.
+\label{eq:polynomial}
+\end{equation}%
+}
+\newcommand{\CouplingMapCouplingDifferentialDisplay}{%
+\begin{equation}
+\CouplingDifferentialEquation.
+\label{eq:differential}
+\end{equation}%
+}
+\newcommand{\CouplingMapCouplingSecondDifferentialDisplay}{%
+\begin{equation}
+\begin{gathered}
+(D^2\Lambda(X)[\delta_1X,\delta_2X])_p
+=\ExplainTerm{Dw_p(X)[\delta_1X](\delta_2X)_p}{first weight change}\\
++\ExplainTerm{Dw_p(X)[\delta_2X](\delta_1X)_p}{second weight change}\\
++\ExplainTerm{X_p\sum_{j\ne p}\bigl[\langle(\delta_1X)_p,(\delta_2X)_j\rangle_{\mathrm F}+\langle(\delta_2X)_p,(\delta_1X)_j\rangle_{\mathrm F}\bigr]}{second variation of the pairing}
+\end{gathered}
+\label{eq:second-differential}
+\end{equation}%
+}
+\newcommand{\CouplingMapFullChainRuleDisplay}{%
+\begin{equation}
+\FullChainRuleEquation.
+\label{eq:chain-rule}
+\end{equation}%
+}
+\newcommand{\CouplingMapBothDifferentialVariationsDisplay}{%
+\begin{equation}
+\BothDifferentialVariationsEquation
+\label{eq:both-differential-variations}
+\end{equation}%
+}
+\newcommand{\CouplingMapPropagatedCompatibilityDisplay}{%
+\begin{equation}
+\PropagatedCompatibilityEquation
+\label{eq:propagated-compatibility}
+\end{equation}%
+}
+\newcommand{\CouplingMapContactDerivativeDisplay}{%
+\begin{equation}
+\ContactDerivativeEquation.
+\label{eq:contact-derivative}
+\end{equation}%
+}
+
+% Hilbert-space symbol used in the current Spectrum section.
+
+
+% Full-source Spectrum repair. All formulas remain centralized here.
+\newcommand{\SpectrumGraphMap}{\mathsf S}
+\newcommand{\SpectrumQuotientMetric}{h_q}
+\newcommand{\SpectrumGramMatrix}{\mathsf G}
+\newcommand{\SpectrumNormalizer}{\mathsf N}
+
+\newcommand{\SpectrumQuotientConnection}{A^{(q)}}
+\newcommand{\SpectrumConnectionDifference}{A=A'+\Delta A}
+
+\newcommand{\SpectrumActualStateMapDisplay}{%
+\begin{equation}
+\mathsf S^\dagger h_q\mathsf S=\mathsf G,\qquad
+\mathsf N^\dagger\mathsf G\mathsf N=I,\qquad
+U=h_q^{1/2}\mathsf S\mathsf N,\qquad U^\dagger U=I.
+\label{eq:actual-state-map}
+\end{equation}%
+}
+\newcommand{\SpectrumActualConnectionDisplay}{%
+\begin{equation}
+A'=U^{-1}A^{(q)}U+U^{-1}dU,\qquad
+F'=U^{-1}F^{(q)}U,
+\end{equation}%
+}
+\newcommand{\SpectrumActualCurvatureDisplay}{%
+\begin{equation}
+F_A=F'+D_{A'}(\Delta A)+\Delta A\wedge\Delta A.
+\label{eq:actual-curvature-map}
+\end{equation}%
+}
+\newcommand{\SpectrumFullCurvatureDisplay}{%
+\begin{equation}
+\begin{aligned}
+\Omega_g&=\begin{pmatrix}\Omega_{11}&\Omega_{12}\\\Omega_{21}&0\end{pmatrix},&
+\mathscr F&=\begin{pmatrix}F_A+\Delta F&(\mathscr F)_{12}\\(\mathscr F)_{21}&(\mathscr F)_{22}\end{pmatrix},\\
+(\mathscr F)_{12}&=D_{\Omega_{11}}\Omega_{12},&(\mathscr F)_{21}&=D_{\Omega_{11}}\Omega_{21},\qquad (\mathscr F)_{22}=\Omega_{21}\wedge \Omega_{12}.
+\end{aligned}
+\end{equation}%
+}
+\newcommand{\SpectrumMixedCorrectionDisplay}{%
+\begin{equation}
+\Theta=A-\Omega_{11},\qquad \Delta F=\Omega_{12}\wedge \Omega_{21}-(D_{\Omega_{11}}\Theta+\Theta\wedge\Theta).
+\end{equation}%
+}
+
+\newcommand{\SpectrumMetricConnection}{\Gamma(g)}
+
+% Actual v5/v6 curvature-energy and sourced EYM chain.
+\newcommand{\NativeCoefficientMetric}{\mathsf g}
+\newcommand{\NativeSolder}{e}
+\newcommand{\NativePairIndices}{A=(\mu,\nu),\ B=(\rho,\sigma)}
+\newcommand{\NativeProjectors}{N^2=N,\ P=I-N}
+\newcommand{\NativeRicciNotation}{\operatorname{Scal}_g=\operatorname{tr}_g\operatorname{Ric}}
+\newcommand{\NativeWeylTensor}{\mathcal C}
+\newcommand{\NativeWorkPi}{\Pi}
+\newcommand{\NativeStressTrace}{\operatorname{tr}_g T=-\operatorname{Scal}_g/{\kappa}}
+\newcommand{\NativeDegree}{\nu>0}
+\newcommand{\NativeHeight}{R^2}
+\newcommand{\NativeEuler}{\mathcal E}
+\newcommand{\NativeEulerNormal}{n=\mathcal E/\sqrt{-g(\mathcal E,\mathcal E)}}
+\newcommand{\NativeObserver}{u}
+\newcommand{\NativeUnitNormal}{n}
+\newcommand{\NativeNormalRicciZero}{\operatorname{Ric}(n,n)=0}
+\newcommand{\NativeSpatialMetric}{h=g|_{n^\perp}}
+\newcommand{\NativeSpatialTracefreeRicci}{\operatorname{Ric}_{0,ij}=\operatorname{Ric}_{ij}-(\operatorname{Scal}_g/3)h_{ij}}
+\newcommand{\NativeRicciEigenvalues}{r_1,r_2,r_3}
+\newcommand{\NativeSectionalValues}{k_{12},k_{13},k_{23}}
+\newcommand{\NativeObservationVector}{\xi}
+\newcommand{\NativeGeometryDisplay}{%
+\begin{equation}
+g=e^T\mathsf g e,\qquad \Gamma=e^{-1}(\Omega_g e+de).
+\end{equation}%
+}
+\newcommand{\NativeCurvatureDisplay}{%
+\begin{equation}
+\mathscr F=d\Omega_g+\Omega_g\wedge\Omega_g,
+\qquad \mathcal R=e^{-1}\mathscr F e.
+\end{equation}%
+}
+\newcommand{\NativeEnergyDefinitionDisplay}{%
+\begin{equation}
+\begin{aligned}
+(g^{-1}\wedge g^{-1})_{AB}&=g^{\mu\rho}g^{\nu\sigma}-g^{\mu\sigma}g^{\nu\rho},\\
+\mathcal K&=-\sum_{A,B}(g^{-1}\wedge g^{-1})_{AB}\operatorname{tr}(\mathscr F_A\mathscr F_B).
+\end{aligned}
+\label{eq:native-energy}
+\end{equation}%
+}
+\newcommand{\NativeRiemannEnergyDisplay}{%
+\begin{equation}
+\mathcal K=-\tfrac12\operatorname{tr}(\mathscr F_{\mu\nu}\mathscr F^{\mu\nu})=\tfrac12R_{abcd}R^{abcd}.
+\end{equation}%
+}
+\newcommand{\NativePacketsDisplay}{%
+\begin{equation}
+\mathscr F_N=N\mathscr FN,\qquad
+\mathscr F_C=N\mathscr FP+P\mathscr FN,\qquad
+\mathscr F_T=P\mathscr FP.
+\end{equation}%
+}
+\newcommand{\NativeEnergyAllocationDisplay}{%
+\begin{equation}
+\begin{gathered}
+\mathcal K=\ExplainTerm{\mathcal K_N}{normal}+\ExplainTerm{\mathcal K_C}{mixed}+\ExplainTerm{\mathcal K_T}{tangent},\\
+\mathcal K=(\mathcal K_N+\mathcal K_C)+(\mathcal K_C+\mathcal K_T)-\ExplainTerm{\mathcal K_C}{remove the duplicate mixed term}
+\end{gathered}
+\label{eq:native-allocation}
+\end{equation}%
+}
+\newcommand{\NativeWeylEnergyDisplay}{%
+\begin{equation}
+\mathcal K=\tfrac12\langle\mathcal C,\mathcal C\rangle_g
++\langle \operatorname{Ric},\operatorname{Ric}\rangle_g-\tfrac16\operatorname{Scal}_g^2.
+\label{eq:native-weyl-energy}
+\end{equation}%
+}
+\newcommand{\NativeWorkCoefficientsDisplay}{%
+\begin{equation}
+\Pi=2\operatorname{Ric}-\tfrac13\operatorname{Scal}_g\,g,\qquad
+\Pi_g=-2\operatorname{Ric}g^{-1}\operatorname{Ric}+\tfrac13\operatorname{Scal}_g \operatorname{Ric}.
+\end{equation}%
+}
+\newcommand{\NativeFullWorkDisplay}{%
+\begin{equation}
+\delta \mathcal K=\delta\!\left(\tfrac12\langle\mathcal C,\mathcal C\rangle_g\right)+
+\langle\Pi_g,\delta g\rangle_g+\langle\Pi,\delta \operatorname{Ric}\rangle_g.
+\end{equation}%
+}
+\newcommand{\NativeStressExtractionDisplay}{%
+\begin{equation}
+T=\frac1{2{\kappa}}(\Pi-g\operatorname{tr}_g\Pi),\qquad
+\operatorname{tr}_g\Pi=\tfrac23\operatorname{Scal}_g.
+\end{equation}%
+}
+\newcommand{\NativeEinsteinDisplay}{%
+\begin{equation}
+{\kappa}T_{\mu\nu}=\operatorname{Ric}_{\mu\nu}-\tfrac12g_{\mu\nu}\operatorname{Scal}_g
+=G_{\mu\nu}.
+\label{eq:stress}
+\end{equation}%
+}
+\newcommand{\NativeCurrentSourceDisplay}{%
+\begin{equation}
+\begin{aligned}
+\operatorname{Ric}&={\kappa}\bigl(T-\tfrac12g\operatorname{tr}_gT\bigr),\\
+J_{ab\nu}&=\nabla_a(\operatorname{Ric})_{b\nu}-\nabla_b(\operatorname{Ric})_{a\nu},
+&j_\nu&=e\bigl(g^{ac}J_{cb\nu}\bigr)e^{-1}.
+\end{aligned}
+\end{equation}%
+}
+\newcommand{\NativeSourcedEquationsDisplay}{%
+\begin{equation}
+D^\mu\mathscr F_{\mu\nu}=j_\nu,\qquad\nabla^\mu T_{\mu\nu}=0.
+\label{eq:native-sourced-eym}
+\end{equation}%
+}
+\newcommand{\NativeEnergyStressDisplay}{%
+\begin{equation}
+\mathcal K=\tfrac12\langle\mathcal C,\mathcal C\rangle_g
++{\kappa}^2\left[\langle T,T\rangle_g-\tfrac16(\operatorname{tr}_gT)^2\right].
+\label{eq:native-energy-stress}
+\end{equation}%
+}
+\newcommand{\NativeTraceReversalNormDisplay}{%
+\begin{equation}
+\begin{aligned}
+{\kappa}^2\langle T,T\rangle_g
+&=\langle \operatorname{Ric},\operatorname{Ric}\rangle_g
+-(\operatorname{Scal}_g)^2+(\operatorname{Scal}_g)^2\\
+&=\langle \operatorname{Ric},\operatorname{Ric}\rangle_g.
+\end{aligned}
+\end{equation}%
+}
+\newcommand{\NativeHomothetyDisplay}{%
+\begin{equation}
+\mathcal L_{\mathcal E}g=4\nu g,\qquad
+\mathcal E^\flat=-\nu\,d(R^2),\qquad
+g(\mathcal E,\mathcal E)=-4\nu^2R^2<0.
+\end{equation}%
+}
+\newcommand{\NativeEulerCurvatureDisplay}{%
+\begin{equation}
+\nabla_X\mathcal E=2\nu X,\qquad
+\mathcal R(X,Y)\mathcal E
+=2\nu(\nabla_XY-\nabla_YX-[X,Y])=0.
+\end{equation}%
+}
+\newcommand{\NativeSpatialEnergyDisplay}{%
+\begin{equation}
+\mathcal K=2\sum_{i<j}\sum_{a<b}(R_{abij})^2\ge0,
+\qquad \mathcal K=0\ \Longleftrightarrow\ \mathcal R=0.
+\label{eq:native-spatial-positivity}
+\end{equation}%
+}
+\newcommand{\NativeObservedEnergyDisplay}{%
+\begin{equation}
+E_\Sigma[u]=\int_\Sigma T_{\mu\nu}u^\mu n^\nu\,d\Sigma.
+\label{eq:native-observed-energy}
+\end{equation}%
+}
+\newcommand{\NativeObservedDensityDisplay}{%
+\begin{equation}
+\rho=T(n,n)=\frac1{\kappa}\left[\operatorname{Ric}(n,n)+\tfrac12\operatorname{Scal}_g\right].
+\end{equation}%
+}
+\newcommand{\NativeSpatialDensityDisplay}{%
+\begin{equation}
+\rho=\frac{\operatorname{Scal}_g}{2{\kappa}}.
+\label{eq:native-spatial-density}
+\end{equation}%
+}
+\newcommand{\NativeDensityIdentityDisplay}{%
+\begin{equation}
+\mathcal K=2|\operatorname{Ric}_0|_h^2+\tfrac16\operatorname{Scal}_g^2=2|\operatorname{Ric}_0|_h^2+\tfrac23{\kappa}^2\rho^2.
+\label{eq:native-density-identity}
+\end{equation}%
+}
+\newcommand{\NativeRicciSectionalDisplay}{%
+\begin{equation}
+r_1=k_{12}+k_{13},\qquad r_2=k_{12}+k_{23},\qquad r_3=k_{13}+k_{23}.
+\end{equation}%
+}
+\newcommand{\NativeSectionalSolutionDisplay}{%
+\begin{equation}
+k_{ij}=\tfrac12(r_i+r_j-r_k)=\tfrac12(\operatorname{Scal}_g-2r_k),\qquad\{i,j,k\}=\{1,2,3\}.
+\end{equation}%
+}
+\newcommand{\NativeSpatialRicciEnergyDisplay}{%
+\begin{equation}
+\mathcal K=2\sum_{i<j}k_{ij}^2=2\sum_i r_i^2-\tfrac12\operatorname{Scal}_g^2.
+\end{equation}%
+}
+\newcommand{\NativeChargeBalanceDisplay}{%
+\begin{equation}
+\nabla_\mu(T^{\mu\nu}\xi_\nu)=T^{\mu\nu}\nabla_{(\mu}\xi_{\nu)}.
+\label{eq:native-charge-balance}
+\end{equation}%
+}
+
+
+% Field definition preceding Phase.
+\newcommand{\FieldVectorSpace}{W}
+\newcommand{\FieldVectorPairing}{\langle\,\cdot\,,\,\cdot\,\rangle_W}
+\newcommand{\FieldConfigurationDomain}{\mathcal U}
+\newcommand{\FieldComponentSpace}{\mathbb V}
+\newcommand{\FieldLabelSet}{\mathcal I}
+\newcommand{\FieldSelfAdjointDisplay}{%
+\begin{equation}
+\underbrace{\langle Av,w\rangle}_{\text{act on }v\text{, then compare with }w}
+=\underbrace{\langle v,Aw\rangle}_{\text{act on }w\text{, then compare with }v}
+\qquad\text{for all }v,w.
+\label{eq:field-self-adjoint}
+\end{equation}%
+}
+\newcommand{\FieldMatrixPairingDisplay}{%
+\begin{equation}
+\langle A,B\rangle_{\mathrm F}=\operatorname{tr}(A^TB)=\operatorname{tr}(AB)=\sum_{a,b}A_{ab}B_{ab},\qquad A,B\in\mathbb V.
+\label{eq:field-matrix-pairing}
+\end{equation}%
+}
+\newcommand{\FieldDefinitionDisplay}{%
+\begin{equation}
+X\colon\mathcal U\longrightarrow {\mathcal V}=\mathbb V^{\mathcal I},\qquad
+X(x)=\bigl(X_p(x)\bigr)_{p\in\mathcal I},
+\label{eq:field-definition}
+\end{equation}%
+}
+\newcommand{\FieldProductMetricDisplay}{%
+\begin{equation}
+\langle \delta_1X,\delta_2X\rangle_{\mathcal V}=\sum_{p\in\mathcal I}\langle (\delta_1X)_p,(\delta_2X)_p\rangle_{\mathrm F},\qquad \delta_1X,\delta_2X\in {\mathcal V}.
+\label{eq:field-product-metric}
+\end{equation}%
+}
+
+% Worked vector, matrix and trace comparisons in Field.
+\newcommand{\FieldExampleVectorA}{a}
+\newcommand{\FieldExampleVectorB}{b}
+\newcommand{\FieldExampleMatrixA}{A}
+\newcommand{\FieldExampleMatrixB}{B}
+\newcommand{\FieldExampleMatrixTranspose}{A^T}
+\newcommand{\FieldExampleMatrixSize}{2\times2}
+\newcommand{\FieldTraceNotation}{\operatorname{tr}}
+\newcommand{\FieldSymmetryIdentity}{A^T=A}
+\newcommand{\FieldExampleVectorsDisplay}{%
+\begin{equation}
+a=(1,0),\qquad b=\left(\frac35,\frac45\right).
+\label{eq:field-example-vectors}
+\end{equation}%
+}
+\newcommand{\FieldExampleLengthsDisplay}{%
+\begin{equation}
+\langle a,a\rangle=1^2+0^2=1,\qquad
+\langle b,b\rangle=\left(\frac35\right)^2+\left(\frac45\right)^2=1.
+\end{equation}%
+}
+\newcommand{\FieldExampleAlignmentDisplay}{%
+\begin{equation}
+\langle a,b\rangle=1\cdot\frac35+0\cdot\frac45=\frac35.
+\end{equation}%
+}
+\newcommand{\FieldExampleProjectionDisplay}{%
+\begin{equation}
+\underbrace{\left(\frac35,\frac45\right)}_{b}
+=\underbrace{\left(\frac35,0\right)}_{\text{parallel to }a}
++\underbrace{\left(0,\frac45\right)}_{\text{perpendicular to }a}.
+\end{equation}%
+}
+\newcommand{\FieldExampleMatricesDisplay}{%
+\begin{equation}
+A=\begin{pmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{pmatrix},\qquad
+B=\begin{pmatrix}b_{11}&b_{12}\\b_{21}&b_{22}\end{pmatrix},
+\end{equation}%
+}
+\newcommand{\FieldExampleMatrixComparisonDisplay}{%
+\begin{equation}
+\langle A,B\rangle=a_{11}b_{11}+a_{12}b_{12}+a_{21}b_{21}+a_{22}b_{22}.
+\end{equation}%
+}
+\newcommand{\FieldExampleMatrixLengthDisplay}{%
+\begin{equation}
+\|A\|^2=\langle A,A\rangle=a_{11}^{\,2}+a_{12}^{\,2}+a_{21}^{\,2}+a_{22}^{\,2}.
+\end{equation}%
+}
+\newcommand{\FieldExampleTransposeDisplay}{%
+\begin{equation}
+A=\begin{pmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{pmatrix}
+\quad\longrightarrow\quad
+A^T=\begin{pmatrix}a_{11}&a_{21}\\a_{12}&a_{22}\end{pmatrix}.
+\end{equation}%
+}
+\newcommand{\FieldExampleDiagonalDisplay}{%
+\begin{equation}
+\begin{aligned}
+(A^TB)_{11}&=a_{11}b_{11}+a_{21}b_{21},\\
+(A^TB)_{22}&=a_{12}b_{12}+a_{22}b_{22}.
+\end{aligned}
+\end{equation}%
+}
+\newcommand{\FieldExampleTraceDisplay}{%
+\begin{equation}
+\begin{aligned}
+\operatorname{tr}(A^TB)&=(A^TB)_{11}+(A^TB)_{22}\\
+&=a_{11}b_{11}+a_{12}b_{12}+a_{21}b_{21}+a_{22}b_{22}\\
+&=\langle A,B\rangle.
+\end{aligned}
+\label{eq:field-example-trace}
+\end{equation}%
+}
+
+% Worked self-adjoint map in Field.
+\newcommand{\FieldSelfAdjointExampleDisplay}{%
+\begin{equation}
+A=\begin{pmatrix}2&1\\1&3\end{pmatrix},\qquad
+v=\begin{pmatrix}1\\0\end{pmatrix},\qquad
+w=\begin{pmatrix}0\\1\end{pmatrix}.
+\label{eq:field-self-adjoint-example}
+\end{equation}%
+}
+\newcommand{\FieldSelfAdjointActionsDisplay}{%
+\begin{equation}
+Av=\begin{pmatrix}2\\1\end{pmatrix},\qquad
+Aw=\begin{pmatrix}1\\3\end{pmatrix}.
+\end{equation}%
+}
+\newcommand{\FieldSelfAdjointComparisonsDisplay}{%
+\begin{equation}
+\langle Av,w\rangle=2\cdot0+1\cdot1=1,\qquad
+\langle v,Aw\rangle=1\cdot1+0\cdot3=1.
+\end{equation}%
+}
+\newcommand{\FieldSelfAdjointIdentityDisplay}{%
+\begin{equation}
+\langle Av,w\rangle=(Av)^Tw=v^TA^Tw=v^TAw=\langle v,Aw\rangle.
+\label{eq:field-self-adjoint-identity}
+\end{equation}%
+}
+
+% Worked product-space metric in Field.
+\newcommand{\FieldFirstChange}{(\delta_1X)_1}
+\newcommand{\FieldSecondChange}{(\delta_1X)_2}
+\newcommand{\FieldCompleteChange}{\delta_1X}
+\newcommand{\FieldOtherChangePair}{\delta_2X=((\delta_2X)_1,(\delta_2X)_2)}
+\newcommand{\FieldTwoComponentSpaceDisplay}{%
+\begin{equation}
+{\mathcal V}=\mathbb V\times\mathbb V.
+\label{eq:field-two-component-space}
+\end{equation}%
+}
+\newcommand{\FieldTwoComponentValueDisplay}{%
+\begin{equation}
+X=(X_1,X_2),\qquad X_1,X_2\in\mathbb V.
+\end{equation}%
+}
+\newcommand{\FieldTwoComponentChangeDisplay}{%
+\begin{equation}
+\delta_1X=((\delta_1X)_1,(\delta_1X)_2).
+\end{equation}%
+}
+\newcommand{\FieldTwoComponentMetricDisplay}{%
+\begin{equation}
+\langle \delta_1X,\delta_2X\rangle_{\mathcal V}=\langle (\delta_1X)_1,(\delta_2X)_1\rangle_{\mathrm F}+\langle (\delta_1X)_2,(\delta_2X)_2\rangle_{\mathrm F}.
+\label{eq:field-two-component-metric}
+\end{equation}%
+}
+\newcommand{\FieldProductFirstExampleDisplay}{%
+\begin{equation}
+(\delta_1X)_1=\begin{pmatrix}1&0\\0&0\end{pmatrix},\qquad
+(\delta_1X)_2=\begin{pmatrix}0&0\\0&2\end{pmatrix},
+\end{equation}%
+}
+\newcommand{\FieldProductSecondExampleDisplay}{%
+\begin{equation}
+(\delta_2X)_1=\begin{pmatrix}3&0\\0&0\end{pmatrix},\qquad
+(\delta_2X)_2=\begin{pmatrix}0&0\\0&4\end{pmatrix}.
+\end{equation}%
+}
+\newcommand{\FieldProductComparisonsDisplay}{%
+\begin{equation}
+\langle (\delta_1X)_1,(\delta_2X)_1\rangle_{\mathrm F}=1\cdot3=3,\qquad
+\langle (\delta_1X)_2,(\delta_2X)_2\rangle_{\mathrm F}=2\cdot4=8.
+\end{equation}%
+}
+\newcommand{\FieldProductTotalDisplay}{%
+\begin{equation}
+\langle \delta_1X,\delta_2X\rangle_{\mathcal V}=3+8=11.
+\end{equation}%
+}
+\newcommand{\FieldProductLengthDisplay}{%
+\begin{equation}
+\|\delta_1X\|_{\mathcal V}^2=\langle (\delta_1X)_1,(\delta_1X)_1\rangle_{\mathrm F}+\langle (\delta_1X)_2,(\delta_1X)_2\rangle_{\mathrm F}=1^2+2^2=5.
+\label{eq:field-product-example-length}
+\end{equation}%
+}
+
+% Worked radial/transverse plane and U(1) rotations in Field.
+\newcommand{\FieldRadialUnit}{{e_r}}
+\newcommand{\FieldTransverseUnit}{{e_\perp}}
+\newcommand{\FieldRadialProjectionValue}{\langle {e_r},b\rangle=\frac35}
+\newcommand{\FieldTransverseLength}{\frac45}
+\newcommand{\FieldPlaneComplexCoordinate}{z}
+\newcommand{\FieldImaginaryUnit}{i}
+\newcommand{\FieldPlaneRealCoordinates}{(x,y)}
+\newcommand{\FieldPlaneRotatedCoordinates}{(-y,x)}
+\newcommand{\FieldPlaneComplexStructure}{J}
+\newcommand{\FieldPlaneIdentity}{I}
+\newcommand{\FieldPlaneAngle}{\theta}
+\newcommand{\FieldRadialVectorsDisplay}{%
+\begin{equation}
+a=(1,0),\qquad b=\left(\frac35,\frac45\right).
+\end{equation}%
+}
+\newcommand{\FieldRadialUnitDisplay}{%
+\begin{equation}
+{e_r}=a=(1,0).
+\end{equation}%
+}
+\newcommand{\FieldTransverseSubtractionDisplay}{%
+\begin{equation}
+b_\perp=b-\langle {e_r},b\rangle {e_r}
+=\left(\frac35,\frac45\right)-\left(\frac35,0\right)
+=\left(0,\frac45\right).
+\label{eq:field-transverse-example}
+\end{equation}%
+}
+\newcommand{\FieldTransverseUnitDisplay}{%
+\begin{equation}
+{e_\perp}=\frac{b_\perp}{\|b_\perp\|}=(0,1).
+\end{equation}%
+}
+\newcommand{\FieldPlaneOrthonormalityDisplay}{%
+\begin{equation}
+\langle {e_r},{e_r}\rangle=\langle {e_\perp},{e_\perp}\rangle=1,\qquad \langle {e_r},{e_\perp}\rangle=0.
+\end{equation}%
+}
+\newcommand{\FieldPlaneVectorDisplay}{%
+\begin{equation}
+v=x{e_r}+y{e_\perp}.
+\end{equation}%
+}
+\newcommand{\FieldPlaneComplexCoordinateDisplay}{%
+\begin{equation}
+z=x+iy,\qquad i^2=-1.
+\end{equation}%
+}
+\newcommand{\FieldPlaneImaginaryRotationDisplay}{%
+\begin{equation}
+iz=i(x+iy)=-y+ix.
+\end{equation}%
+}
+\newcommand{\FieldPlaneQuarterTurnDisplay}{%
+\begin{equation}
+{e_r}\longmapsto {e_\perp},\qquad {e_\perp}\longmapsto -{e_r}.
+\end{equation}%
+}
+\newcommand{\FieldPlaneComplexStructureDisplay}{%
+\begin{equation}
+J{e_r}={e_\perp},\qquad J{e_\perp}=-{e_r},\qquad J^2=-I,
+\end{equation}%
+}
+\newcommand{\FieldPlanePhaseFactorDisplay}{%
+\begin{equation}
+e^{i\theta}=\cos\theta+i\sin\theta.
+\end{equation}%
+}
+\newcommand{\FieldPlaneRotationCoordinatesDisplay}{%
+\begin{equation}
+e^{i\theta}(x+iy)
+=(x\cos\theta-y\sin\theta)+i(x\sin\theta+y\cos\theta),
+\end{equation}%
+}
+\newcommand{\FieldPlanePhaseLengthDisplay}{%
+\begin{equation}
+|e^{i\theta}|^2=\cos^2\theta+\sin^2\theta=1,
+\end{equation}%
+}
+\newcommand{\FieldPlanePhaseGroupDisplay}{%
+\begin{equation}
+\mathrm U(1)=\{e^{i\theta}:\theta\in\mathbb R\}.
+\label{eq:field-phase-group-example}
+\end{equation}%
+}
+\newcommand{\FieldPlanePhaseCompositionDisplay}{%
+\begin{equation}
+e^{i\alpha}e^{i\beta}=e^{i(\alpha+\beta)}.
+\end{equation}%
+}
+
+% Worked induced U(1) connection and local gauge transformation in Field.
+\newcommand{\FieldPathParameter}{s}
+\newcommand{\FieldMovingRadial}{{e_r}(s)}
+\newcommand{\FieldMovingTransverse}{{e_\perp}(s)}
+\newcommand{\FieldRadialDerivative}{d e_r/ds}
+\newcommand{\FieldTransverseDerivative}{d e_\perp/ds}
+\newcommand{\FieldNegativeRadial}{-{e_r}}
+\newcommand{\FieldConnectionComplexValue}{z=x+iy}
+\newcommand{\FieldGaugeAngle}{\chi(s)}
+\newcommand{\FieldConnectionVector}{v}
+\newcommand{\FieldGaugeUnrotation}{\chi=-s}
+\newcommand{\FieldConfigurationCoordinates}{x^\mu}
+\newcommand{\FieldConnectionCoefficients}{a_\mu}
+\newcommand{\FieldConnectionRateDisplay}{%
+\begin{equation}
+ a_s=\left\langle e_\perp(s),\frac{d e_r}{ds}\right\rangle.
+\label{eq:field-connection-rate}
+\end{equation}%
+}
+\newcommand{\FieldConnectionProjectedDisplay}{%
+\begin{equation}
+\left(\frac{d e_r}{ds}\right)_{\parallel}=a_s {e_\perp},\qquad
+\left(\frac{d e_\perp}{ds}\right)_{\parallel}=-a_s {e_r}.
+\end{equation}%
+}
+\newcommand{\FieldConnectionRotatingFrameDisplay}{%
+\begin{equation}
+{e_r}(s)=(\cos s,\sin s),\qquad {e_\perp}(s)=(-\sin s,\cos s).
+\end{equation}%
+}
+\newcommand{\FieldConnectionRotatingRateDisplay}{%
+\begin{equation}
+\frac{d e_r}{ds}={e_\perp},\qquad\frac{d e_\perp}{ds}=-{e_r},\qquad a_s=\langle {e_\perp},{e_\perp}\rangle=1.
+\end{equation}%
+}
+\newcommand{\FieldConnectionVectorDisplay}{%
+\begin{equation}
+v(s)=x(s){e_r}(s)+y(s){e_\perp}(s).
+\end{equation}%
+}
+\newcommand{\FieldConnectionVectorDerivativeDisplay}{%
+\begin{equation}
+\left(\frac{dv}{ds}\right)_{\parallel}
+=\left(\frac{dx}{ds}-a_s y\right){e_r}
++\left(\frac{dy}{ds}+a_s x\right){e_\perp}.
+\end{equation}%
+}
+\newcommand{\FieldConnectionCovariantDerivativeDisplay}{%
+\begin{equation}
+D_s z=\frac{dz}{ds}+ia_s z.
+\end{equation}%
+}
+\newcommand{\FieldConnectionFixedVectorDisplay}{%
+\begin{equation}
+v=(1,0).
+\end{equation}%
+}
+\newcommand{\FieldConnectionFixedCoordinatesDisplay}{%
+\begin{equation}
+x(s)=\langle {e_r}(s),v\rangle=\cos s,\qquad
+y(s)=\langle {e_\perp}(s),v\rangle=-\sin s,
+\end{equation}%
+}
+\newcommand{\FieldConnectionFixedComplexDisplay}{%
+\begin{equation}
+z(s)=e^{-is}.
+\end{equation}%
+}
+\newcommand{\FieldConnectionCancellationDisplay}{%
+\begin{equation}
+D_sz=\frac{d}{ds}e^{-is}+ie^{-is}=-ie^{-is}+ie^{-is}=0.
+\label{eq:field-connection-fixed-vector}
+\end{equation}%
+}
+\newcommand{\FieldConnectionFrameChangeDisplay}{%
+\begin{equation}
+\widetilde {e_r}=\cos\chi\,{e_r}+\sin\chi\,{e_\perp},\qquad
+\widetilde {e_\perp}=-\sin\chi\,{e_r}+\cos\chi\,{e_\perp}.
+\end{equation}%
+}
+\newcommand{\FieldConnectionCoordinateChangeDisplay}{%
+\begin{equation}
+\widetilde z=e^{-i\chi}z.
+\end{equation}%
+}
+\newcommand{\FieldConnectionPotentialChangeDisplay}{%
+\begin{equation}
+\widetilde a_s=a_s+\frac{d\chi}{ds}.
+\end{equation}%
+}
+\newcommand{\FieldConnectionCovarianceDisplay}{%
+\begin{equation}
+\widetilde D_s\widetilde z=e^{-i\chi}D_sz.
+\label{eq:field-connection-gauge-covariance}
+\end{equation}%
+}
+\newcommand{\FieldConnectionCoordinateDirectionsDisplay}{%
+\begin{equation}
+a_\mu=\left\langle {e_\perp},\frac{\partial {e_r}}{\partial x^\mu}\right\rangle,\qquad
+D_\mu z=\frac{\partial z}{\partial x^\mu}+ia_\mu z.
+\end{equation}%
+}
+
+% Worked coupling, orthogonal planes and non-Abelian frame transformations.
+\newcommand{\FieldCouplingLinearResponse}{{L_X}\delta X}
+\newcommand{\FieldCouplingExampleAdjoint}{{L_X}^*=2I}
+\newcommand{\FieldCouplingExampleNormalization}{\sqrt5}
+\newcommand{\FieldCouplingUnitaryGroup}{\mathrm U(2)}
+\newcommand{\FieldCouplingMixingU}{U_1}
+\newcommand{\FieldCouplingMixingV}{U_2}
+\newcommand{\FieldCouplingNoncommutation}{U_1U_2\ne U_2U_1}
+\newcommand{\FieldCouplingResponseDisplay}{%
+\begin{equation}Y=\Lambda(X).\end{equation}%
+}
+\newcommand{\FieldCouplingWeightsDisplay}{%
+\begin{equation}
+Y_p=w_p(X)X_p,\qquad w_p(X)=\sum_{j\ne p}\langle X_p,X_j\rangle_{\mathrm F}.
+\end{equation}%
+}
+\newcommand{\FieldCouplingDerivativeDisplay}{%
+\begin{equation}{L_X}=D\Lambda(X).\end{equation}%
+}
+\newcommand{\FieldCouplingVariationDisplay}{%
+\begin{equation}
+({L_X}\delta X)_p=w_p(X)(\delta X)_p+X_p\sum_{j\ne p}\left[\langle (\delta X)_p,X_j\rangle_{\mathrm F}+\langle X_p,(\delta X)_j\rangle_{\mathrm F}\right].
+\label{eq:field-coupling-variation}
+\end{equation}%
+}
+\newcommand{\FieldCouplingGraphDisplay}{%
+\begin{equation}{\iota_{L_X}}(\delta X)=(\delta X,{L_X}\delta X).\end{equation}%
+}
+\newcommand{\FieldCouplingAdjointDisplay}{%
+\begin{equation}
+\langle {L_X}\delta X,w\rangle_{\mathcal V}=\langle \delta X,{L_X}^*w\rangle_{\mathcal V}\qquad\text{for every }\delta X,w.
+\end{equation}%
+}
+\newcommand{\FieldCouplingNormalDisplay}{%
+\begin{equation}{\iota_{L_X}^\perp}(w)=(-{L_X}^*w,w).\end{equation}%
+}
+\newcommand{\FieldCouplingOrthogonalityDisplay}{%
+\begin{equation}
+\begin{aligned}
+\langle {\iota_{L_X}}(\delta X),{\iota_{L_X}^\perp}(w)\rangle_{{\mathcal V}\times {\mathcal V}}
+&=\langle \delta X,-{L_X}^*w\rangle_{\mathcal V}+\langle {L_X}\delta X,w\rangle_{\mathcal V}\\
+&=-\langle \delta X,{L_X}^*w\rangle_{\mathcal V}+\langle {L_X}\delta X,w\rangle_{\mathcal V}\\
+&=0.
+\end{aligned}
+\label{eq:field-coupling-orthogonality}
+\end{equation}%
+}
+\newcommand{\FieldCouplingGraphPlaneDisplay}{%
+\begin{equation}{\iota_{L_X}}({e_r})=({e_r},{L_X}{e_r}),\qquad {\iota_{L_X}}({e_\perp})=({e_\perp},{L_X}{e_\perp}),\end{equation}%
+}
+\newcommand{\FieldCouplingNormalPlaneDisplay}{%
+\begin{equation}{\iota_{L_X}^\perp}({e_r})=(-{L_X}^*{e_r},{e_r}),\qquad {\iota_{L_X}^\perp}({e_\perp})=(-{L_X}^*{e_\perp},{e_\perp}).\end{equation}%
+}
+\newcommand{\FieldCouplingExampleDerivativeDisplay}{%
+\begin{equation}{L_X}=2I,\qquad {e_r}=(1,0),\qquad {e_\perp}=(0,1),\end{equation}%
+}
+\newcommand{\FieldCouplingExampleLiftsDisplay}{%
+\begin{equation}
+\begin{aligned}
+{\iota_{L_X}}({e_r})&=(1,0;\,2,0),&{\iota_{L_X}}({e_\perp})&=(0,1;\,0,2),\\
+{\iota_{L_X}^\perp}({e_r})&=(-2,0;\,1,0),&{\iota_{L_X}^\perp}({e_\perp})&=(0,-2;\,0,1).
+\end{aligned}
+\end{equation}%
+}
+\newcommand{\FieldCouplingExampleCancellationDisplay}{%
+\begin{equation}
+\langle {\iota_{L_X}}({e_r}),{\iota_{L_X}^\perp}({e_r})\rangle=1(-2)+0(0)+2(1)+0(0)=0.
+\end{equation}%
+}
+\newcommand{\FieldCouplingComplexPairDisplay}{%
+\begin{equation}\mathbf z=\begin{pmatrix}z_1\\z_2\end{pmatrix},\end{equation}%
+}
+\newcommand{\FieldCouplingComplexNormDisplay}{%
+\begin{equation}\|\mathbf z\|^2=|z_1|^2+|z_2|^2.\end{equation}%
+}
+\newcommand{\FieldCouplingMixingMatricesDisplay}{%
+\begin{equation}
+{U_1}=\begin{pmatrix}i&0\\0&-i\end{pmatrix},\qquad
+{U_2}=\frac1{\sqrt2}\begin{pmatrix}1&1\\-1&1\end{pmatrix}.
+\end{equation}%
+}
+\newcommand{\FieldCouplingInitialCoordinateDisplay}{%
+\begin{equation}\mathbf z_0=\begin{pmatrix}1\\0\end{pmatrix},\end{equation}%
+}
+\newcommand{\FieldCouplingFirstOrderDisplay}{%
+\begin{equation}{U_1}{U_2}\mathbf z_0=\frac1{\sqrt2}\begin{pmatrix}i\\i\end{pmatrix},\end{equation}%
+}
+\newcommand{\FieldCouplingSecondOrderDisplay}{%
+\begin{equation}{U_2}{U_1}\mathbf z_0=\frac1{\sqrt2}\begin{pmatrix}i\\-i\end{pmatrix}.\label{eq:field-coupling-noncommuting-example}\end{equation}%
+}
+
+% Yang--Mills waves, collective mass and the physical mass-gap question.
+\newcommand{\FieldYMPotential}{A_\mu}
+\newcommand{\FieldYMCoordinateIndex}{\mu}
+\newcommand{\FieldYMCoupling}{g_{\mathrm{YM}}}
+\newcommand{\FieldYMNaturalUnits}{c=\hbar=1}
+\newcommand{\FieldYMMassTerm}{\operatorname{tr}(A_\mu A^\mu)}
+\newcommand{\FieldYMFrequency}{\omega}
+\newcommand{\FieldYMWaveVector}{\mathbf k}
+\newcommand{\FieldYMQuantumEnergy}{E=\hbar\omega}
+\newcommand{\FieldYMQuantumMomentum}{\mathbf p=\hbar\mathbf k}
+\newcommand{\FieldYMZeroMass}{m=0}
+\newcommand{\FieldYMTotalEnergy}{E}
+\newcommand{\FieldYMTotalMomentum}{\mathbf P}
+\newcommand{\FieldYMCollectiveMass}{M}
+\newcommand{\FieldYMExampleEnergy}{\varepsilon}
+\newcommand{\FieldYMScalarLabel}{0^{++}}
+
+
+\newcommand{\FieldYMStrengthDisplay}{%
+\begin{equation}
+F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu-ig_{\mathrm{YM}}[A_\mu,A_\nu],
+\label{eq:field-ym-strength}
+\end{equation}%
+}
+\newcommand{\FieldYMCommutatorDisplay}{%
+\begin{equation}[A_\mu,A_\nu]=A_\mu A_\nu-A_\nu A_\mu.\end{equation}%
+}
+\newcommand{\FieldYMLagrangianDisplay}{%
+\begin{equation}\mathcal L_{\mathrm{YM}}=-\frac12\operatorname{tr}(F_{\mu\nu}F^{\mu\nu}).\end{equation}%
+}
+\newcommand{\FieldYMWaveDisplay}{%
+\begin{equation}
+\left(\frac1{c^2}\frac{\partial^2}{\partial t^2}-\nabla^2\right)\mathbf A_\perp=0.
+\end{equation}%
+}
+\newcommand{\FieldYMDispersionDisplay}{%
+\begin{equation}\omega^2=c^2|\mathbf k|^2.\end{equation}%
+}
+\newcommand{\FieldYMMasslessEnergyDisplay}{%
+\begin{equation}E=c|\mathbf p|.\end{equation}%
+}
+\newcommand{\FieldYMRelativisticEnergyDisplay}{%
+\begin{equation}E^2=c^2|\mathbf p|^2+m^2c^4.\end{equation}%
+}
+\newcommand{\FieldYMInvariantMassDisplay}{%
+\begin{equation}M^2c^4=E^2-c^2|\mathbf P|^2.\end{equation}%
+}
+\newcommand{\FieldYMOppositeMomentaDisplay}{%
+\begin{equation} E_1=E_2=\varepsilon,\qquad \mathbf p_1=\frac{\varepsilon}{c}\hat{\mathbf x},\qquad \mathbf p_2=-\frac{\varepsilon}{c}\hat{\mathbf x},\end{equation}%
+}
+\newcommand{\FieldYMCombinedEnergyDisplay}{%
+\begin{equation} E=E_1+E_2=2\varepsilon,\qquad\mathbf P=0.\end{equation}%
+}
+\newcommand{\FieldYMPairMassDisplay}{%
+\begin{equation} M=\frac{2\varepsilon}{c^2}.\label{eq:field-massless-pair-mass}\end{equation}%
+}
+\newcommand{\FieldYMGlueballMassDisplay}{%
+\begin{equation}M_{0^{++}}c^2=1.73\pm0.05\pm0.08\ \mathrm{GeV}\end{equation}%
+}
+
+
+% Worked Phase applications, loop phases and gauge invariance.
+\newcommand{\PhaseExampleRotationAngle}{\pi/4}
+\newcommand{\PhaseHermitianPairing}{h}
+\newcommand{\PhaseDifferentialSymbol}{d}
+\newcommand{\PhaseOrientedAreaElement}{d x^1\wedge d x^2}
+\newcommand{\PhaseSurfaceBoundary}{\partial\mathcal S}
+\newcommand{\PhaseExampleLoopAngle}{\pi/2}
+\newcommand{\PhaseConnectionConvention}{\nabla=d+ia}
+\newcommand{\PhaseGaugeAngleSymbol}{\chi}
+\newcommand{\PhaseMatrixExampleDisplay}{%
+\begin{equation}
+X_p=\begin{pmatrix}1&0\\0&0\end{pmatrix},\qquad
+X_i=\begin{pmatrix}\frac35&0\\0&\frac45\end{pmatrix}.
+\label{eq:phase-matrix-example}
+\end{equation}%
+}
+\newcommand{\PhaseMatrixProjectionDisplay}{%
+\begin{equation}
+\begin{gathered}
+\langle X_p,X_p\rangle_{\mathrm F}=1,\qquad\langle X_p,X_i\rangle_{\mathrm F}=\frac35,\qquad
+X_{i\perp p}=\begin{pmatrix}0&0\\0&\frac45\end{pmatrix},\\
+{e_r}=\begin{pmatrix}1&0\\0&0\end{pmatrix},\qquad
+{e_\perp}=\begin{pmatrix}0&0\\0&1\end{pmatrix},\qquad\langle {e_r},{e_\perp}\rangle_{\mathrm F}=0.
+\end{gathered}
+\end{equation}%
+}
+\newcommand{\PhaseMatrixRotationDisplay}{%
+\begin{equation}
+\mathsf R\!\left(\frac\pi4\right){e_r}=\frac{{e_r}+{e_\perp}}{\sqrt2}
+=\frac1{\sqrt2}\begin{pmatrix}1&0\\0&1\end{pmatrix},\qquad
+\left\|\mathsf R\!\left(\frac\pi4\right){e_r}\right\|_{\mathrm F}^2=1.
+\end{equation}%
+}
+\newcommand{\PhaseHermitianExampleDisplay}{%
+\begin{equation}
+\begin{gathered}
+v=x{e_r}+y{e_\perp},\qquad z=x+iy,\qquad\langle v,v\rangle_{\mathrm F}=x^2+y^2=|z|^2,\\
+h(z_1,z_2)=\overline{z_1}z_2.
+\end{gathered}
+\end{equation}%
+}
+\newcommand{\PhaseConnectionPathDisplay}{%
+\begin{equation}
+a_s=a\!\left(\frac{d}{ds}\right)=\left\langle e_\perp,\frac{d e_r}{ds}\right\rangle_{\mathrm F}.
+\end{equation}%
+}
+\newcommand{\PhaseCurvatureCoordinatesDisplay}{%
+\begin{equation}
+a=a_1\,dx^1+a_2\,dx^2,\qquad
+da=\left(\frac{\partial a_2}{\partial x^1}-\frac{\partial a_1}{\partial x^2}\right)dx^1\wedge dx^2.
+\label{eq:phase-curvature-coordinates}
+\end{equation}%
+}
+\newcommand{\PhaseLoopExampleDisplay}{%
+\begin{equation}
+\int_{\mathcal S} da=\frac\pi2\quad\Longrightarrow\quad
+\exp\!\left(i\oint_{\partial \mathcal S}a\right)=e^{i\pi/2}=i.
+\end{equation}%
+}
+\newcommand{\PhaseParallelTransportDisplay}{%
+\begin{equation}
+dz+iaz=0,\qquad
+z_{\mathrm{end}}=\exp\!\left(-i\oint_{\partial\mathcal S}a\right)z_{\mathrm{start}}.
+\label{eq:phase-parallel-transport-sign}
+\end{equation}%
+}
+\newcommand{\PhaseGaugeExampleDisplay}{%
+\begin{equation}
+\chi(x^1,x^2)=x^1x^2,\qquad d\chi=x^2\,dx^1+x^1\,dx^2,\qquad d(d\chi)=(-1+1)\,dx^1\wedge dx^2=0.
+\end{equation}%
+}
+\newcommand{\PhaseGaugeAngleDifferential}{d\chi}
+
+% Worked Coupling examples and explanations.
+\newcommand{\CouplingPlaneCoordinates}{\xi}
+\newcommand{\CouplingAlpha}{\alpha}
+\newcommand{\CouplingBeta}{\beta}
+\newcommand{\CouplingSecondDerivative}{{L_Y}}
+\newcommand{\CouplingMatrixInputExampleDisplay}{%
+\begin{equation}
+X_1=\begin{pmatrix}1&0\\0&0\end{pmatrix},\qquad
+X_2=\begin{pmatrix}2&0\\0&1\end{pmatrix}.
+\label{eq:coupling-matrix-input}
+\end{equation}%
+}
+\newcommand{\CouplingMatrixResponseExampleDisplay}{%
+\begin{equation}
+\begin{gathered}
+w_1=w_2=\langle X_1,X_2\rangle_{\mathrm F}=2,\\
+Y_1=2X_1=\begin{pmatrix}2&0\\0&0\end{pmatrix},\qquad
+Y_2=2X_2=\begin{pmatrix}4&0\\0&2\end{pmatrix}.
+\end{gathered}
+\end{equation}%
+}
+\newcommand{\CouplingMatrixVariationExampleDisplay}{%
+\begin{equation}
+\begin{gathered}
+(\delta X)_1=\begin{pmatrix}0&0\\0&1\end{pmatrix},\qquad (\delta X)_2=0,\qquad
+\delta w_1=\delta w_2=\langle (\delta X)_1,X_2\rangle_{\mathrm F}=1,\\
+(L_X\delta X)_1=2(\delta X)_1+X_1=\begin{pmatrix}1&0\\0&2\end{pmatrix},\qquad
+(L_X\delta X)_2=X_2=\begin{pmatrix}2&0\\0&1\end{pmatrix}.
+\end{gathered}
+\label{eq:coupling-matrix-variation}
+\end{equation}%
+}
+\newcommand{\CouplingAdjointMeaningDisplay}{%
+\begin{equation}
+\langle {L_X}v,w\rangle_{\mathcal V}=\langle v,{L_X}^*w\rangle_{\mathcal V}\qquad(v,w\in {\mathcal V}).
+\end{equation}%
+}
+\newcommand{\CouplingGramLengthsDisplay}{%
+\begin{equation}
+\begin{aligned}
+\xi^T{\mathsf V_0}^*{\mathsf V_0}\xi&=\|{\mathsf V}\xi\|_{\mathcal V}^2+\|{L_X}{\mathsf V}\xi\|_{\mathcal V}^2>0,\\
+\xi^T{\mathsf V_1}^*{\mathsf V_1}\xi&=\|{\mathsf V}\xi\|_{\mathcal V}^2+\|{L_X}^*{\mathsf V}\xi\|_{\mathcal V}^2>0,
+\qquad\xi\in\mathbb R^2\setminus\{0\}.
+\end{aligned}
+\label{eq:coupling-gram-lengths}
+\end{equation}%
+}
+\newcommand{\CouplingComplexVolumeDisplay}{%
+\begin{equation}
+\det[z\ w]=z_1w_2-z_2w_1,\qquad
+\det[Uz\ Uw]=(\det U)\det[z\ w].
+\end{equation}%
+}
+\newcommand{\CouplingUnitaryMixingExampleDisplay}{%
+\begin{equation}
+\alpha=\beta=\frac1{\sqrt2},\qquad
+U=\frac1{\sqrt2}\begin{pmatrix}1&1\\-1&1\end{pmatrix},\qquad
+U\begin{pmatrix}1\\0\end{pmatrix}=\frac1{\sqrt2}\begin{pmatrix}1\\-1\end{pmatrix}.
+\end{equation}%
+}
+\newcommand{\CouplingSuccessiveResponseDisplay}{%
+\begin{equation}
+Y=\Lambda(X),\quad Z=\Lambda(Y),\quad {L_Y}=D\Lambda(Y),\qquad
+\delta Y={L_X}\delta X,\quad\delta Z={L_Y}{L_X}\delta X.
+\label{eq:coupling-successive-response}
+\end{equation}%
+}
+\newcommand{\CouplingSecondMatrixResponseDisplay}{%
+\begin{equation}
+\langle Y_1,Y_2\rangle_{\mathrm F}=8,\qquad
+Z_1=8Y_1=\begin{pmatrix}16&0\\0&0\end{pmatrix},\qquad
+Z_2=8Y_2=\begin{pmatrix}32&0\\0&16\end{pmatrix}.
+\end{equation}%
+}
+
+% Worked explanations for Algebra.
+\newcommand{\AlgebraRawNormal}{{\mathsf W_2}}
+\newcommand{\AlgebraFinalNormal}{{\mathsf V_2}}
+\newcommand{\AlgebraResponseExampleDisplay}{%
+\begin{equation}
+\begin{aligned}
+\delta w_1(Y)=\delta w_2(Y)
+&=\langle(L_X\delta X)_1,Y_2\rangle_{\mathrm F}+\langle Y_1,(L_X\delta X)_2\rangle_{\mathrm F}\\
+&=8+4=12,\\
+(L_YL_X\delta X)_1&=8(L_X\delta X)_1+12Y_1=\begin{pmatrix}32&0\\0&16\end{pmatrix},\\
+(L_YL_X\delta X)_2&=8(L_X\delta X)_2+12Y_2=\begin{pmatrix}64&0\\0&32\end{pmatrix}.
+\end{aligned}
+\label{eq:algebra-response-example}
+\end{equation}%
+}
+\newcommand{\AlgebraNormalCancellationDisplay}{%
+\begin{equation}
+\begin{aligned}
+\langle\iota{}v,{\iota_1^\perp}w\rangle
+&=-\langle v,{L_X}^*w\rangle+\langle {L_X}v,w\rangle=0,\\
+\langle\iota{}v,{\iota_2^\perp}w\rangle
+&=-\langle {L_X}v,{L_Y}^*w\rangle+\langle {L_Y}{L_X}v,w\rangle=0.
+\end{aligned}
+\end{equation}%
+}
+\newcommand{\AlgebraProjectionDisplay}{%
+\begin{equation}
+({\mathsf V_1}^*{\mathsf V_1})\alpha={\mathsf V_1}^*{\mathsf W_2}\xi,\qquad \alpha=({\mathsf V_1}^*{\mathsf V_1})^{-1}{\mathsf V_1}^*{\mathsf W_2}\xi,\qquad
+{\mathsf V_1}^*({\mathsf W_2}\xi-{\mathsf V_1}\alpha)=0.
+\end{equation}%
+}
+\newcommand{\AlgebraMatrixUnitExampleDisplay}{%
+\begin{equation}
+E_{12}\begin{pmatrix}z_1\\z_2\\z_3\end{pmatrix}
+=\begin{pmatrix}z_2\\0\\0\end{pmatrix},\qquad
+E_{23}\begin{pmatrix}z_1\\z_2\\z_3\end{pmatrix}
+=\begin{pmatrix}0\\z_3\\0\end{pmatrix},\qquad
+E_{12}E_{23}=E_{13}.
+\end{equation}%
+}
+\newcommand{\AlgebraGeneratorActionDisplay}{%
+\begin{equation}
+\mathsf A_{12}=\begin{pmatrix}0&1&0\\-1&0&0\\0&0&0\end{pmatrix},\qquad
+\mathsf A_{12}\begin{pmatrix}z_1\\z_2\\z_3\end{pmatrix}
+=\begin{pmatrix}z_2\\-z_1\\0\end{pmatrix},\qquad
+\mathsf A_{12}^{\dagger}=-\mathsf A_{12}.
+\end{equation}%
+}
+\newcommand{\AlgebraCommutatorMeaningDisplay}{%
+\begin{equation}
+[P,Q]=PQ-QP,\qquad [P,Q]z=P(Qz)-Q(Pz).
+\end{equation}%
+}
+\newcommand{\AlgebraBracketProductsDisplay}{%
+\begin{equation}
+\mathsf A_{12}\mathsf A_{23}=E_{13},\qquad \mathsf A_{23}\mathsf A_{12}=E_{31},\qquad
+[\mathsf A_{12},\mathsf A_{23}]=E_{13}-E_{31}=\mathsf A_{13}.
+\end{equation}%
+}
+\newcommand{\AlgebraDimensionDisplay}{%
+\begin{equation}
+\operatorname{diag}(ia_1,ia_2,ia_3),\qquad
+ a_3=-a_1-a_2,\qquad
+\dim_{\mathbb R}\mathfrak{su}(3)=3\cdot2+(3-1)=8.
+\end{equation}%
+}
+\newcommand{\AlgebraFrameSkewDisplay}{%
+\begin{equation}
+\mathsf E^*\mathsf E=I_6,\qquad
+ d(\mathsf E^*\mathsf E)=(d\mathsf E)^*\mathsf E+\mathsf E^*d\mathsf E=0,\qquad
+\Omega_{\mathbb R}^*=-\Omega_{\mathbb R}.
+\end{equation}%
+}
+\newcommand{\AlgebraConnectionPropertiesDisplay}{%
+\begin{equation}
+A_JJ=JA_J,\qquad A^\dagger=-A,\qquad \operatorname{tr}_{\mathbb C}A=0.
+\end{equation}%
+}
+\newcommand{\AlgebraWedgeExampleDisplay}{%
+\begin{equation}
+\begin{gathered}
+(A_{12}\wedge A_{23})(\eta,\zeta)=A_{12}(\eta)A_{23}(\zeta)-A_{12}(\zeta)A_{23}(\eta),\\
+A_{12}(\eta)=A_{23}(\zeta)=1,\quad A_{12}(\zeta)=A_{23}(\eta)=0
+\quad\Longrightarrow\quad (A_{12}\wedge A_{23})(\eta,\zeta)=1.
+\end{gathered}
+\end{equation}%
+}
+\newcommand{\AlgebraDiagonalNormExampleDisplay}{%
+\begin{equation}
+\tfrac12\operatorname{tr}(\lambda_3^2)=\frac{1+1}{2}=1,\quad \tfrac12\operatorname{tr}(\lambda_8^2)=\frac{1+1+4}{6}=1,\quad \tfrac12\operatorname{tr}(\lambda_3\lambda_8)=\frac{1-1}{\sqrt{12}}=0.
+\end{equation}%
+}
+\newcommand{\AlgebraDiagonalExpansionDisplay}{%
+\begin{equation}
+\operatorname{diag}(1,0,-1)=\frac{\lambda_3}{2}+\frac{\sqrt3\,\lambda_8}{2}=\operatorname{diag}\!\left(\tfrac12,-\tfrac12,0\right)+\operatorname{diag}\!\left(\tfrac12,\tfrac12,-1\right).
+\end{equation}%
+}
+
+% Worked explanations for Curvature.
+\newcommand{\CurvatureEdgeLength}{\sqrt2\,\ell}
+\newcommand{\CurvatureEndpointExampleDisplay}{%
+\begin{equation}
+(\ell,0,0),\quad(-\ell,0,0),\quad(0,\ell,0),\quad(0,-\ell,0),\quad(0,0,\ell),\quad(0,0,-\ell).
+\end{equation}%
+}
+\newcommand{\CurvatureFaceAverageDisplay}{%
+\begin{equation}
+\begin{gathered}
+x=\alpha\ell e_1+\beta\ell e_2+\gamma\ell e_3,
+\qquad\alpha,\beta,\gamma\ge0,\qquad\alpha+\beta+\gamma=1,\\
+\alpha=\beta=\gamma=\tfrac13
+\quad\Longrightarrow\quad x=\tfrac{\ell}{3}(e_1+e_2+e_3).
+\end{gathered}
+\end{equation}%
+}
+\newcommand{\CurvatureFacePairExampleDisplay}{%
+\begin{equation}
+\tau_{(+,+,+)}=\operatorname{conv}\{\ell e_1,\ell e_2,\ell e_3\},\qquad
+\tau_{(+,+,-)}=\operatorname{conv}\{\ell e_1,\ell e_2,-\ell e_3\}.
+\end{equation}%
+}
+\newcommand{\CurvatureEdgeCancellationExampleDisplay}{%
+\begin{equation}
+[\ell e_1,\ell e_2]+[\ell e_2,\ell e_1]=0.
+\end{equation}%
+}
+\newcommand{\CurvatureCountingExampleDisplay}{%
+\begin{equation}
+N_{\mathrm{vertices}}=3\cdot2=6,\qquad
+N_{\mathrm{edges}}=\binom32\,2^2=12,\qquad
+N_{\mathrm{faces}}=2^3=8.
+\end{equation}%
+}
+\newcommand{\CurvatureEquilateralExampleDisplay}{%
+\begin{equation}
+\begin{gathered}
+\|\ell e_2-\ell e_1\|=\|\ell e_3-\ell e_1\|
+=\|\ell e_3-\ell e_2\|=\sqrt2\,\ell,\\
+\frac{\langle\ell e_2-\ell e_1,\ell e_3-\ell e_1\rangle}
+{\|\ell e_2-\ell e_1\|\,\|\ell e_3-\ell e_1\|}
+=\frac{\ell^2}{2\ell^2}=\frac12=\cos\frac\pi3.
+\end{gathered}
+\end{equation}%
+}
+\newcommand{\CurvatureAngleExampleDisplay}{%
+\begin{equation}
+4\frac\pi3=\frac{4\pi}{3}=240^\circ,\qquad
+2\pi-\frac{4\pi}{3}=\frac{2\pi}{3}=120^\circ.
+\end{equation}%
+}
+\newcommand{\CurvatureAngleCountingDisplay}{%
+\begin{equation}
+\sum_v\sum_{f\ni v}\theta_{vf}
+=\sum_f\sum_{v\in f}\theta_{vf}
+=\sum_{f=1}^{8}\pi=8\pi.
+\end{equation}%
+}
+\newcommand{\CurvatureScaleExampleDisplay}{%
+\begin{equation}
+\ell\longmapsto2\ell,\qquad
+\sqrt2\,\ell\longmapsto2\sqrt2\,\ell,\qquad
+\operatorname{Area}(\tau_s)\longmapsto4\operatorname{Area}(\tau_s),\qquad
+\delta_v\longmapsto\delta_v.
+\end{equation}%
+}
+
+% Worked explanations for Energy.
+\newcommand{\EnergyColorBlock}{\Omega_{11}}
+\newcommand{\EnergyMixedConnection}{\Omega_{12},\Omega_{21}}
+\newcommand{\EnergyBlockDerivative}{D_{\Omega_{11}}}
+\newcommand{\EnergyColorConnection}{A}
+\newcommand{\EnergyPairWeight}{(g^{-1}\wedge g^{-1})_{AB}}
+\newcommand{\EnergyMetricWork}{\Pi_g}
+\newcommand{\EnergyMetricExampleDisplay}{%
+\begin{equation}
+\mathsf g=\begin{pmatrix}-1&0\\0&1\end{pmatrix},\qquad
+e=\begin{pmatrix}2&0\\0&3\end{pmatrix},\qquad
+g=e^T\mathsf g e=\begin{pmatrix}-4&0\\0&9\end{pmatrix},\qquad
+g(v,w)=-4v^0w^0+9v^1w^1.
+\end{equation}%
+}
+\newcommand{\EnergyCurvatureOrderDisplay}{%
+\begin{equation}
+(\Omega_g\wedge\Omega_g)(\xi,\zeta)
+=\Omega_g(\xi)\Omega_g(\zeta)
+-\Omega_g(\zeta)\Omega_g(\xi).
+\end{equation}%
+}
+\newcommand{\EnergyColorCorrectionDisplay}{%
+\begin{equation}
+\begin{aligned}
+F_A&=F_{\Omega_{11}}+D_{\Omega_{11}}\Theta+\Theta\wedge\Theta,\\
+F_A+\Delta F&=F_{\Omega_{11}}+\Omega_{12}\wedge \Omega_{21}.
+\end{aligned}
+\end{equation}%
+}
+\newcommand{\EnergyWeightExampleDisplay}{%
+\begin{equation}
+g^{\mu\nu}=\operatorname{diag}(-1,1,1,1),\qquad
+(g^{-1}\wedge g^{-1})_{(0,1),(0,1)}=-1,\qquad (g^{-1}\wedge g^{-1})_{(1,2),(1,2)}=1.
+\end{equation}%
+}
+\newcommand{\EnergyProjectionExampleDisplay}{%
+\begin{equation}
+\mathscr F=(N+P)\mathscr F(N+P)
+=N\mathscr FN+N\mathscr FP+P\mathscr FN+P\mathscr FP.
+\end{equation}%
+}
+\newcommand{\EnergyRicciMeaningDisplay}{%
+\begin{equation}
+\operatorname{Ric}_{\mu\nu}=R^\rho{}_{\mu\rho\nu},\qquad
+\operatorname{Scal}_g=g^{\mu\nu}\operatorname{Ric}_{\mu\nu}.
+\end{equation}%
+}
+\newcommand{\EnergyInverseMetricDisplay}{%
+\begin{equation}
+\delta(g^{-1}g)=0
+\quad\Longrightarrow\quad
+\delta g^{-1}=-g^{-1}(\delta g)g^{-1}.
+\end{equation}%
+}
+\newcommand{\EnergyStressSubstitutionDisplay}{%
+\begin{equation}
+\begin{aligned}
+\operatorname{tr}_g\Pi
+&=2\operatorname{Scal}_g-\tfrac13\operatorname{Scal}_g\operatorname{tr}_g g
+=\tfrac23\operatorname{Scal}_g,\\
+T&=\frac1{2{\kappa}}\bigl(2\operatorname{Ric}-\tfrac13\operatorname{Scal}_g g
+-\tfrac23\operatorname{Scal}_g g\bigr)\\
+&=\frac1{\kappa}\bigl(\operatorname{Ric}-\tfrac12\operatorname{Scal}_g g\bigr).
+\end{aligned}
+\end{equation}%
+}
+\newcommand{\EnergyHomothetyExplanationDisplay}{%
+\begin{equation}
+\begin{aligned}
+g(\nabla_\xi\mathcal E,\zeta)&=g(\nabla_\zeta\mathcal E,\xi),\\
+g(\nabla_\xi\mathcal E,\zeta)+g(\xi,\nabla_\zeta\mathcal E)
+&=(\mathcal L_{\mathcal E}g)(\xi,\zeta)=4\nu g(\xi,\zeta).
+\end{aligned}
+\end{equation}%
+}
+\newcommand{\EnergySkewSquareExampleDisplay}{%
+\begin{equation}
+\mathsf A=\begin{pmatrix}0&a&b\\-a&0&c\\-b&-c&0\end{pmatrix},\qquad
+-\operatorname{tr}(\mathsf A^2)=2(a^2+b^2+c^2)\ge0.
+\end{equation}%
+}
+
+% Worked explanations for Spectrum.
+\newcommand{\SpectrumSurfaceMeasure}{d\Sigma}
+\newcommand{\SpectrumNormalizedMap}{U}
+\newcommand{\SpectrumConnectionCorrection}{\Delta A}
+\newcommand{\SpectrumRegionExampleDisplay}{%
+\begin{equation}
+\rho|_{\mathcal D}=\rho_0,\qquad
+E_{\mathcal D}[n]=\int_{\mathcal D}\rho_0\,d\Sigma
+=\rho_0\operatorname{Vol}(\mathcal D).
+\end{equation}%
+}
+\newcommand{\SpectrumIsotropicExampleDisplay}{%
+\begin{equation}
+r_1=r_2=r_3=r,\qquad \operatorname{Scal}_g=3r,\qquad
+\operatorname{Ric}_0=0,\qquad \rho=\frac{3r}{2{\kappa}},\qquad
+\mathcal K=\tfrac32r^2=\tfrac23{\kappa}^2\rho^2.
+\end{equation}%
+}
+\newcommand{\SpectrumAnisotropyExampleDisplay}{%
+\begin{equation}
+\begin{gathered}
+(r_1,r_2,r_3)=(r+a,r-a,r),\qquad \operatorname{Scal}_g=3r,\qquad \rho=\frac{3r}{2{\kappa}},\\
+|\operatorname{Ric}_0|_h^2=a^2+(-a)^2=2a^2,
+\qquad \mathcal K=4a^2+\tfrac32r^2.
+\end{gathered}
+\end{equation}%
+}
+\newcommand{\SpectrumSymmetryExampleDisplay}{%
+\begin{equation}
+\nabla_{(\mu}\xi_{\nu)}=0
+\quad\Longrightarrow\quad
+\nabla_\mu(T^{\mu\nu}\xi_\nu)=0.
+\end{equation}%
+}
+\newcommand{\SpectrumMassExampleDisplay}{%
+\begin{equation}
+E=\tfrac54m_*c^2,\qquad
+|\mathbf P|=\tfrac34m_*c,\qquad m_*>0,
+\qquad M^2=\left(\tfrac{25}{16}-\tfrac9{16}\right)m_*^2=m_*^2.
+\end{equation}%
+}
+\newcommand{\SpectrumNormalizationExampleDisplay}{%
+\begin{equation}
+\begin{gathered}
+h_q=I_3,\qquad \mathsf S=\operatorname{diag}(2,3,4),\qquad
+\mathsf G=\mathsf S^\dagger \mathsf S=\operatorname{diag}(4,9,16),\\
+\mathsf N=\operatorname{diag}\!\left(\tfrac12,\tfrac13,\tfrac14\right),
+\qquad \mathsf N^\dagger\mathsf G\mathsf N=I_3,\qquad
+U=\mathsf S\mathsf N=I_3.
+\end{gathered}
+\end{equation}%
+}
+\newcommand{\SpectrumCorrectionExampleDisplay}{%
+\begin{equation}
+D_{A'}(\Delta A)=d(\Delta A)+A'\wedge\Delta A+\Delta A\wedge A'.
+\end{equation}%
+}
+
+
+% Worked explanations for Differentiation.
+\newcommand{\DifferentiationSecondResponse}{Z}
+\newcommand{\DifferentiationBaseDirection}{\eta}
+\newcommand{\DifferentiationContactFunction}{\psi(s)=\varphi(\Phi(X(s)))}
+\newcommand{\DifferentiationCoefficientDisplay}{%
+\begin{equation}
+Dw_p(X)[\delta X]=\sum_{j\ne p}\bigl[\langle (\delta X)_p,X_j\rangle_{\mathrm F}+\langle X_p,(\delta X)_j\rangle_{\mathrm F}\bigr].
+\end{equation}%
+}
+\newcommand{\DifferentiationMatrixCurveDisplay}{%
+\begin{equation}
+\begin{gathered}
+X_1(s)=\begin{pmatrix}1&0\\0&s\end{pmatrix},\qquad
+X_2(s)=\begin{pmatrix}2&0\\0&1\end{pmatrix},\qquad w_1=w_2=2+s,\\
+\Lambda(X(s))_1=\begin{pmatrix}2+s&0\\0&2s+s^2\end{pmatrix},\qquad
+\Lambda(X(s))_2=\begin{pmatrix}4+2s&0\\0&2+s\end{pmatrix}.
+\end{gathered}
+\end{equation}%
+}
+\newcommand{\DifferentiationMatrixDerivativesDisplay}{%
+\begin{equation}
+\begin{gathered}
+\left.\frac{d}{ds}\Lambda(X(s))_1\right|_0=\begin{pmatrix}1&0\\0&2\end{pmatrix},\qquad
+\left.\frac{d}{ds}\Lambda(X(s))_2\right|_0=\begin{pmatrix}2&0\\0&1\end{pmatrix},\\
+\left.\frac{d^2}{ds^2}\Lambda(X(s))_1\right|_0=\begin{pmatrix}0&0\\0&2\end{pmatrix},\qquad
+\left.\frac{d^2}{ds^2}\Lambda(X(s))_2\right|_0=0.
+\end{gathered}
+\end{equation}%
+}
+\newcommand{\DifferentiationChainDefinitionDisplay}{%
+\begin{equation}
+Y=\Lambda(X),\qquad Z=\Lambda(Y),\qquad {L_X}=D\Lambda(X),\qquad {L_Y}=D\Lambda(Y).
+\end{equation}%
+}
+\newcommand{\DifferentiationNormalizationDisplay}{%
+\begin{equation}
+v(s)=\begin{pmatrix}1\\s\end{pmatrix},\qquad
+{e_r}(s)=\frac{1}{\sqrt{1+s^2}}\begin{pmatrix}1\\s\end{pmatrix},\qquad
+{e_r}'(0)=\begin{pmatrix}0\\1\end{pmatrix},\qquad
+{e_r}''(0)=\begin{pmatrix}-1\\0\end{pmatrix}.
+\end{equation}%
+}
+\newcommand{\DifferentiationUnitConstraintDisplay}{%
+\begin{equation}
+\langle {e_r},{e_r}\rangle=1
+\quad\Longrightarrow\quad
+\langle {e_r},{e_r}'\rangle=0,\qquad
+\langle {e_r},{e_r}''\rangle=-\|{e_r}'\|^2.
+\end{equation}%
+}
+\newcommand{\DifferentiationContactTaylorDisplay}{%
+\begin{equation}
+\psi(0)=0,\qquad
+\psi(s)=s \psi'(0)+\tfrac12s^2\psi''(0)+o(s^2),\qquad s\ge0.
+\end{equation}%
+}
+\newcommand{\DifferentiationContactExamplesDisplay}{%
+\begin{equation}
+\begin{aligned}
+\psi(s)=s\quad(s\ge0)&:\qquad \psi'(0)=1,\quad \psi''(0)=0,\\
+\psi(s)=s^2\quad(s\in\mathbb R)&:\qquad \psi'(0)=0,\quad \psi''(0)=2.
+\end{aligned}
+\end{equation}%
+}
+
+% Closed coupled source and regional mass displays
+\newcommand{\ClosedPatchDirectionDisplay}{%
+\begin{equation}
+\widehat r_s(\lambda)=\frac{(s_1\lambda_1,s_2\lambda_2,s_3\lambda_3)}{\sqrt{\lambda_1^2+\lambda_2^2+\lambda_3^2}}.
+\label{eq:source-patch-direction}
+\end{equation}%
+}
+\newcommand{\ClosedSourcePatchDisplay}{%
+\begin{equation}
+\KeyMath{
+\ExplainTerm{\Psi_s(\lambda;r)}{normalized source patch}
+=\ExplainTerm{\left[\frac{R_0}{R(\mathsf D(q_*+r\widehat r_s(\lambda)))}\right]^{1/324}}{fixed-scale normalization}
+\ExplainTerm{\mathsf D(q_*+r\widehat r_s(\lambda))}{source on the radial boundary}
+}
+\label{eq:source-patch}
+\end{equation}%
+}
+\newcommand{\ClosedCurvatureBlockDisplay}{%
+\begin{equation}
+\Omega_g=\begin{pmatrix}\omega&\theta\\\theta^T&0\end{pmatrix},\qquad
+\mathscr F=\begin{pmatrix}F_\omega+\theta\wedge\theta^T&0\\0&0\end{pmatrix},\qquad
+F_\omega=d\omega+\omega\wedge\omega.
+\label{eq:assembled-curvature-block}
+\end{equation}%
+}
+\newcommand{\ClosedStressMatrixDisplay}{%
+\begin{equation}
+\KeyMath{
+Q=\ExplainTerm{3}{normal-product contribution}+\ExplainTerm{\tfrac12\operatorname{Scal}_\gamma}{spatial scalar contribution},\\
+\ExplainTerm{T_{\hat a\hat b}=\frac1{\kappa R^2}\begin{pmatrix}Q&0\\0&-\mathcal D\end{pmatrix}}{energy and stress in the orthonormal rest frame}
+}
+\label{eq:assembled-stress}
+\end{equation}%
+}
+\newcommand{\ClosedDensityStressDisplay}{%
+\begin{equation}
+\begin{gathered}
+\ExplainTerm{\rho=\frac{Q}{\kappa R^2}}{rest energy density},\qquad
+\ExplainTerm{\boldsymbol\pi=0}{rest-frame momentum density},\\
+S=\ExplainTerm{-\frac{Q}{3\kappa R^2}I_3}{isotropic stress}
+-\ExplainTerm{\frac{\mathcal D_0}{\kappa R^2}}{anisotropic stress},\qquad
+\ExplainTerm{\operatorname{tr}_{h_R}S=-\rho}{energy--stress trace relation}
+\end{gathered}
+\label{eq:assembled-density-stress}
+\end{equation}%
+}
+\newcommand{\ClosedInteriorStressDisplay}{%
+\begin{equation}
+\KeyMath{
+\ExplainTerm{\int_{\Sigma_-}\operatorname{tr}_{h_R}S\,dV_{h_R}}{integrated spatial-stress trace}
+=-\ExplainTerm{\int_{\Sigma_-}\rho\,dV_{h_R}}{interior energy}
+=-E_-(R,r)>0,\quad0<r<r_0
+}
+\label{eq:interior-stress-counterpart}
+\end{equation}%
+}
+\newcommand{\ClosedRegionalMassDisplay}{%
+\begin{equation}
+M^2c^4=(E_-+E_+)^2-c^2|\mathbf P_-+\mathbf P_+|^2.
+\label{eq:regional-mass}
+\end{equation}%
+}
+\newcommand{\ClosedSourceMassDisplay}{%
+\begin{equation}
+\KeyMath{
+\ExplainTerm{M}{invariant mass}
+=\ExplainTerm{\frac{R}{\kappa c^2}}{scale and physical normalization}
+\sum_s\int\ExplainTerm{\chi_s}{chart weight}
+\ExplainTerm{\left(3+\tfrac12\operatorname{Scal}_{\gamma,s}\right)}{curvature trace}
+\ExplainTerm{\sqrt{\det(\gamma_{ij}^{(s)})}\,d^3q_s}{spatial volume in the chart}
+}
+\label{eq:source-mass}
+\end{equation}%
+}
+\newcommand{\ClosedInteriorAccountingDisplay}{%
+\begin{equation}
+E_-=Mc^2-E_+.
+\label{eq:interior-energy-accounting}
+\end{equation}%
+}
+
+% Exact retained source and complete boundary reduction
+\newcommand{\SourceBasisDisplay}{%
+\begin{equation}
+\mathsf D(x,y,z)=\begin{pmatrix}
+x&y&-1\\ z&(-y-1)/3&0\\
+\zeta&(-y+2)/3&0\\-x-z-\zeta&(-y-1)/3&1
+\end{pmatrix},\qquad
+\zeta=ax+by-d+(a+b+d)z.
+\label{eq:retained-source-basis}
+\end{equation}%
+}
+\newcommand{\SourceReferenceDisplay}{%
+\begin{equation}
+\mathsf D(q_*)=\begin{pmatrix}-1&-1&-1\\1&0&0\\0&1&0\\0&0&1\end{pmatrix}.
+\end{equation}%
+}
+\newcommand{\SourceDensityCoefficientDisplay}{%
+\begin{equation}
+\mathfrak f_*=\frac{N_*}{D_*}<0,\quad N_*<0,\quad D_*>0,\qquad
+\mathfrak f_*\simeq-1.933636\times10^{39}.
+\label{eq:retained-exact-density}
+\end{equation}%
+}
+\newcommand{\SourceInteriorBoundDisplay}{%
+\begin{equation}
+E_-(R,r)=\frac R{\kappa}\int_{|q-q_*|\leq r}\mathfrak f\,d^3q
+\leq\frac{2\pi R}{3{\kappa}}\mathfrak f_*r^3<0,\qquad 0<r<r_0.
+\label{eq:source-interior-bound}
+\end{equation}%
+}
+\newcommand{\SourceGramReductionDisplay}{%
+\begin{equation}
+\mathsf Z=\mathsf Y\mathsf W,\qquad G_Z=\mathsf W G_Y\mathsf W,\qquad \mathsf H=G_Z^2=\mathsf W G_Y\mathsf W^2G_Y\mathsf W.
+\end{equation}%
+}
+\newcommand{\SourceOrderedCurvatureDisplay}{%
+\begin{equation}
+\begin{gathered}
+\mathscr F_{ab}=\ExplainTerm{\mathsf W^{-1}G_Y^{-1}\bigl[(B_a^\perp)^TB_b^\perp-(B_b^\perp)^TB_a^\perp\bigr]\mathsf W}{curvature from the normal response}\\
++\ExplainTerm{\partial_a\Xi_b-\partial_b\Xi_a}{correction derivatives}
++\ExplainTerm{[\beta_a,\Xi_b]-[\beta_b,\Xi_a]}{mixed coupling}
++\ExplainTerm{[\Xi_a,\Xi_b]}{correction commutator}
+\end{gathered}
+\label{eq:source-ordered-curvature}
+\end{equation}%
+}
+\newcommand{\SourceCurvatureReductionDisplay}{%
+\begin{equation}
+\mathscr F=
+\begin{pmatrix}
+F_\omega+\theta\wedge\theta^T&d\theta+\omega\wedge\theta\\
+d\theta^T+\theta^T\wedge\omega&\theta^T\wedge\theta
+\end{pmatrix}
+=\begin{pmatrix}F_\omega+\theta\wedge\theta^T&0\\0&0\end{pmatrix}.
+\end{equation}%
+}
+\newcommand{\SourceRegionalEnergiesDisplay}{%
+\begin{equation}
+E_-=\frac R{\kappa}\int_{\Sigma_-}Q\,dV_\gamma,\qquad
+E_+=\frac R{\kappa}\int_{\Sigma_+}Q\,dV_\gamma.
+\label{eq:source-regional-energy}
+\end{equation}%
+}
+\newcommand{\SourceBoundaryReductionDisplay}{%
+\begin{equation}
+\begin{aligned}
+\mathfrak v^k&=\sqrt{\det\gamma}(\gamma^{ij}\Gamma^k{}_{ij}-\gamma^{ki}\Gamma^j{}_{ij}),\\
+\mathfrak w&=\sqrt{\det\gamma}\left[3+\tfrac12\gamma^{ij}(\Gamma^k{}_{i\ell}\Gamma^\ell{}_{jk}-\Gamma^k{}_{ij}\Gamma^\ell{}_{k\ell})\right].
+\end{aligned}
+\label{eq:source-boundary-density}
+\end{equation}%
+}
+\newcommand{\SourceBoundaryIntegralDisplay}{%
+\begin{equation}
+\int_U \mathfrak f\,d^3q=\int_U\mathfrak w\,d^3q+
+\frac12\int_{\partial U}\mathfrak v^k\,dS_k.
+\label{eq:source-boundary-integral}
+\end{equation}%
+}
+
+% Intermediate steps for the appendix derivations.
+\newcommand{\SourceDensityScalingDisplay}{%
+\begin{equation}
+\begin{aligned}
+dV_{h_R}&=R^3dV_\gamma=R^3\sqrt{\det\gamma}\,d^3q,
+&\rho&=\frac{Q}{{\kappa}R^2},\\
+\rho\,dV_{h_R}&=\frac R{\kappa} \mathfrak f\,d^3q.
+\end{aligned}
+\label{eq:source-density-scaling}
+\end{equation}%
+}
+\newcommand{\SourceCoefficientGeometryDisplay}{%
+\begin{equation}
+R^2=(\mathbf1^T\mathsf H^{-1}\mathbf1)^{-1},\qquad
+\mathbf v=R^2 \mathsf H^{-1}\mathbf1,\qquad
+\mathsf g=\mathsf H-2R^2\mathbf1\mathbf1^T.
+\label{eq:source-coefficient-geometry}
+\end{equation}%
+}
+\newcommand{\SourceInducedConnectionDisplay}{%
+\begin{equation}
+\begin{aligned}
+P_Y&=\mathsf YG_Y^{-1}\mathsf Y^T,&
+B_a^\perp&=(I-P_Y)\partial_a\mathsf Y,\\
+\beta_Y&=G_Y^{-1}\mathsf Y^T d\mathsf Y.
+\end{aligned}
+\label{eq:source-induced-connection}
+\end{equation}%
+}
+\newcommand{\SourceConnectionTransformDisplay}{%
+\begin{equation}
+\begin{aligned}
+\beta&=\mathsf W^{-1}\beta_Y\mathsf W+\mathsf W^{-1}d\mathsf W,\\
+F(\beta)&=\mathsf W^{-1}F(\beta_Y)\mathsf W,\\
+F(\beta_Y)_{ab}&=G_Y^{-1}
+((B_a^\perp)^TB_b^\perp-(B_b^\perp)^TB_a^\perp).
+\end{aligned}
+\label{eq:source-connection-transform}
+\end{equation}%
+}
+\newcommand{\SourceCurvatureExpansionDisplay}{%
+\begin{equation}
+\mathscr F=F(\beta)+d\Xi+\beta\wedge\Xi+\Xi\wedge\beta+\Xi\wedge\Xi.
+\label{eq:source-curvature-expansion}
+\end{equation}%
+}
+\newcommand{\SourceRicciStressReductionDisplay}{%
+\begin{equation}
+\begin{aligned}
+R_{\hat a\hat b}&=\frac1{R^2}
+\begin{pmatrix}0&0\\0&QI_3-\mathcal D\end{pmatrix},
+&\operatorname{Scal}_g&=\frac{2Q}{R^2},\\
+T_{\hat a\hat b}&=\frac1{\kappa}\left(R_{\hat a\hat b}
+-\tfrac12\eta_{\hat a\hat b}\operatorname{Scal}_g\right)
+=\frac1{{\kappa}R^2}\begin{pmatrix}Q&0\\0&-\mathcal D\end{pmatrix},
+&\eta_{\hat a\hat b}&=\operatorname{diag}(-1,I_3).
+\end{aligned}
+\label{eq:source-ricci-stress-reduction}
+\end{equation}%
+}
+\newcommand{\SourceObserverWorkDisplay}{%
+\begin{equation}
+\frac{dE_\alpha}{dR}
+=-\int_{\Sigma_\alpha}S^{ij}K_{ij}\,dV_{h_R}
+=-\frac1R\int_{\Sigma_\alpha}\operatorname{tr}_{h_R}S\,dV_{h_R}
+=\frac{E_\alpha}{R},\qquad \alpha\in\{-,+\}.
+\label{eq:source-observer-work}
+\end{equation}%
+}
+\newcommand{\SourceWeightedBoundaryDisplay}{%
+\begin{equation}
+\int_U\chi \mathfrak f\,d^3q
+=\int_U\left(\chi\mathfrak w-\tfrac12\mathfrak v^k\partial_k\chi\right)d^3q
++\frac12\int_{\partial U}\chi\mathfrak v^k\,dS_k.
+\label{eq:source-weighted-boundary}
+\end{equation}%
+}

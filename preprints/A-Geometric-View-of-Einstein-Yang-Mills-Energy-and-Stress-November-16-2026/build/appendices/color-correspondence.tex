@@ -1,0 +1,28 @@
+\section{Color-frame correspondence}
+\label{app:color-correspondence}
+The color connection used in Sections~\ref{sec:color} and \ref{sec:energy} can be compared with a connection on the configuration quotient. The comparison must retain the metric, normalization and changing frame on the stated regular domains.
+
+Start with the real six-frame from Section~\ref{sec:color}. Differentiating its orthonormality gives
+\AlgebraFrameSkewDisplay
+so its connection is skew-symmetric. This is the real-frame identity underlying the compatible color projection.
+
+To compare normalized color descriptions, let $\SpectrumGraphMap$ map the differential graph to the configuration quotient. Write $\SpectrumQuotientMetric$ for its positive Hermitian metric matrix and $\SpectrumGramMatrix$ for the graph Gram matrix. These represent the metrics on the corresponding spaces in the stated common dimension.
+
+Let $\SpectrumNormalizer$ convert the graph coordinates to an orthonormal basis, and write $\SpectrumNormalizedMap$ for the resulting map between normalized coordinates. Their metric relations are
+\SpectrumActualStateMapDisplay
+The first equality says that pulling back the quotient pairing gives the graph pairing. The matrix $\SpectrumNormalizer$ normalizes the graph coordinates. Multiplication by the positive square root of the quotient metric then gives $\SpectrumNormalizedMap$, whose adjoint product is the identity. It therefore preserves the inner product of those normalized color coordinates.
+
+For diagonal metrics the operations are explicit,
+\SpectrumNormalizationExampleDisplay
+The normalizer removes the graph's three scale factors before the map is applied. This example illustrates the metric equality without changing its domain or assumptions.
+
+As the source varies, its normalized frame varies too. Writing $\SpectrumQuotientConnection$ for the quotient color connection, with $(q)$ denoting this description, gives
+\SpectrumActualConnectionDisplay
+The derivative of the normalized map accounts for that frame change. Including it makes curvature transform by conjugation.
+
+The connection entering the full field may also differ from this transported connection. Keeping their difference gives
+\SpectrumActualCurvatureDisplay
+where $\SpectrumConnectionDifference$. Its covariant derivative contains the interaction with the transported connection,
+\SpectrumCorrectionExampleDisplay
+and the remaining quadratic term contains the correction's self-product. These are the terms retained when the full curvature enters the energy contraction in Section~\ref{sec:energy}.
+

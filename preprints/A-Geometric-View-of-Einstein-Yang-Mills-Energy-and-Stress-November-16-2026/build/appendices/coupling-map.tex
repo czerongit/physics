@@ -1,0 +1,219 @@
+\section{Comparisons, variations and supporting calculations}
+\label{app:coupling}
+The calculations here support the field comparison, phase connection and coupled response in Sections~\ref{sec:field}--\ref{sec:color}. First, explicit matrix examples verify the comparisons used in the construction. The later derivatives follow a source variation through its responses and compatibility conditions. A curve parameter $s$ labels these variations and is independent of physical time.
+
+\subsection{Matrix comparisons}
+For the two matrices used to explain the field pairing, transposition exchanges rows and columns,
+\FieldExampleTransposeDisplay
+Multiplication then collects matching column products on the diagonal,
+\FieldExampleDiagonalDisplay
+and their sum gives
+\FieldExampleTraceDisplay
+This verifies the trace formula used in Section~\ref{sec:field}.
+
+A self-adjoint map transfers its action between the entries of the inner product. For example,
+\FieldSelfAdjointExampleDisplay
+gives
+\FieldSelfAdjointActionsDisplay
+and hence
+\FieldSelfAdjointComparisonsDisplay
+The equality holds for every vector pair because the matrix is symmetric,
+\FieldSelfAdjointIdentityDisplay
+This identifies symmetric matrices as the self-adjoint component values used by the field.
+
+The product metric applies the same comparison at every component label. Consider two complete field changes with components
+\FieldProductFirstExampleDisplay
+and
+\FieldProductSecondExampleDisplay
+Their component pairings are
+\FieldProductComparisonsDisplay
+so the complete comparison is
+\FieldProductTotalDisplay
+Self-pairing similarly gives
+\FieldProductLengthDisplay
+Each labelled change contributes to the length of the complete variation.
+
+\subsection{Phase rotation and moving frames}
+In the oriented plane of Section~\ref{sec:phase}, rotation through $\FieldPlaneAngle$ multiplies its complex coordinate by
+\FieldPlanePhaseFactorDisplay
+The real coordinates consequently transform as
+\FieldPlaneRotationCoordinatesDisplay
+Since
+\FieldPlanePhaseLengthDisplay
+the rotation preserves length. These factors constitute
+\FieldPlanePhaseGroupDisplay
+and compose by addition of angles,
+\FieldPlanePhaseCompositionDisplay
+This is the phase action carried by the radial and transverse plane.
+
+To verify the connection's role, keep a plane fixed and rotate its frame,
+\FieldConnectionRotatingFrameDisplay
+Its angular rate is
+\FieldConnectionRotatingRateDisplay
+Now take the fixed vector
+\FieldConnectionFixedVectorDisplay
+Its coordinates in that rotating frame are
+\FieldConnectionFixedCoordinatesDisplay
+or, in complex form,
+\FieldConnectionFixedComplexDisplay
+Their ordinary derivative is nonzero, but the frame term cancels it,
+\FieldConnectionCancellationDisplay
+The covariant derivative therefore records the fixed geometric vector correctly.
+
+An additional frame angle $\FieldGaugeAngle$ changes the basis by
+\FieldConnectionFrameChangeDisplay
+The coordinate of the same vector changes oppositely,
+\FieldConnectionCoordinateChangeDisplay
+while the connection becomes
+\FieldConnectionPotentialChangeDisplay
+Together these transformations give
+\FieldConnectionCovarianceDisplay
+so either frame describes the same derivative. Choosing $\FieldGaugeUnrotation$ removes the earlier frame rotation and gives constant coordinates for the fixed vector.
+
+\subsection{Weak waves and collective mass}
+For the conventional gluon connection, linearization about the trivial connection gives the transverse wave equation
+\FieldYMWaveDisplay
+Here $z$ denotes a spatial coordinate. With angular frequency $\FieldYMFrequency$ and wave vector $\FieldYMWaveVector$, it implies
+\FieldYMDispersionDisplay
+Using $\FieldYMQuantumEnergy$ and $\FieldYMQuantumMomentum$, where $\hbar$ is the reduced Planck constant, gives
+\FieldYMMasslessEnergyDisplay
+Comparison with
+\FieldYMRelativisticEnergyDisplay
+identifies $m=0$ for these weak-field excitations~\cite{jaffeWitten}.
+
+Their zero individual masses do not require zero mass for a collection. If two excitations have energy $\FieldYMExampleEnergy$ and opposite momenta,
+\FieldYMOppositeMomentaDisplay
+the totals are
+\FieldYMCombinedEnergyDisplay
+and their invariant mass is
+\FieldYMPairMassDisplay
+This illustrates the distinction between constituent mass and collective mass; binding remains a separate dynamical property.
+
+In pure gauge theory, a glueball is a bound excitation of the interacting gluon field. Lattice calculations estimate such collective energies. Morningstar and Peardon obtained approximately
+\FieldYMGlueballMassDisplay
+for the lightest scalar state, using their stated conversion to physical units~\cite{morningstarPeardon1999}. The label $\FieldYMScalarLabel$ denotes zero spin and positive parity and charge-conjugation parity. This result is a comparison, not an input to the constructed source's mass.
+
+A common mass gap would require a positive threshold for all physical excitations. The opposite-momentum example alone supplies no such threshold because its input energy can be arbitrarily small. The main construction instead follows the specific closed geometry to its complete energy--momentum.
+
+\subsection{Derivatives of the coupling}
+The response used in Section~\ref{sec:coupling} is
+\FieldCouplingResponseDisplay
+with component rule
+\FieldCouplingWeightsDisplay
+Both factors depend on the source. Writing
+\FieldCouplingDerivativeDisplay
+gives
+\FieldCouplingVariationDisplay
+The two terms vary the component and its pairings with the other components.
+
+Writing the same response directly as a polynomial in its input gives
+\CouplingMapPolynomialCouplingDisplay
+Its differential is the preceding variation with $L_X=D\Lambda(X)$ written out,
+\CouplingMapCouplingDifferentialDisplay
+The derivative of its scalar coefficient is
+\DifferentiationCoefficientDisplay
+Each pairing varies through both entries, so an unchanged input component can still acquire a changed response.
+
+Differentiating once more in independent directions $\delta_1X,\delta_2X$ gives
+\CouplingMapCouplingSecondDifferentialDisplay
+The first two terms differentiate the two factors of the first variation; the last differentiates the pairings again. Exchange of the variation directions leaves the result unchanged.
+
+For the matrix example in Section~\ref{sec:coupling}, let the first component vary in its second diagonal entry,
+\DifferentiationMatrixCurveDisplay
+The coefficient $w_1=w_2=2+s$ varies with that entry, giving at $s=0$
+\DifferentiationMatrixDerivativesDisplay
+The quadratic term comes from their product. This verifies why coefficient variation must remain in the response derivative.
+
+\subsection{Successive responses}
+To carry the variation into the next level, write
+\DifferentiationChainDefinitionDisplay
+The derivatives $L_X$ and $L_Y$ are evaluated at different inputs. Since the second input is itself a response, its change must also be differentiated.
+
+For a configuration direction $\DifferentiationBaseDirection$, put $\delta X=DX[\eta]$. The chain rule gives
+\CouplingMapFullChainRuleDisplay
+The second response receives the composed change $L_YL_X\delta X$, while the last expression differentiates the evaluation point of $L_Y$.
+
+If the varied vector also depends on the configuration, the full derivative is
+\CouplingMapBothDifferentialVariationsDisplay
+All three contributions enter the changing frame, along with derivatives of its projections and normalization. Treating either response derivative as fixed would omit part of that change.
+
+\subsection{Normalization and compatibility}
+Normalization itself contributes nonlinear derivatives. For example,
+\DifferentiationNormalizationDisplay
+The unnormalized vector has zero second derivative, but its unit direction does not. Differentiating unit length in general gives
+\DifferentiationUnitConstraintDisplay
+The first identity makes velocity tangent to the unit sphere; the second fixes the acceleration's normal component.
+
+Compatibility must be differentiated along the same source curve. Let $\CombinedFieldMap$ collect the responses, metric, connection and derivatives in a smooth condition $\CompatibilityEquality$. Take a twice differentiable curve $\CompatibleFieldCurve$ satisfying it, and set $\FieldVelocityAcceleration$. Dots refer to $s$, with derivatives of $\Phi$ evaluated at $X(0)$ and those of $f$ at $\Phi(X(0))$.
+
+One and two differentiations give
+\CouplingMapPropagatedCompatibilityDisplay
+The second-order condition contains source acceleration, nonlinear response and curvature of the constraint. Retaining all three terms ensures that the varied induced quantities follow the source compatibility.
+
+For a smooth inequality $\CompatibilityInequality$ that is an equality initially, a compatible curve with $s\ge0$ obeys
+\CouplingMapContactDerivativeDisplay
+Writing $\DifferentiationContactFunction$ gives the Taylor expansion
+\DifferentiationContactTaylorDisplay
+A negative first derivative violates the inequality for sufficiently small positive $s$. If the first derivative vanishes, the second must be nonnegative. A curve allowed for both signs requires zero first derivative.
+
+The distinction is illustrated by
+\DifferentiationContactExamplesDisplay
+The linear example is admissible on one side and the quadratic example on both. These differential restrictions are necessary; the curve must still satisfy the original compatibility relations.
+
+\subsection{Graph and normal planes}
+The first response places a variation in the graph
+\FieldCouplingGraphDisplay
+The adjoint relation
+\FieldCouplingAdjointDisplay
+then gives a normal lift
+\FieldCouplingNormalDisplay
+whose complete pairing with the graph is
+\FieldCouplingOrthogonalityDisplay
+The cancellation establishes the perpendicular directions used in Section~\ref{sec:coupling}.
+
+Inserting the radial and transverse frame in the selected component gives
+\FieldCouplingGraphPlaneDisplay
+and
+\FieldCouplingNormalPlaneDisplay
+The graph retains the two independent directions in its first position; the normal lift retains them in its second. Their ranks therefore remain two.
+
+For an explicit check, take
+\FieldCouplingExampleDerivativeDisplay
+The paired directions are
+\FieldCouplingExampleLiftsDisplay
+and, for example,
+\FieldCouplingExampleCancellationDisplay
+All cross-plane pairings vanish similarly. Each vector has squared length five, so division by $\FieldCouplingExampleNormalization$ gives an orthonormal frame within either plane.
+
+For the three-level joint variation of Section~\ref{sec:color}, the lifts become
+\AlgebraTripleLiftDisplay
+The continuing matrix example gives
+\AlgebraResponseExampleDisplay
+for the final graph component. Adjacent adjoint cancellations show
+\AlgebraNormalCancellationDisplay
+Both normal planes are thus perpendicular to the graph, though they may overlap each other through the middle position.
+
+Subtracting that overlap gives
+\AlgebraOrthogonalColumnsDisplay
+Here $\mathsf W_2$ is the second normal map before projection. For a plane-coordinate column $\xi\in\mathbb R^2$, the coefficients $\alpha\in\mathbb R^2$ solve
+\AlgebraProjectionDisplay
+The inverse exists because $\mathsf V_1$ has independent columns. Subtraction leaves the third block of $\mathsf V_2$ equal to $\mathsf V$, since $\mathsf V_1$ has zero third block. All three maps therefore retain two independent columns and the mutual orthogonality used in the main text.
+
+\subsection{Pair-generator calculations}
+The matrix units act by
+\AlgebraMatrixUnitExampleDisplay
+so their product connects the first and third coordinates. For the real pair generator,
+\AlgebraGeneratorActionDisplay
+multiplication in both orders gives
+\AlgebraBracketProductsDisplay
+This verifies the first--third generator in Section~\ref{sec:color}. The imaginary generator follows from the same matrix-unit product.
+
+For the diagonal components, the trace pairing gives
+\AlgebraDiagonalNormExampleDisplay
+and the first--third difference is
+\AlgebraDiagonalExpansionDisplay
+These relations fix their normalization and dependence.
+
+Finally, connection curvature retains the order of its matrix-valued factors. For local tangent directions $\eta,\zeta$,
+\AlgebraWedgeExampleDisplay
+The nonzero example illustrates the adjacent interaction in the first--third curvature entry.

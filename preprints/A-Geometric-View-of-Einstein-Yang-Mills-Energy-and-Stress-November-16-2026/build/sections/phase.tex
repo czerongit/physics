@@ -1,0 +1,114 @@
+\section{Phase}
+\label{sec:phase}
+Applying the matrix pairing to a nonzero component gives its radial direction. A second component supplies an independent direction wherever its perpendicular remainder is nonzero. Removing its parallel part gives
+\PhaseTransverseDisplay
+Normalizing the two directions then yields
+\PhaseNormalizationDisplay
+Their order specifies an oriented plane. The same operation can first be seen in the vector example from Section~\ref{sec:field}.
+
+\subsection{An oriented plane and its rotations}
+Returning to those vectors,
+\FieldRadialVectorsDisplay
+the radial unit vector is
+\FieldRadialUnitDisplay
+Subtracting the projection of $\FieldExampleVectorB$ along it gives
+\FieldTransverseSubtractionDisplay
+The remainder has length $\FieldTransverseLength$, so its normalization is
+\FieldTransverseUnitDisplay
+Together the two directions satisfy
+\FieldPlaneOrthonormalityDisplay
+Every vector in their plane therefore has the form
+\FieldPlaneVectorDisplay
+The first coordinate measures the radial component and the second the transverse component. Ordering these directions makes a positive quarter-turn take $\FieldRadialUnit$ toward $\FieldTransverseUnit$.
+
+Combining the coordinates into
+\FieldPlaneComplexCoordinateDisplay
+expresses that rotation as multiplication by $\FieldImaginaryUnit$,
+\FieldPlaneImaginaryRotationDisplay
+which sends the coordinate pair to
+\FieldPlaneQuarterTurnDisplay
+The quarter-turn defines the complex structure $J$. Applying it twice reverses the vector,
+\FieldPlaneComplexStructureDisplay
+where $I$ is the identity on this plane.
+
+The matrix field carries the same construction. For example,
+\PhaseMatrixExampleDisplay
+projection and normalization give
+\PhaseMatrixProjectionDisplay
+In this basis the quarter-turn acts by
+\PhaseComplexStructureDisplay
+and rotation through an arbitrary angle is
+\PhaseRotationDisplay
+A rotation through $\PhaseExampleRotationAngle$ gives
+\PhaseMatrixRotationDisplay
+The resulting matrix retains unit length while redistributing its radial and transverse components.
+
+Thus a complex coordinate describes two real directions of the same plane. Their inner product becomes
+\PhaseHermitianExampleDisplay
+A complex line with this inner product is a Hermitian line. Its length-preserving rotations form $\PhaseGroup$. The phase-factor calculation in Appendix~\ref{app:coupling} verifies the arbitrary-angle rotation and composition law.
+
+\begin{figure}[!htbp]
+\centering
+\resizebox{.62\linewidth}{!}{\CarrierScene{1}{0}{0}}
+\caption{Radial and transverse directions span the phase plane. Opposite vertices $\VertexPairOne$ mark the first axis of the representation; the plane carries the internal U(1) rotation.}
+\label{fig:phase}
+\end{figure}
+
+Figure~\ref{fig:phase} places this first phase direction in the geometric representation. Its display axis records the direction being compared, while the radial and transverse coordinates describe rotation within its internal plane. The next operation is to compare that plane as the field varies.
+\FloatBarrier
+
+\subsection{Comparing a moving phase plane}
+Let $\FieldPathParameter$ parameterize a path of field configurations, with unit directions $\FieldMovingRadial$ and $\FieldMovingTransverse$. Projecting the radial derivative along the transverse direction measures its internal angular rate,
+\FieldConnectionRateDisplay
+Differentiating unit length and orthogonality fixes the other in-plane component,
+\FieldConnectionProjectedDisplay
+Components outside the plane describe its motion in the surrounding matrix space. The projected components specify the rotation that must enter a comparison within the plane.
+
+For several configuration directions, collect these rates in the real connection one-form
+\PhasePhaseConnectionDisplay
+Here $d$ differentiates along the configuration coordinates. Restricting to a path gives
+\PhaseConnectionPathDisplay
+and the projected frame derivatives are
+\PhaseProjectedDerivativesDisplay
+A derivative of vector coordinates must include this frame change as well as their ordinary variation.
+
+Writing a vector in the moving frame gives
+\FieldConnectionVectorDisplay
+Differentiating both coordinates and basis produces
+\FieldConnectionVectorDerivativeDisplay
+In complex notation, the same comparison is
+\FieldConnectionCovariantDerivativeDisplay
+The connection term compensates for basis rotation. Appendix~\ref{app:coupling} verifies this for a fixed vector expressed in a rotating frame.
+
+With local configuration coordinates $x^\mu$, extending the comparison along each coordinate direction gives
+\FieldConnectionCoordinateDirectionsDisplay
+On a spatial region with coordinates $\FieldSpatialCoordinates$, the same connection has components
+\FieldSpatialConnectionDisplay
+Here the spatial coordinate $z$ is distinct from the complex coordinate of the internal plane. The spatial labels identify where comparisons are made; the internal plane identifies what rotates in each comparison.
+
+\subsection{Curvature and loop comparison}
+Two successive directional comparisons need not agree when their order is exchanged. The covariant derivative and its curvature are
+\PhaseUnitaryConnectionDisplay
+In two local configuration coordinates, write
+\PhaseCurvatureCoordinatesDisplay
+The coefficient measures the difference between the two orders of differentiation, per oriented coordinate area. In the spatial description this becomes
+\FieldSpatialCurvatureDisplay
+The three terms compare small loops in the three coordinate planes for the same phase connection.
+
+Integrating these local comparisons around a loop gives the phase accumulated over its spanning surface. For an oriented surface $\SpanningSurface$ contained in a local patch, Stokes' theorem gives
+\PhaseLoopPhaseDisplay
+where $\PhaseSurfaceBoundary$ is the oriented boundary. For example,
+\PhaseLoopExampleDisplay
+represents a quarter-turn. With the convention $\PhaseConnectionConvention$, parallel-transported coordinates satisfy
+\PhaseParallelTransportDisplay
+Their compensating sign is the same frame-versus-coordinate relation used by the covariant derivative.
+
+A change of phase frame alters the connection coefficients while preserving this curvature. For a smooth phase angle $\PhaseGaugeAngleSymbol$,
+\PhasePhaseGaugeDisplay
+The added exact differential has vanishing curvature because its mixed derivatives commute. The spatial components transform together,
+\FieldSpatialGaugeDisplay
+as illustrated by
+\PhaseGaugeExampleDisplay
+For a single-valued smooth phase angle on the patch, its differential also has zero loop integral. The connection therefore compares the same phase geometry in either frame.
+
+This construction compares one phase plane through changes of the field. When the response depends on the components' mutual pairings, those changes also alter the response. Carrying both together introduces the coupled directions considered next.

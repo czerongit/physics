@@ -1,0 +1,46 @@
+\section{Closed geometry}
+\label{sec:octahedron}
+The three complex directions and eight connection components from Section~\ref{sec:color} now give the axes and face labels of an octahedron. Closing this representation supplies the patch arrangement; placing the actual source on those patches then gives the smooth field and its separating boundary.
+
+\subsection{The closed representation}
+Let $e_1,e_2,e_3$ be the standard basis of the three-dimensional drawing space and choose
+\CurvatureSignedEndpointsDisplay
+with drawing scale $\DisplaySize>0$. Taking one signed endpoint from each axis produces
+\CurvatureOctahedralFacesDisplay
+The eight sign triples give eight faces. Every edge belongs to two faces with opposite induced orientations, so their boundary contributions cancel,
+\CurvatureClosedSurfaceDisplay
+
+This closed arrangement also fixes the total angular defect. At a vertex $v$, let $\delta_v$ be a full turn minus the incident face angles. Their sum is
+\CurvatureTotalDefectDisplay
+Local defects can redistribute under nondegenerate piecewise Euclidean deformations that preserve the connectivity, but their total remains fixed. Appendix~\ref{app:source-reduction} supplies the count. This angular result belongs to the representation; the smooth field's curvature is obtained from its metric after assembly.
+
+\begin{figure}[!htbp]
+\centering
+\resizebox{.62\linewidth}{!}{\CarrierScene{3}{3}{2}}
+\FaceKey{2}
+\caption{Closed representation of the eight color components, with six off-diagonal and two diagonal face labels. Shared edges cancel, and the total angular defect is independent of the drawing scale $\DisplaySize$.}
+\label{fig:complete}
+\end{figure}
+\FloatBarrier
+
+\subsection{Assembling the smooth field}
+Radial projection turns each face into a patch on the unit sphere. For a sign triple $s=(s_1,s_2,s_3)$, let $\lambda_i\ge0$ locate a point in the face, with $\lambda_1+\lambda_2+\lambda_3=1$. Its unit direction is
+\ClosedPatchDirectionDisplay
+A vanishing weight places the point on a shared edge, where the adjacent descriptions agree. At a vertex a smooth chart contains the four incident sectors. Together these patches cover the sphere.
+
+To put the constructed field on these patches, use its original four source vectors $b_0,b_1,b_2,b_3$. The columns of $\mathsf D(q)$ record $b_1-b_0,b_2-b_0,b_3-b_0$ in source coordinates $q=(x,y,z)$. Their weighted differences undergo the vector coupling and assemble the self-adjoint matrices $X_p$; the same matrix coupling then gives $Y=\Lambda(X)$ and $Z=\Lambda(Y)$. Thus $\mathsf D$ describes the input to the response chain of Sections~\ref{sec:coupling}--\ref{sec:color}. Appendix~\ref{app:source-coordinates} specifies the weights and assembly.
+
+With reference point $q_*=(-1,-1,1)$, the point $q_*+r\widehat r_s(\lambda)$ selects this source on a sphere of coordinate radius $r>0$. Each patch carries the resulting $X,Y,Z$ and their induced geometry.
+
+These matrices need a common source scale. Let $R(\mathsf D)$ be the positive scale function determined by the coefficient geometry and set $R_0=R(\mathsf D(q_*))$. The normalized patch is
+\ClosedSourcePatchDisplay
+The exponent follows from $R(a\mathsf D)=a^{324}R(\mathsf D)$ for $a>0$. This factor changes the scale of the matrix while leaving the selected source-coordinate point fixed. Radius $r$ locates the surface; $R_0$ specifies the common scale of its data.
+
+Each patch is a restriction of the same smooth source map. Source values and derivatives therefore agree at shared edges and vertices after the corresponding coordinate changes. Applying the coupling gives a smooth field, metric and connection across the assembled surface.
+
+\subsection{The boundary and its two sides}
+On the fixed-scale spatial slice $\Sigma_R$, the image of the coordinate ball $B_r(q_*)$ defines $\Sigma_-$. Its boundary is $S_r=\partial\Sigma_-$, and the complementary region is $\Sigma_+=\Sigma_R\setminus\overline{\Sigma_-}$. The signs label sides of the surface. The radius remains general within the regular neighborhood of the source.
+
+Allowing the source coordinates and scale to vary continues this geometry across $S_r$. Neighborhoods on its two sides, called collars, have matching induced metrics and second fundamental forms when compared with a common normal. Thus the separating surface divides a matched geometry with source data available on both sides.
+
+\FloatBarrier

@@ -1,0 +1,38 @@
+\section{Collective mass}
+\label{sec:collective-mass}
+Integrating those densities gives the regional energy and momentum. Their combined balance retains the surrounding response in the invariant mass.
+
+\subsection{Measured energy and momentum}
+Let $u$ be a future unit timelike observer and $n$ the future unit normal to a spatial slice $\Sigma$. Contracting $T$ with these directions gives
+\NativeObservedEnergyDisplay
+The slice metric supplies $d\Sigma$, while $T$ retains the normalization $\kappa$. For the rest observer $u=n$ this contraction is
+\NativeObservedDensityDisplay
+Homogeneity gives $\operatorname{Ric}(n,n)=0$, recovering $\rho=Q/(\kappa R^2)$ from the preceding stress matrix. Integrating over $\Sigma_-$ and $\Sigma_+$ gives $E_-$ and $E_+$.
+
+Momentum uses the same source-frame comparison. The spatial projections $\pi_i=-T(n,R^{-1}E_i)$ give regional components $P_{\pm,i}=c^{-1}\int_{\Sigma_\pm}\pi_i\,dV_{h_R}$. The factor $1/c$ converts the stress--energy projection to momentum units. Their vanishing in the source rest frame gives $\mathbf P_\pm=0$.
+
+The continued tensor determines $E_+$ and describes the surrounding gravitational response. Equation~\eqref{eq:interior-stress-counterpart} instead integrates the spatial-stress trace over $\Sigma_-$, giving $-E_-$. These two contractions retain the roles established in Section~\ref{sec:energy}.
+
+\subsection{Combining the two regions}
+Matching at $S_r$ gives the same stress on both sides, while the regions have opposite outward normals. Their shared-interface fluxes therefore cancel when the regional balances are added. The remaining balance includes the exterior contribution and any actual outer flux.
+
+To track this balance for a changing observation, let $\xi$ be the spacetime observation vector. Stress conservation and the product rule give
+\NativeChargeBalanceDisplay
+Parentheses symmetrize indices with weight $1/2$. Thus $\nabla_{(\mu}\xi_{\nu)}=(\nabla_\mu\xi_\nu+\nabla_\nu\xi_\mu)/2$ measures the metric deformation along $\xi$. Its contraction with $T$ is the associated work. Integrating retains this work, outer-boundary flux and boundary transport, as detailed in Appendix~\ref{app:source-reduction}. A metric symmetry removes the deformation term; a constant charge also requires zero net outer flux.
+
+Moving $S_r$ at fixed field and fixed $R$ transfers the same contribution between $\Sigma_-$ and $\Sigma_+$, leaving their sum unchanged. The radius $r$ specifies this partition. Changing $R$ changes the source geometry and its energy, with the corresponding work already included in the balance.
+
+\subsection{Mass of the closed structure}
+Combining the regional measurements gives $E=E_-+E_+$ and $\mathbf P=\mathbf P_-+\mathbf P_+$. When this total four-momentum is defined, future-directed and timelike, its invariant mass satisfies
+\EnergyTotalMassRelationDisplay
+Substitution gives
+\ClosedRegionalMassDisplay
+The cross terms belong to the invariant of the complete system. In the source rest frame $\mathbf P=0$, so $E=Mc^2$ and
+\ClosedInteriorAccountingDisplay
+
+The source geometry enters this mass explicitly through its density and volume. Substituting $\rho=Q/(\kappa R^2)$ and $dV_{h_R}=R^3dV_\gamma$ combines the scale factors into $R/\kappa$. The remaining integrand is the curvature trace $Q=3+\tfrac12\operatorname{Scal}_\gamma$ times spatial volume.
+
+To express the integral on source charts $q_s$ covering both regions, take nonnegative weights $\chi_s$ with $\sum_s\chi_s=1$. Each chart has $dV_{\gamma,s}=\sqrt{\det(\gamma_{ij}^{(s)})}\,d^3q_s$, and the weights count overlaps once. Appendix~\ref{app:source-reduction} retains their derivative and outer-boundary contributions in the equivalent bulk--boundary expression.
+
+Under the stated four-momentum conditions, the coupled curvature and spatial volume therefore give the following mass. The source scale $R$ remains explicit, while the fixed-field sum is independent of the partition radius $r$,
+\ClosedSourceMassDisplay
