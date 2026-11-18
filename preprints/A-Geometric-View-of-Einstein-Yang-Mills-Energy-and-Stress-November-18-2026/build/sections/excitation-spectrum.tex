@@ -1,0 +1,107 @@
+\section{Mass and the excitation spectrum}
+\label{sec:excitation-spectrum}
+
+In the source rest frame Eq.~\eqref{eq:source-mass} gives \(Mc^2=E_-+E_+\). Evaluating the same regional sum on the excited source and on the vacuum gives the rest energy above the vacuum.
+
+\subsection{Energy above the vacuum}
+
+Write \(E[J]=(E_-+E_+)[J]\) for the complete energy of a source \(J\). On the homogeneous branch \(h_R=R^2\gamma\), the stress and volume formulas give
+\SpectrumSourceEnergyDisplay
+Integration covers \(\Sigma_-\) and \(\Sigma_+\), with each chart overlap counted once. Both regions therefore enter the vacuum subtraction.
+
+Let \(H\) be the self-adjoint Yang--Mills Hamiltonian and \(\Omega\) a normalized vacuum of energy \(E_0\). Subtracting \(E_0\) gives \(K=H-E_0I\), whose spectrum measures energy above the vacuum. In the rest sector, remove the vacuum eigenspace and denote the remaining space by \(\mathcal H_*\). Assume this space is nonzero and invariant under the spectral projections of \(K\). Its normalized states of finite mean energy form \(\mathcal D_*\). When states are resolved by total momentum, these definitions apply in the zero-momentum fiber. Use \(\hbar=1\), so that energy times Euclidean separation is dimensionless.
+
+Let \(J_\psi\) and \(J_\Omega\) denote the sources corresponding to the state and the vacuum. Assume their complete energy difference gives the quantum mean excitation energy for each \(\psi\in\mathcal D_*\),
+\SpectrumEnergyFormDisplay
+Each energy uses its own density, volume and regions. At common \(R\), the left side is exactly \(R/\kappa\) times the state-minus-vacuum difference of \(\sum_s\int\chi_s Q\,dV_{\gamma,s}\).
+
+\subsection{Stress and curvature measurements}
+
+To follow an excitation into a curvature measurement, retain the order of the products in the curvature of Appendix~\ref{app:source-stress}. Expanding the two normal-response products, the two derivatives of the connection correction, the four mixed products and the two products of corrections gives ten signed contributions. Let \(B_\ell\) be the symmetric Ricci contraction of contribution \(\ell\), including its sign. Their sum is \(\operatorname{Ric}\). Applying the focusing calibration of Eq.~\eqref{eq:stress} gives the same stress coefficient from the source work and from the geometric contraction,
+\SpectrumRowStressDisplay
+Both contractions use the metric of the complete source. In particular, \(\sum_\ell B_\ell(n,n)=0\) on the homogeneous branch. Each row contributes \(2B_\ell(n,n)/\kappa\) to \(\rho+\operatorname{tr}_{h_R}S\); summing the rows recovers the equilibrium relation in Eq.~\eqref{eq:assembled-density-stress}.
+
+Choose a smooth test function \(w\) and a component \(A\) in the observer's orthonormal frame. For example, the normal-normal component measures the energy density averaged over the support of \(w\). Use smearings for which the renormalized stress operators are defined on the vacuum and create finite-norm vectors. In the term-by-term correspondence the stress contains ten contributions. Keeping the same frame, volume, smearing and normalization gives the measurement
+\SpectrumComponentDisplay
+Here \(\ell\) labels a contribution to the stress and \(A\) selects a component of their sum. With the normalization of Eq.~\eqref{eq:stress}, \(G_{\mu\nu}=\kappa T_{\mu\nu}\), the corresponding curvature observable is
+\SpectrumCurvatureDisplay
+In this representation both measurements act on the same states. For a separate geometric Hilbert space, assume a unitary map \(U\) onto the corresponding sector that carries the vacuum, the component operators and the complete energy form with its domain. Uniqueness of the associated self-adjoint operator gives \(K_{\rm GR}=U K_{\rm YM}U^\dagger\). This is the correspondence required to read \eqref{eq:spectrum-curvature} as an observable of an independently quantized geometry.
+
+Subtract the vacuum expectation, \(\delta O_A=O_A-\langle\Omega,O_A\Omega\rangle I\), and project the vector \((\delta O_A)^\dagger\Omega\) onto \(\mathcal H_*\). Call the resulting vector \(v_A\); in a momentum-fiber formulation use the corresponding admitted fiber vectors. For Euclidean separation \(\tau\), the stress and curvature measurements have correlations
+\SpectrumCorrelationsDisplay
+Each insertion contributes one factor of \(\kappa\). Expanding them retains every ordered pair of the ten contributions. For a channel with \(v_A\ne0\), its normalized autocorrelation \(C_{AA}(\tau)/C_{AA}(0)\) is the response of the state \(v_A/\|v_A\|\).
+
+\subsection{How a lattice correlation gives the glueball mass}
+\label{sec:lattice-rest-mass}
+
+Morningstar and Peardon extracted the scalar glueball mass quoted in Appendix~\ref{app:coupling} from correlations of spatial loop operators on an anisotropic lattice~\cite{morningstarPeardon1999}. On each sampled gauge configuration, multiply the link matrices around a closed spatial loop and take the trace. This gives a gauge-invariant measurement on one slice. Summing over spatial positions selects zero total momentum. Combining loop shapes with scalar symmetry, even parity and even charge conjugation selects the \(0^{++}\) channel. Write \(O(t_0)\) for the resulting operator measured on the slice at \(t_0\).
+
+Measure \(O\) again at \(t_0+\tau\). Average the product \(O(t_0+\tau)O(t_0)^*\) over starting slices and configurations, then subtract the product of the two means. At sufficiently large temporal extent this connected correlation has the vacuum spectral expansion
+\LatticeGlueballCorrelationDisplay
+Here \(E_n\) is the energy of a zero-momentum state in the regulated theory. Subtracting the mean removes the constant vacuum term. Euclidean evolution weights the remaining states by their energies above the vacuum. As the separation grows, the slowest surviving decay belongs to the lowest energy with nonzero overlap. Because the spatial momentum is zero, its exponent is the rest energy \(mc^2=E_n-E_0\).
+
+Suppose this state dominates over a range of separations, with backward propagation negligible. Then \(C(\tau)\simeq A e^{-mc^2\tau}\). Increasing the separation by one temporal lattice spacing \(a_t\) multiplies the correlation by \(e^{-a_tmc^2}\). Taking the ratio cancels the unknown overlap \(A\) and gives the effective mass,
+\LatticeGlueballEstimatorDisplay
+With \(\hbar=1\), the logarithm measures the dimensionless combination \(a_tmc^2\). A stable value over adjacent separations identifies a window for a correlated fit. On a periodic lattice of temporal extent \(T\), the same state also propagates around the boundary. The fit then includes both \(e^{-mc^2\tau}\) and \(e^{-mc^2(T-\tau)}\). Several operators with the same symmetry can be combined through their correlation matrix to separate nearby states. Varying the fit window, volume and lattice spacing tests the extracted energy; conversion to physical units requires setting the lattice scale.
+
+For a matched stress component in Eq.~\eqref{eq:spectrum-correlations}, the same measurement has a direct geometric reading. The factor \(\kappa^2\) multiplying \(C_{AA}\) cancels between adjacent slices, so the stress and curvature correlations give the same effective mass at each separation where the ratio is defined. A glueball operator and a stress component resolve the same rest mass when both detect the same lowest state. Identifying that channel energy with the sector gap further requires that the state lie at the sector's lower edge.
+
+\subsection{Rest mass from the relative response}
+
+\begin{theorem}[Mass and the excitation spectrum]
+\label{thm:mass-spectrum}
+
+Let \(\Delta=\inf\sigma(K|_{\mathcal H_*})\). For a normalized rest excitation define its response at separation \(t>0\) and a weighted average over separations by
+\SpectrumResponsesDisplay
+Compare these two measurements relative to the original response,
+\[
+ G_{{\rm rel},\psi}(t)=\frac{\ExplainTerm{r_\psi(t)-f_\psi(t)}{response difference}}{f_\psi(t)} .
+\]
+For a definite rest excitation of mass \(m\), the two weights in Eq.~\eqref{eq:spectrum-responses} give
+\SpectrumDefiniteMassDisplay
+Thus the logarithmic growth rate of the relative response gives the rest energy of that excitation. For a superposition it gives the lowest energy present. Taking the lower edge over the rest excitations gives
+\SpectrumThresholdDisplay
+One infimum uses the complete regional energy. Taking the long-time rate before the other infimum resolves the lowest energy present in each state. If the matched Yang--Mills sector has a positive excitation threshold \(\Delta_{\rm YM}\), both give \(m_{\rm gap}=\Delta_{\rm YM}/c^2>0\). Equation \eqref{eq:spectrum-correlations} gives the geometric expression of that threshold in every curvature channel with weight arbitrarily close to it.
+
+\end{theorem}
+
+\begin{proof} Let \(\mu_\psi\) be the energy spectral measure of \(\psi\). At energy \(E\), evolution through \(t\) gives the weight \(e^{-tE}\). Averaging over \(u\) gives \((1+tE)^{-1}\). Their difference is positive for \(E>0\), since \(e^{tE}>1+tE\). It recovers the \emph{mean} excitation energy at all separations through the exact identity
+\SpectrumMomentDisplay
+Indeed, the integrand defining \(c_{\mathcal L}\) is bounded at zero and integrable at infinity. Exchanging the nonnegative integrals and substituting \(y=tE\) makes the response integral equal to \(c_{\mathcal L}\int E\,d\mu_\psi(E)\). Equation \eqref{eq:spectrum-energy-form} identifies this first moment with the source-energy difference. It is positive for every normalized excitation.
+
+To find the \emph{lowest} energy in the same measurement, put \(a_\psi=\inf\operatorname{supp}\mu_\psi\). Every interval \([a_\psi,a_\psi+\eta]\), \(\eta>0\), has weight \(p_\eta>0\), so
+\SpectrumSupportBoundsDisplay
+Taking logarithms in the bounds on \(f_\psi\) gives \(-t^{-1}\log f_\psi(t)\to a_\psi\) by letting \(t\to\infty\) and then \(\eta\downarrow0\). Applying the same operation to \(r_\psi\) gives \(t^{-1}\log r_\psi(t)\to0\). Thus the logarithmic rate in \eqref{eq:spectrum-threshold} is \(a_\psi\). For definite rest energy it equals \(mc^2\); for a superposition it selects the lower edge present in that state.
+
+Both the mean energy and \(a_\psi\) are at least \(\Delta\). For each \(\eta>0\), the range of the excitation spectral projection on \([\Delta,\Delta+\eta]\) contains a unit vector. Its mean and its lower edge both lie in that interval. Taking the two infima and using \eqref{eq:spectrum-energy-form} proves \eqref{eq:spectrum-threshold}, including a threshold reached only as a limit.
+\end{proof}
+
+\subsection{From one excitation to a uniform mass threshold}
+
+For a fixed excitation both responses tend to zero, and so does their absolute difference. Their ratio can nevertheless resolve a separation. If \(\int E^{-1}d\mu_\psi(E)<\infty\), dominated convergence gives \(t f_\psi(t)\to0\) and \(t r_\psi(t)\to\int E^{-1}d\mu_\psi(E)>0\). Hence \(r_\psi=\omega(f_\psi)\) and \(G_{{\rm rel},\psi}\to\infty\). For positive \(\Delta\) the integrability condition holds throughout the sector.
+
+To compare all rest excitations at the same separation, set \(b_t(E)=(1+tE)e^{-tE}\). For each fixed excitation \(b_t(K)\psi\to0\) by dominated convergence. Across the entire sector,
+\SpectrumUniformDisplay
+At fixed separation this ratio averages the decreasing function \(b_t\) with weights proportional to \((1+tE)^{-1}d\mu_\psi(E)\). Its upper bound is \(b_t(\Delta)\). A vector supported within \(\eta\) of the threshold gives at least \(b_t(\Delta+\eta)\), proving sharpness. Uniform little-omega is therefore equivalent to \(\Delta>0\). An independently established sector-wide ratio bound \(q<1\) at one separation \(T>0\) would give \(\Delta\ge-\log(q)/T\), since \(e^{-T\Delta}\le b_T(\Delta)\). 
+
+\subsection{Which excitations a curvature measurement sees}
+
+Equation \eqref{eq:spectrum-correlations} gives the corresponding curvature spectrum. If \(P_K\) is the energy spectral projection, put \(d\nu_{AB}(E)=\langle v_A,dP_K(E)v_B\rangle\). This positive matrix measure gives
+\SpectrumCurvatureBoundsDisplay
+Integration gives \(\int_0^\infty\mathscr G(\tau)\,d\tau\preceq\kappa^2 C(0)/\Delta\) for \(\Delta>0\). Both matrix inequalities follow by applying the scalar bounds in every linear combination of channels. For fluctuations that preserve the rest-frame balance, \(\delta O_{33}=-\delta O_{00}-\delta O_{11}-\delta O_{22}\) with the same smearing in all four entries. Dropping the last component and then reconstructing it by this relation recovers the full correlation matrix at every separation. The zero combination records a dependence among measurements. It contributes no massless excitation.
+
+An isolated lowest excitation with nonzero overlap produces a pole at \(s=-\Delta\) in the resolvent correlation; a continuous threshold appears as the lower edge of its measure. A channel that misses the lowest excitations measures its own higher edge.
+
+\section{Conclusion}
+A Yang--Mills field with no elementary gluon mass term can carry
+collective mass through its own interaction. In the construction given
+here, the field and its successive responses determine a geometry that
+continues across the surface of the closed structure. Its curvature
+gives the rest energy density and the spatial stress in the equilibrium
+relation \(\rho=-\operatorname{tr}_{h_R}S\). Moving the surface changes
+how much energy lies on either side, yet leaves the mass
+\(M=(E_-+E_+)/c^2\) unchanged. With the vacuum value subtracted as in
+Eq.~\eqref{eq:spectrum-energy-form}, this same regional sum measures
+the energy of excitation. A positive lower edge \(\Delta\) of the
+Yang--Mills rest spectrum thus gives the mass gap of the complete
+field, \(m_{\rm gap}=\Delta/c^2\).

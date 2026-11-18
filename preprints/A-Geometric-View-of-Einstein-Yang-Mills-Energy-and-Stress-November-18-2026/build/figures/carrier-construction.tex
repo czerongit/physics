@@ -1,0 +1,105 @@
+% Fixed projection and face assignment throughout the manuscript.
+\definecolor{carrierred}{HTML}{BE4654}
+\definecolor{carriergreen}{HTML}{398268}
+\definecolor{carrierblue}{HTML}{4277AD}
+\definecolor{diagonalgold}{HTML}{AC8542}
+\definecolor{diagonalviolet}{HTML}{8B6A9E}
+\tikzset{carrierstar/.style={star,star points=5,star point ratio=2.2,draw=white,line width=.3pt,minimum size=7.8pt,inner sep=0pt},carrieredge/.style={draw=black!55,line width=.65pt},pendingedge/.style={draw=black!18,densely dashed,line width=.6pt},carrierlabel/.style={font=\scriptsize,fill=white,fill opacity=.87,text opacity=1,inner sep=2pt}}
+% Arguments: displayed response direction count, edge stage, face stage.
+\newcommand{\CarrierScene}[4][1]{%
+\begin{tikzpicture}[x={(1.8cm,-.55cm)},y={(.95cm,.85cm)},z={(0cm,1.65cm)}]
+\useasboundingbox (-3.7cm,-3.0cm) rectangle (3.7cm,3.0cm);
+\coordinate (rp) at (1,0,0);\coordinate (rm) at (-1,0,0);
+\coordinate (gp) at (0,1,0);\coordinate (gm) at (0,-1,0);
+\coordinate (bp) at (0,0,1);\coordinate (bm) at (0,0,-1);
+\filldraw[fill=carrierred,fill opacity=.035,draw=carrierred!28,line width=.35pt]
+ (0,-1.15,-1.15)--(0,1.15,-1.15)--(0,1.15,1.15)--(0,-1.15,1.15)--cycle;
+\node[carrierlabel,text=carrierred] at (0,1.12,.72) {$\CarrierDirectionLabel{1}$};
+\draw[carrierred!50,line width=.5pt] (-1.1,0,0)--(1.1,0,0);
+\ifnum#2=1
+ \draw[carrierred!70,-{Stealth[length=4pt]},domain=15:337,samples=70,smooth,variable=\t]
+ plot ({0},{.40*cos(\t)},{.40*sin(\t)});
+ \node[carrierlabel] at (0,-.55,.32) {$\PhaseRotation$};
+\fi
+\ifnum#2>1
+ \filldraw[fill=carriergreen,fill opacity=.035,draw=carriergreen!28,line width=.35pt]
+ (-1.15,0,-1.15)--(1.15,0,-1.15)--(1.15,0,1.15)--(-1.15,0,1.15)--cycle;
+ \node[carrierlabel,text=carriergreen] at (-1.12,0,.79) {$\CarrierDirectionLabel{2}$};
+ \draw[carriergreen!50,line width=.5pt] (0,-1.1,0)--(0,1.1,0);
+\fi
+\ifnum#2>2
+ \filldraw[fill=carrierblue,fill opacity=.035,draw=carrierblue!28,line width=.35pt]
+ (-1.15,-1.15,0)--(1.15,-1.15,0)--(1.15,1.15,0)--(-1.15,1.15,0)--cycle;
+ \node[carrierlabel,text=carrierblue] at (1.1,.98,0) {$\CarrierDirectionLabel{3}$};
+ \draw[carrierblue!50,line width=.5pt] (0,0,-1.1)--(0,0,1.1);
+\fi
+\ifnum#4>0
+ \fill[carrierred,opacity=.14] (rp)--(gm)--(bm)--cycle;
+ \fill[carriergreen,opacity=.14] (rm)--(gp)--(bp)--cycle;
+ \fill[carriergreen,opacity=.14] (rm)--(gp)--(bm)--cycle;
+ \fill[carrierblue,opacity=.14] (rp)--(gm)--(bp)--cycle;
+ \fill[carrierred,opacity=.14] (rp)--(gp)--(bm)--cycle;
+ \fill[carrierblue,opacity=.14] (rm)--(gm)--(bp)--cycle;
+\fi
+\ifnum#4>1
+ \fill[diagonalgold,opacity=.17] (rp)--(gp)--(bp)--cycle;
+ \fill[diagonalviolet,opacity=.17] (rm)--(gm)--(bm)--cycle;
+\fi
+\ifnum#3>0
+ \foreach \a in {rp,rm}{\foreach \b in {gp,gm}{\draw[carrieredge] (\a)--(\b);}}
+\fi
+\ifnum#3>1
+ \foreach \a in {gp,gm}{\foreach \b in {bp,bm}{\draw[carrieredge] (\a)--(\b);}}
+ \ifnum#3=2
+  \foreach \a in {rp,rm}{\foreach \b in {bp,bm}{\draw[pendingedge] (\a)--(\b);}}
+ \fi
+\fi
+\ifnum#3>2
+ \foreach \a in {rp,rm}{\foreach \b in {bp,bm}{\draw[carrieredge] (\a)--(\b);}}
+\fi
+\foreach \a in {rp,rm}{\node[carrierstar,fill=carrierred] at (\a) {};}
+\node[carrierlabel,anchor=west,xshift=5pt] at (rp) {$\VertexLabel{1}{+}$};
+\node[carrierlabel,anchor=east,xshift=-5pt] at (rm) {$\VertexLabel{1}{-}$};
+\ifnum#2>1
+ \foreach \a in {gp,gm}{\node[carrierstar,fill=carriergreen] at (\a) {};}
+ \node[carrierlabel,anchor=south west,xshift=3pt,yshift=3pt] at (gp) {$\VertexLabel{2}{+}$};
+ \node[carrierlabel,anchor=north east,xshift=-3pt,yshift=-3pt] at (gm) {$\VertexLabel{2}{-}$};
+\fi
+\ifnum#2>2
+ \foreach \a in {bp,bm}{\node[carrierstar,fill=carrierblue] at (\a) {};}
+ \node[carrierlabel,anchor=south,yshift=5pt] at (bp) {$\VertexLabel{3}{+}$};
+ \node[carrierlabel,anchor=north,yshift=-5pt] at (bm) {$\VertexLabel{3}{-}$};
+\fi
+\ifnum#2=2
+ \node[carrierlabel] at (0,0,-1.35) {$\FirstPairFigureLabel$};
+\fi
+\ifnum#1=1
+\ifnum#2>2
+ \node[carrierlabel] at (0,0,-1.4) {$\AdjacentPairsFigureLabel$};
+\fi
+\ifnum#4>1
+ \node[font=\small] at (0,0,-1.75) {$\ColorGroup$};
+\fi
+\fi
+\end{tikzpicture}}
+\newcommand{\FaceKey}[1]{%
+\par\smallskip
+\begin{tikzpicture}[x=1cm,y=1cm]
+\foreach \x/\y/\col/\lab/\sig in {
+0/0/carrierred/{\RedAntiGreen}/{\RedAntiGreenSigns},3.0/0/carriergreen/{\GreenAntiRed}/{\GreenAntiRedSigns},6.0/0/carriergreen/{\GreenAntiBlue}/{\GreenAntiBlueSigns},9.0/0/carrierblue/{\BlueAntiGreen}/{\BlueAntiGreenSigns},
+0/-1.05/carrierred/{\RedAntiBlue}/{\RedAntiBlueSigns},3.0/-1.05/carrierblue/{\BlueAntiRed}/{\BlueAntiRedSigns}}
+ {\filldraw[fill=\col!12,draw=\col!70] (\x,\y)--(\x+.55,\y+.68)--(\x+1.1,\y)--cycle;
+ \node[font=\small] at (\x+.55,\y+.23) {$\lab$};
+ \node[font=\scriptsize,anchor=west] at (\x+1.22,\y+.25) {$\sig$};}
+\ifnum#1=1
+ \foreach \x/\sig in {6.0/{\FirstDiagonalSigns},9.0/{\SecondDiagonalSigns}}
+ {\draw[black!35,dashed] (\x,-1.05)--(\x+.55,-.37)--(\x+1.1,-1.05)--cycle;
+ \node[font=\scriptsize,text=black!45] at (\x+.55,-.83) {};
+ \node[font=\scriptsize,anchor=west] at (\x+1.22,-.8) {$\sig$};}
+\else
+ \foreach \x/\col/\lab/\sig in {6.0/diagonalgold/{\FirstDiagonalModeLabel}/{\FirstDiagonalSigns},9.0/diagonalviolet/{\SecondDiagonalModeLabel}/{\SecondDiagonalSigns}}
+ {\filldraw[fill=\col!14,draw=\col!70] (\x,-1.05)--(\x+.55,-.37)--(\x+1.1,-1.05)--cycle;
+ \node[font=\small] at (\x+.55,-.83) {$\lab$};
+ \node[font=\scriptsize,anchor=west] at (\x+1.22,-.8) {$\sig$};}
+\fi
+\end{tikzpicture}}

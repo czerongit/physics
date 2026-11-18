@@ -1,0 +1,86 @@
+\section{Coupling}
+\label{sec:coupling}
+A phase connection compares internal directions as the field changes. Coupling also changes the response to those directions. On the complete field space $\ComparisonSpace$, the response map is
+\CouplingCouplingDisplay
+The label $p$ selects the component, while $j$ runs over its partners. Their pairings supply the coefficient multiplying that component, so its response depends on both magnitude and relative alignment.
+
+\subsection{How a change reaches the response}
+For a two-component example, take
+\CouplingMatrixInputExampleDisplay
+Each component has one partner, giving
+\CouplingMatrixResponseExampleDisplay
+Changing either matrix can therefore affect both responses through their shared pairing.
+
+The first variation must retain that dependence. Writing $L_X=D\Lambda(X)$ gives
+\CouplingCouplingResponseDisplay
+The first term changes the component at its current coefficient; the second changes the coefficient itself. In the example, varying only the second diagonal entry of the first component yields
+\CouplingMatrixVariationExampleDisplay
+The second response changes although its own input component is fixed. The derivative $L_X$ records this transmission of a change through the coupling.
+
+\subsection{Two complex response directions}
+To compare a field change with its response, place them in $\mathcal V\oplus\mathcal V$ with the product metric of Section~\ref{sec:field}. The graph consists of pairs $(v,L_Xv)$. Its perpendicular directions are obtained from the metric adjoint,
+\CouplingAdjointMeaningDisplay
+which transfers $L_X$ between the two entries of the pairing. The graph and normal lifts are
+\CouplingPairLiftDisplay
+Their comparison gives
+\CouplingPairOrthogonalityDisplay
+so a normal lift is perpendicular to every graph lift. Appendix~\ref{app:coupling} expands the cancellation in coordinates.
+
+Apply both lifts to the radial and transverse directions from Section~\ref{sec:phase}. Let $\PlaneInjection$ insert their linear combinations in the chosen labelled component of $\mathcal V$. Lifting its columns gives
+\CouplingPairColumnsDisplay
+The graph retains $\TwoColumnFrame$ in its first position and the normal lift retains it in its second. Both planes therefore retain two independent directions, even if $L_X$ has a kernel.
+
+Their Gram matrices satisfy
+\CouplingPairGramDisplay
+The zero cross-pairing records orthogonality, while the positive Gram matrices give a metric on each plane. Explicitly, for a nonzero plane-coordinate column $\CouplingPlaneCoordinates$,
+\CouplingGramLengthsDisplay
+Each squared length contains the strictly positive contribution from $\TwoColumnFrame\CouplingPlaneCoordinates$.
+
+Both planes inherit the radial and transverse ordering. Their metrics and orientations therefore supply a quarter-turn on each, giving two orthogonal complex directions. In oriented orthonormal coordinates,
+\FieldCouplingComplexPairDisplay
+their combined length is
+\FieldCouplingComplexNormDisplay
+Transformations preserving this complex inner product form $\FieldCouplingUnitaryGroup$.
+
+Preserving the complex volume form imposes the determinant-one condition. For two complex columns,
+\CouplingComplexVolumeDisplay
+so the unitary maps preserving this form constitute $\PairGroup$. They have matrices
+\CouplingPairGroupDisplay
+where $\CouplingAlpha,\CouplingBeta$ are complex and the bars denote conjugation. Metric preservation gives orthonormal columns, and determinant one retains their complex volume.
+
+For example,
+\CouplingUnitaryMixingExampleDisplay
+mixes the two directions equally while retaining unit length and determinant one. Such pair transformations need not commute. Two of them are
+\FieldCouplingMixingMatricesDisplay
+Applied to
+\FieldCouplingInitialCoordinateDisplay
+in opposite orders, they give
+\FieldCouplingFirstOrderDisplay
+and
+\FieldCouplingSecondOrderDisplay
+The different results exhibit the order dependence that the shared pair actions will carry into the three-direction construction.
+
+\subsection{The shared intermediate response}
+Applying the same coupling to $Y$ produces $Z$. The derivative of this next response must pass through the change of $Y$,
+\CouplingSuccessiveResponseDisplay
+Here $L_Y$ is evaluated at the intermediate field. In the matrix example the next pairing is eight, giving
+\CouplingSecondMatrixResponseDisplay
+Thus all three levels are determined by the original matrices and the same rule; the two adjacent comparisons share $Y$.
+
+\begin{figure}[!htbp]
+\centering
+\begin{minipage}[t]{.495\linewidth}\centering
+\resizebox{\linewidth}{!}{\CarrierScene{2}{1}{0}}\par\smallskip
+\small (a) Two response components and their pair action
+\end{minipage}\hfill
+\begin{minipage}[t]{.495\linewidth}\centering
+\resizebox{\linewidth}{!}{\CarrierScene{3}{2}{0}}\par\smallskip
+\small (b) Three coupled response components
+\end{minipage}
+\caption{Successive responses $X\to Y\to Z$ under $\CouplingMap$ give two adjacent pair actions, shown by solid edges. Dashed edges mark the first--third relation generated from them in Section~\ref{sec:color}.}
+\label{fig:couplings}
+\end{figure}
+\FloatBarrier
+
+The shared intermediate response links the two solid pair relations in Figure~\ref{fig:couplings}. Determining what their combined action generates is the next step.
+\FloatBarrier

@@ -1,0 +1,68 @@
+\section{Field}
+\label{sec:field}
+A field assigns values to configurations of a system. The values considered here are matrix components whose magnitudes and relative directions determine their interactions. The physical question is how such interactions can produce the mass of a closed structure when the Yang--Mills Lagrangian contains no elementary gluon mass term.
+
+\subsection{From field interaction to collective mass}
+In the usual spacetime description, a gauge connection has matrix-valued components $\FieldYMPotential$, where $\FieldYMCoordinateIndex$ labels a spacetime direction. Using Hermitian matrices, equal to their conjugate transposes, its curvature, or field strength, is
+\FieldYMStrengthDisplay
+Here $\FieldYMCoupling$ is the coupling strength and
+\FieldYMCommutatorDisplay
+Directional derivatives measure changes of the connection, while the commutator records the order dependence of its internal transformations. This product term allows the field to interact with itself.
+
+Squaring the field strength retains both propagation and interaction. With $c$ the speed of light and $\hbar$ the reduced Planck constant, choose units where $\FieldYMNaturalUnits$. The Yang--Mills Lagrangian density is
+\FieldYMLagrangianDisplay
+Repeated indices are contracted with the spacetime metric. Expanding the square gives quadratic, cubic and quartic terms in the connection, with no separate mass term proportional to $\FieldYMMassTerm$~\cite{yangMills1954}. For the gluon field the gauge group is $\ColorGroup$, and the linearized transverse waves are massless. Appendix~\ref{app:coupling} gives the weak-wave calculation.
+
+Absence of an elementary mass term does not preclude collective invariant mass. Restoring $c$, a system with total energy $\FieldYMTotalEnergy$ and total momentum $\FieldYMTotalMomentum$ has invariant mass $\FieldYMCollectiveMass$ satisfying
+\FieldYMInvariantMassDisplay
+Even massless components can have a nonzero value of this invariant when their momenta cancel. That kinematic observation alone does not establish binding. A glueball is a gauge-invariant bound excitation of the interacting gluon field, with mass determined by its complete rest energy. The weak-wave comparison, a two-excitation example and a lattice result are given in Appendix~\ref{app:coupling}.
+
+The construction follows field comparisons through coupled phase rotations to a closed geometry, then uses its stress and complete energy--momentum to obtain a mass expression. The mass statement retains the condition that the total four-momentum is defined, future-directed and timelike. A common positive threshold for all physical excitations is a distinct mass-gap question~\cite{jaffeWitten}. The first step here is to determine what information about the field components can generate the proposed geometry.
+
+\subsection{Comparing components}
+Magnitude alone does not specify an interaction between directions. Two components may have the same length and different alignments. An inner product measures length by self-pairing and alignment by cross-pairing, allowing one direction to be resolved along another.
+
+For example, consider
+\FieldExampleVectorsDisplay
+Both vectors have unit length,
+\FieldExampleLengthsDisplay
+but their cross-pairing is
+\FieldExampleAlignmentDisplay
+Since $\FieldExampleVectorA$ is a unit vector, this value is the component of $\FieldExampleVectorB$ along it. Subtracting that component leaves a perpendicular remainder,
+\FieldExampleProjectionDisplay
+This is the projection operation used below to obtain radial and transverse field directions.
+
+Matrix components admit the same comparison by multiplying corresponding entries and adding. For two real $\FieldExampleMatrixSize$ matrices,
+\FieldExampleMatricesDisplay
+the pairing is
+\FieldExampleMatrixComparisonDisplay
+and self-pairing gives
+\FieldExampleMatrixLengthDisplay
+Transposition and matrix multiplication collect these products on the diagonal of $A^TB$. Their sum, the trace, is therefore the same inner product. Appendix~\ref{app:coupling} shows the entrywise calculation.
+
+To specify the field components, regard a matrix as a linear map on a finite-dimensional real inner-product space $\FieldVectorSpace$. A map is self-adjoint when its action can be transferred between the two entries of every pairing,
+\FieldSelfAdjointDisplay
+In an orthonormal basis this condition means that its matrix is symmetric. The numerical example and transpose identity in Appendix~\ref{app:coupling} make this equivalence explicit.
+
+Write $\FieldComponentSpace$ for the real vector space of these self-adjoint components. In orthonormal coordinates its inner product is
+\FieldMatrixPairingDisplay
+The indices range over the basis directions. Positivity follows from the sum of squared entries, while cross-pairing retains the relative alignment needed for the coupling.
+
+\subsection{The complete field and its variations}
+Several labelled components require several positions in the field value. For two components, these positions form
+\FieldTwoComponentSpaceDisplay
+with a typical value
+\FieldTwoComponentValueDisplay
+Keeping the positions separate allows the same pairing to compare complete field variations by adding the comparisons at matching labels.
+
+A change of both components is recorded as
+\FieldTwoComponentChangeDisplay
+and its pairing with $\FieldOtherChangePair$ is
+\FieldTwoComponentMetricDisplay
+This product metric measures the complete change without losing the identity of either component. A worked matrix example is given in Appendix~\ref{app:coupling}.
+
+For a finite label set $\FieldLabelSet$, let $\mathcal V=\FieldComponentSpace^{\FieldLabelSet}$. On a regular configuration domain $\FieldConfigurationDomain$, the field is
+\FieldDefinitionDisplay
+and its product metric is
+\FieldProductMetricDisplay
+Coupling and compatibility determine which field values and changes are admissible; the metric compares their magnitudes and directions. Normalizing a component and projecting another perpendicular to it now applies the elementary comparison to the field itself.

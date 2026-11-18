@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,calc}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,hypcap=false}
+\usepackage{placeins}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.8}
+\widowpenalty=10000
+\clubpenalty=10000
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A Geometric View of Einstein-Yang-Mills Energy and Stress},pdfauthor={Sina Montazeri}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\input{equations-notations}
+\input{figures/carrier-construction}
+\title{A Geometric View of Einstein--Yang--Mills Energy and Stress}
+\author{Sina Montazeri}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Yang--Mills theory describes interacting gauge fields whose classical Lagrangian contains no gluon mass term. A topological view describes how the radial and transverse directions of a field define oriented phase planes, each carrying a U(1) rotation. Coupling the field and its successive responses links three such planes, generating an SU(3) symmetry whose eight components are represented by the faces of an octahedron.
+
+The resulting closed structure separates its interior from the surrounding spacetime. Its coupled responses determine a spacetime metric and curvature. Variation of the curvature energy yields the stress--energy tensor, including the gravitational response surrounding the structure. Its energy and momentum determine its mass without introducing an elementary gluon mass term into the Yang--Mills Lagrangian. Subtracting the vacuum energy from the sum of the interior and exterior energies relates the mass of the closed field to the lower edge of its excitation spectrum.
+\end{abstract}
+\par\medskip\begingroup\centering
+\resizebox{.62\textwidth}{!}{\CarrierScene[0]{3}{3}{2}}\par
+\smallskip
+\begin{minipage}{.82\textwidth}\centering\small
+Symmetries of the gluon field in the glueball construction. Each shaded
+plane carries a \(\PhaseGroup\) phase rotation. Rotations between adjacent
+pairs of internal directions generate \(\ColorGroup\), whose eight generators
+are represented by the faces of the octahedron.
+\end{minipage}\par
+\endgroup
+\clearpage
+\input{sections/field}
+\input{sections/phase}
+\input{sections/coupling}
+\input{sections/algebra}
+\input{sections/curvature}
+\input{sections/energy}
+\input{sections/mass}
+\input{sections/excitation-spectrum}
+\clearpage
+\appendix
+\input{appendices/coupling-map}
+\clearpage
+\input{appendices/source-reduction}
+\clearpage
+\input{appendices/color-correspondence}
+\clearpage
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}

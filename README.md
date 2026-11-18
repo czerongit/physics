@@ -4,7 +4,7 @@ This research program started as an investigation of dynamics and its structures
 
 ### Papers
 
-1. [A Geometric View of Einstein–Yang–Mills Energy and Stress](preprints/A-Geometric-View-of-Einstein-Yang-Mills-Energy-and-Stress-November-16-2026/)
+1. [A Geometric View of Einstein–Yang–Mills Energy and Stress](preprints/A-Geometric-View-of-Einstein-Yang-Mills-Energy-and-Stress-November-18-2026/)
 
 ### Recently Used Models
 

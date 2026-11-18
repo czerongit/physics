@@ -1,0 +1,67 @@
+\section{Algebra}
+\label{sec:color}
+Retaining the field, its response and the next response gives three linked entries. With $L_X=D\Lambda(X)$ and $L_Y=D\Lambda(Y)$, a variation becomes
+\AlgebraThreeLevelVariationDisplay
+Both adjacent comparisons use the middle entry. Their pair actions therefore act within a common three-direction construction.
+
+\subsection{Three coupled complex directions}
+The graph and normal lifts now lie in $\TripleComparisonSpace$ with its product metric. As for a single pair, the adjoint identity makes each adjacent normal lift perpendicular to the graph. The two normal lifts can overlap through their middle components, so subtracting that overlap is needed to obtain mutually orthogonal planes.
+
+Apply these operations to the same radial and transverse inclusion $\mathsf V$. Write $\mathsf V_0,\mathsf V_1,\mathsf V_2$ for the graph-plane map and the two resulting normal-plane maps. Their pairings satisfy
+\AlgebraJointOrthogonalityDisplay
+Each map retains two independent columns from $\mathsf V$. Appendix~\ref{app:coupling} gives the projection and the component argument establishing that rank.
+
+The inherited order of the columns orients each plane. Its metric then supplies the quarter-turn constructed in Section~\ref{sec:phase}, so the three planes form a Hermitian three-space. The adjacent actions $\mathrm{SU}(2)_{12}$ and $\mathrm{SU}(2)_{23}$ preserve its metric and complex volume form. Since both act on its middle direction, their generators can also produce a first--third action.
+
+\subsection{Completing the pair symmetry}
+To calculate that action, let $E_{ij}$ be the matrix with entry one at $(i,j)$ and zero elsewhere. The trace-free skew-Hermitian generators of a pair are
+\AlgebraGeneratorDefinitionDisplay
+Here $\mathsf A_{ij}$ and $\mathsf B_{ij}$ mix the two complex coordinates, while $\mathsf H_{ij}$ changes their relative phase. Taking brackets of adjacent generators gives
+\AlgebraCrossPairDisplay
+Thus the first--third mixing is obtained from the two actions sharing the middle direction. Its diagonal generator satisfies
+\AlgebraDiagonalDependenceDisplay
+
+Together these generators supply three complex off-diagonal entries and two independent imaginary diagonal entries,
+\AlgebraDimensionDisplay
+The bracket calculation supplies the pair relations, and the count identifies their eight independent directions. They span $\ColorAlgebra$, with connected generated group $\ColorGroup$.
+
+\subsection{The connection of the coupled frame}
+These directions vary with the source. To compare them at neighboring configurations, choose an oriented orthonormal basis in each plane. The three bases form a real six-frame $\RealFrame$; pairing the radial and transverse entries in each plane expresses the same frame in three complex coordinates.
+
+Let $J$ be the direct sum of their quarter-turns. Differentiating the real frame gives $\Omega_{\mathbb R}=\mathsf E^*d\mathsf E$, where the star denotes the real metric adjoint. Its part commuting with $J$ acts complex-linearly. Expressing that part as a complex $3\times3$ matrix and removing its common phase gives
+\AlgebraCompatibleConnectionDisplay
+The trace is taken in the three complex coordinates, and $I_3$ is their identity. The first projection preserves the complex structure; the second leaves relative phases.
+
+Orthonormality makes the resulting connection skew-Hermitian, and removal of the common phase makes it trace-free. With $\dagger$ denoting conjugate transpose,
+\AlgebraConnectionPropertiesDisplay
+It can therefore be written
+\AlgebraConnectionMatrixDisplay
+The real one-forms $a_i$ describe diagonal phase changes, while $A_{12},A_{23},A_{13}$ mix pairs. All entries depend on the source through its responses, projections and normalization. Appendix~\ref{app:color-correspondence} compares this connection in different normalized color descriptions.
+
+The connection now makes the earlier order dependence local. Its curvature is
+\AlgebraGaugeCurvatureDisplay
+with first--third entry
+\AlgebraCrossCurvatureDisplay
+The product $A_{12}\wedge A_{23}$ carries the adjacent interactions into that entry, the curvature counterpart of the bracket that generated the first--third pair.
+
+Multiplying the skew-Hermitian components by $-i$ gives Hermitian coordinates. The two diagonal modes have the normalized basis
+\AlgebraDiagonalModesDisplay
+The off-diagonal coordinates form three conjugate pairs, completing the eight components. The letters $r,g,b$ name the color basis directions and a bar denotes anticolor.
+
+\begin{figure}[!htbp]
+\centering
+\begin{minipage}[t]{.495\linewidth}\centering
+\resizebox{\linewidth}{!}{\CarrierScene{3}{3}{0}}\par\smallskip
+\small (a) All three pair relations
+\end{minipage}\hfill
+\begin{minipage}[t]{.495\linewidth}\centering
+\resizebox{\linewidth}{!}{\CarrierScene{3}{3}{1}}\par\smallskip
+\small (b) Six off-diagonal color coordinates
+\end{minipage}
+\FaceKey{1}
+\caption{Adjacent pair actions generate the first--third relation. The six off-diagonal color labels occupy three conjugate pairs of faces; the two remaining faces carry the diagonal modes.}
+\label{fig:offdiagonal}
+\end{figure}
+
+Figure~\ref{fig:offdiagonal} organizes the components just obtained. Their eight face labels provide the representation from which the closed source surface is assembled.
+\FloatBarrier

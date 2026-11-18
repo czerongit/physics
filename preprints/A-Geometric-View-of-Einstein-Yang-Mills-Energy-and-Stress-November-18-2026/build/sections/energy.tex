@@ -1,0 +1,63 @@
+\section{Energy and stress}
+\label{sec:energy}
+Energy and momentum are read from the response of this geometry to source variations. The calculation begins with the matrix pairings that determine its metric.
+
+\subsection{Metric and complete curvature}
+Collect the terminal matrices as columns $\mathsf Z=(\operatorname{vec}Z_p)_p$. Their Frobenius pairings give $G_Z=\mathsf Z^T\mathsf Z$, and $\mathsf H=G_Z^2$ supplies a positive metric on their coefficients. On the regular source family, the scale is $R^2=(\mathbf1^T\mathsf H^{-1}\mathbf1)^{-1}$ and the normalized coefficient vector is $\mathbf v=R^2\mathsf H^{-1}\mathbf1$, where $\mathbf1$ is the column of ones.
+
+Reversing the metric sign along this scale direction gives $\mathsf g=\mathsf H-2R^2\mathbf1\mathbf1^T$. The coframe $e$ is the covariant change of $\mathbf v$ along the source history, computed with the $\mathsf H$-compatible connection. It maps a tangent vector to its coefficient change, so pairing two such images gives the spacetime metric. With $\Omega_g$ its torsion-free metric connection,
+\NativeGeometryDisplay
+Appendix~\ref{app:source-metric} derives these coefficients and the coframe from the same response matrices. Changing to spacetime coordinates introduces the frame derivative $de$ in $\Gamma(g)$. Differentiation then gives the curvature in the two descriptions,
+\NativeCurvatureDisplay
+Thus $\mathscr F$ and $\mathcal R$ represent the same curvature before and after the frame change.
+
+The color connection $A$ from Section~\ref{sec:color} enters $\Omega_g$ with the mixed components and connection corrections. Let $\mathscr F_{\mu\nu}$ denote its curvature two-form components for $\mu,\nu=0,1,2,3$, and $R_{abcd}$ the Riemann tensor in an orthonormal frame. Contracting all contributions gives
+\NativeRiemannEnergyDisplay
+The metric raises indices with their Lorentzian signs. Appendix~\ref{app:source-reduction} expands the weights and blocks, and Appendix~\ref{app:color-correspondence} gives the color-frame transformation. Varying this complete invariant now determines how the geometry responds to a source change.
+
+\subsection{From curvature work to physical stress}
+One contraction of Riemann curvature gives Ricci curvature; its trace gives the scalar curvature,
+\EnergyRicciMeaningDisplay
+The trace-free remainder is the Weyl tensor $\mathcal C$. In four dimensions the invariant separates into
+\NativeWeylEnergyDisplay
+Here $\langle\,\cdot\,,\,\cdot\,\rangle_g$ contracts all tensor indices using $g^{-1}$. This tensor contraction uses the generated metric, while the matrix pairing in Section~\ref{sec:field} compared the original field components. The scalar term corrects for the trace already included in the Ricci term.
+
+A source variation changes both curvature and the metric used to contract it. Write $\Pi$ for the coefficient of $\delta\operatorname{Ric}$ and $\Pi_g$ for that of $\delta g$ in the Ricci and scalar contributions. Including the Weyl contribution gives
+\NativeFullWorkDisplay
+The first term varies the Weyl tensor and its metric pairing. The other terms record the Ricci and metric responses, with frame and coupling coefficients changing along the same source family. Their coefficient calculation is given in Appendix~\ref{app:source-reduction}.
+
+The physical work measurement follows the convergence and separation of neighboring source-response curves. After retaining their acceleration and frame transport, these focusing measurements reconstruct Ricci curvature on the regular source family. Its conjugate work coefficient is therefore the same $\Pi=2\operatorname{Ric}-\tfrac13\operatorname{Scal}_g\,g$ obtained in the variation.
+
+The calibration fixes the relative normalization of trace-free and scalar focusing deformations, while $\kappa>0$ converts to physical units. It preserves their work pairing, as shown in Appendix~\ref{app:curvature-work}. In this convention the coefficient paired with the calibrated deformation is
+\NativeStressExtractionDisplay
+Substitution of $\Pi$, with $\operatorname{tr}_g g=4$, yields
+\NativeEinsteinDisplay
+Thus the measured focusing stress agrees with the Einstein tensor divided by $\kappa$. The full source variation still contains the Weyl and metric work displayed above.
+
+The resulting stress also supplies the curvature source current. Let $D_\mu$ be the derivative induced by $\Omega_g$ on coefficient-frame endomorphisms, $\nabla_\mu$ the Levi-Civita derivative of $g$, and $j_\nu$ the source current obtained from the antisymmetrized Ricci derivative. The field and stress balances are
+\NativeSourcedEquationsDisplay
+Appendix~\ref{app:source-reduction} gives the current and frame conversion. These equations apply to the matched geometry and its continuation beyond the boundary.
+
+Substituting the stress relation back into the invariant gives
+\NativeEnergyStressDisplay
+This expresses the same complete contraction through stress and Weyl curvature. To obtain a measured density, the tensor $T$ must next be resolved along the source's observer and spatial directions.
+
+\subsection{Energy and stress of the closed source}
+For the homogeneous family, $g=-dR^2+R^2\gamma$, where $\gamma$ is the spatial metric at unit scale. Choose the future normal $n=\partial_R$; the slice metric is $h_R=R^2\gamma$. Let $\theta=(\theta^i)$ be an orthonormal coframe for $\gamma$, with dual vectors $E_i$ and connection $\omega$. Placing the spatial directions before the normal in the connection gives
+\ClosedCurvatureBlockDisplay
+Torsion freedom cancels the mixed curvature blocks. The product $\theta\wedge\theta^T$ remains in the spatial curvature and contributes on each of its three oriented two-planes.
+
+Represent that curvature on $(E_2\wedge E_3,E_3\wedge E_1,E_1\wedge E_2)$ by the symmetric matrix $\mathcal D$, with trace $Q$. For the physical reading, use the orthonormal rest frame $(n,R^{-1}E_1,R^{-1}E_2,R^{-1}E_3)$; hatted indices denote this ordering.
+
+In this frame, $\rho=T(n,n)$ is the energy density. The spatial projections $\pi_i=-T(n,R^{-1}E_i)$ give momentum, and the restriction of $T$ to the slice gives the spatial stress $S$. Ricci contraction and calibrated trace reversal yield
+\ClosedStressMatrixDisplay
+Each spatial two-plane contributes to the three in $Q$. Trace reversal supplies the energy entry even though the normal Ricci component vanishes. The intermediate Ricci matrix is displayed in Appendix~\ref{app:source-reduction}.
+
+Separating $\mathcal D=(Q/3)I_3+\mathcal D_0$, with $\operatorname{tr}\mathcal D_0=0$, resolves the matrix into
+\ClosedDensityStressDisplay
+The displayed spatial matrix contains the components of $S$ in the $h_R$-orthonormal frame. Its trace is therefore $-\rho$ for isotropic and anisotropic stress alike. The same reduction gives zero rest-frame momentum. Appendix~\ref{app:source-reduction} relates these quantities to the spatial curvature contraction.
+
+For the reference source, $\mathfrak f=Q\sqrt{\det\gamma}$ is negative at $q_*=(-1,-1,1)$. Since $\rho\,dV_{h_R}=(R/\kappa)\mathfrak f\,d^3q$, continuity gives $r_0>0$ for which the regional integral $E_-(R,r)=\int_{\Sigma_-}\rho\,dV_{h_R}$ is negative when $0<r<r_0$. Integrating the stress trace on the same region yields
+\ClosedInteriorStressDisplay
+Thus the negative regional energy has an exact positive integrated spatial-stress counterpart.
+\FloatBarrier

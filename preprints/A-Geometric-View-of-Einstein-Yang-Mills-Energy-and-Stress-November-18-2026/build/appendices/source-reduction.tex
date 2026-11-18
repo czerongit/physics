@@ -1,0 +1,233 @@
+\section{Source geometry and energy balance}
+\label{app:source-reduction}
+This appendix follows the source used in Section~\ref{sec:octahedron} into the curvature and stress of Section~\ref{sec:energy}, then into the regional balance used for mass. The coordinate radius $r$ specifies a dividing surface; the source scale $R$ controls the homogeneous geometry.
+
+\subsection{Angular curvature of the octahedral representation}
+The signed vertices in Section~\ref{sec:octahedron} give the convex hull
+\CurvatureOctahedralHullDisplay
+A point within a face has the form
+\CurvatureFaceAverageDisplay
+For example,
+\CurvatureFacePairExampleDisplay
+share the edge joining their first two vertices. With consistent outward face orientations, their induced edge directions satisfy
+\CurvatureEdgeCancellationExampleDisplay
+Pairing every shared edge this way closes the representation.
+
+Counting the vertices, edges and faces gives
+\CurvatureCountingExampleDisplay
+Equal axis lengths make each triangular face equilateral,
+\CurvatureEquilateralExampleDisplay
+For a vertex $v$, let $\theta_{vf}$ be its corner angle in an incident face $f$. The angular defect is
+\CurvatureAngularDefectDisplay
+Four faces meet there, so
+\CurvatureRegularDefectDisplay
+or, in degrees,
+\CurvatureAngleExampleDisplay
+
+To sum the defects, count all corner angles once by vertex and once by face,
+\CurvatureAngleCountingDisplay
+Each triangular face contributes $\pi$, giving
+\CurvatureInvariantDefectDisplay
+This is the total in equation~\eqref{eq:octahedral-total-defect}. Rescaling the drawing preserves it,
+\CurvatureScaleExampleDisplay
+The calculation concerns the representation's angles. The radial patch map in Section~\ref{sec:octahedron} supplies the smooth surface on which the coupled source is evaluated.
+
+\subsection{Source coordinates}
+\label{app:source-coordinates}
+That patch map uses an affine source plane with basis matrix $B\in\mathbb Q^{12\times4}$. Write $q=(x,y,z)$ and $\bar q=(x,y,-1,z)^T$. Stacking the rows of $\mathsf D(q)$ into a column gives $B\bar q$, equivalently
+\SourceBasisDisplay
+The constants $a,b,d$ are entries $B_{7,1},B_{7,2},B_{7,3}$, with indices starting at one. Their exact rational values are supplied in the \href{retained-source-exact-data.json}{supplementary data}; the formula determines the remaining basis entries.
+
+The columns are the differences $b_i-b_0$ for $i=1,2,3$ between four original source vectors in $\mathbb R^4$, with the common translation fixed by $b_0=0$. They generate the matrix field used in the main construction. For each anchor $p\in\{0,1,2,3\}$, use the fixed labels $(\phi_0,\phi_1,\phi_2,\phi_3)=(0,1,3,7)$ and the original positive vector pairing $\beta$ to form
+\[
+v_{pi}=(\phi_i-\phi_p)(b_i-b_p),\qquad
+(\lambda_p x)_i=\left(\sum_{j\ne p,i}\beta(x_i,x_j)\right)x_i,\qquad i\ne p.
+\]
+Applying this vector coupling twice gives $z_{p\bullet}=\lambda_p(\lambda_p(v_{p\bullet}))$. The self-adjoint matrix
+\[
+X_p=\sum_{i\ne p}z_{pi}z_{pi}^{\flat_\beta}
+\]
+is assembled from these responses; $z^{\flat_\beta}(w)=\beta(z,w)$. The matrix-level responses are then exactly $Y=\Lambda(X)$ and $Z=\Lambda(Y)$ from Section~\ref{sec:coupling}. Vector and matrix operations are thus successive levels of the same source construction.
+
+Fixing $\bar q_3=-1$ gives three coordinates transverse to scaling. At $q_*=(-1,-1,1)$,
+\SourceReferenceDisplay
+Equation~\eqref{eq:source-patch} normalizes this family to a fixed positive scale $R$. The ball $|q-q_*|<r$ then selects the interior region on that slice, distinguishing the role of radius from source scale.
+
+\subsection{Matrix response, metric and induced connection}
+\label{app:source-metric}
+To calculate the geometry from the coupling, collect $Y=\Lambda(X)$ into columns $\mathsf Y=(\operatorname{vec}Y_p)_p$ and $Z=\Lambda(Y)$ into $\mathsf Z=(\operatorname{vec}Z_p)_p$. Their Gram matrices are $G_Y=\mathsf Y^T\mathsf Y$ and $G_Z=\mathsf Z^T\mathsf Z$. The coupling multiplies column $p$ by $w_p(Y)=\sum_{j\ne p}(G_Y)_{pj}$. With $\mathsf W=\operatorname{diag}(w_p(Y))$,
+\SourceGramReductionDisplay
+A Gram matrix introduces a weight on each side, and squaring it produces $\mathsf H$. These formulas apply on the regular patches where the columns are independent and $\mathsf W$ is invertible.
+
+The resulting coefficient geometry is
+\SourceCoefficientGeometryDisplay
+Here $\mathbf1$ is the column of ones. The definition of $R^2$ gives $\mathbf1^T\mathbf v=1$, while $\mathsf H\mathbf v=R^2\mathbf1$. Thus $\mathbf v$ is $\mathsf H$-orthogonal to coefficient directions whose entries sum to zero. The signed metric keeps their positive pairing and gives $\mathsf g(\mathbf v,\mathbf v)=-R^2$ on the scale line.
+
+The coframe is also determined by these matrices. On history coordinates $x^\mu$, let $\mathsf C=\mathsf Z$ and $\mathsf K=G_Z$, so $\mathsf H=\mathsf K^2$. The induced connection and its positive metric correction are
+\[
+\mathsf b_\mu=\mathsf K^{-1}\mathsf C^T\partial_\mu\mathsf C,\qquad
+\mathsf A^+_\mu=\mathsf b_\mu+
+\tfrac12\mathsf K^{-1}(\mathsf b_\mu+\mathsf b_\mu^T)\mathsf K.
+\]
+They satisfy $(\mathsf A^+_\mu)^T\mathsf H+\mathsf H\mathsf A^+_\mu=\partial_\mu\mathsf H$. Covariantly differentiating the normalized coefficient vector gives
+\[
+e_\mu=\partial_\mu\mathbf v+\mathsf A^+_\mu\mathbf v,\qquad
+e=[e_0\ e_1\ e_2\ e_3],\qquad
+g_{\mu\nu}=e_\mu^T\mathsf g e_\nu.
+\]
+The coframe therefore records how source changes alter the normalized coefficient vector, including the moving coefficient metric. It has rank four on the retained regular history. Pairing its columns gives the spacetime metric used in Section~\ref{sec:energy}; homogeneity reduces it to $g=-dR^2+R^2\gamma$.
+
+Differentiating the column space requires its tangential projection and normal remainder,
+\SourceInducedConnectionDisplay
+In these source-coordinate expressions, $\partial_a=\partial/\partial q^a$ with $a=1,2,3$. Thus $B_a^\perp$ measures the part of the changing columns perpendicular to their current span, while $\beta_Y$ compares directions within that span.
+
+Passing from $\mathsf Y$ to the weighted response $\mathsf Z$ transforms the connection and its curvature,
+\SourceConnectionTransformDisplay
+The term containing $d\mathsf W$ retains the varying coupling weights. Here $F(\beta)=d\beta+\beta\wedge\beta$, with the same convention for $\beta_Y$. The source-coordinate indices $a,b$ in curvature components are distinct from the fixed constants in the affine source matrix.
+
+\subsection{Complete curvature and calibrated work}
+\label{app:curvature-work}
+The metric and connection above determine the full curvature before any homogeneous block reduction. Its invariant uses all coordinate components. For increasing pairs $\NativePairIndices$, its weights are
+\NativeEnergyDefinitionDisplay
+The pair labels collect antisymmetric coordinate indices, each ranging over four spacetime directions.
+
+A two-direction example verifies how the metric transforms with its frame,
+\EnergyMetricExampleDisplay
+Each scale occurs twice because the metric pairs two vectors. The connection product likewise retains both orders,
+\EnergyCurvatureOrderDisplay
+so its contraction must preserve the complete matrix action.
+
+Let $N$ be the $\mathsf g$-orthogonal projector onto the timelike normal line and $P=I-N$ its spatial complement. Inserting both projectors gives
+\EnergyProjectionExampleDisplay
+Grouping the blocks defines
+\NativePacketsDisplay
+Their cross-pairings vanish under the trace, giving
+\NativeEnergyAllocationDisplay
+Both the normal--mixed and mixed--tangent descriptions contain $\mathcal K_C$, so one copy is subtracted in their sum. This accounts for all blocks once.
+
+A frame separating color and complementary directions has
+\SpectrumFullCurvatureDisplay
+Here the two-digit subscripts label blocks. Writing $D_{\Omega_{11}}$ for the derivative induced by the first block, the difference between its connection and $A$ gives
+\SpectrumMixedCorrectionDisplay
+and
+\EnergyColorCorrectionDisplay
+The mixed products thus remain before restricting to the homogeneous solution.
+
+To vary the invariant, first differentiate its inverse metric,
+\EnergyInverseMetricDisplay
+Applying this rule to the Ricci and scalar terms in equation~\eqref{eq:native-weyl-energy} gives
+\NativeWorkCoefficientsDisplay
+The coefficient $\Pi$ pairs with $\delta\operatorname{Ric}$ and $\Pi_g$ with $\delta g$. The full variation also includes the Weyl term. The physical focusing measurement is obtained from the response of the same source, with acceleration and frame transport retained. For its response velocity $v$, write $\mathsf B^a{}_b=\nabla_bv^a$, $\vartheta=\operatorname{tr}\mathsf B$ and $a_v=\nabla_vv$. The measured directional contraction is
+\[
+r_{\mathrm{foc}}(v)=\operatorname{div}_g a_v-v(\vartheta)-\operatorname{tr}(\mathsf B^2)
+=\operatorname{Ric}(v,v).
+\]
+The available source probes reconstruct the corresponding symmetric tensor. This is the focusing tensor whose conjugate work coefficient is $\Pi$; the identification is made after the source response and its transport are included.
+
+For a focusing variation $B$, the adopted deformation calibration is $4B-\tfrac43g\operatorname{tr}_gB$. Its pairing with the physical stress obeys
+\[
+\frac{\kappa}{2}
+\left\langle T,\,4B-\frac43g\operatorname{tr}_gB\right\rangle_g
+=\langle\Pi,B\rangle_g,\qquad
+T=\frac1{2\kappa}\left(\Pi-g\operatorname{tr}_g\Pi\right).
+\]
+Substitution verifies this work identity using $\operatorname{tr}_g g=4$. The calibration fixes the relative trace and trace-free response; $\kappa$ retains the physical unit conversion. It is an operational normalization supplied with the source-work correspondence, not a new consequence of choosing a tensor norm.
+
+Its conserved trace combination and unit trace-free gain give the displayed stress. In the class of metric-natural linear trace adjustments, the contracted Bianchi identity fixes the trace ratio when scalar curvature varies, while the gain fixes the remaining normalized factor. Keeping $\kappa$ explicit, the substitution is
+\EnergyStressSubstitutionDisplay
+
+The same stress relation can be substituted back into the invariant. Trace reversal gives
+\NativeTraceReversalNormDisplay
+which, together with $\operatorname{tr}_gT=-\operatorname{Scal}_g/\kappa$, proves equation~\eqref{eq:native-energy-stress}.
+
+Antisymmetrizing the covariant derivative of Ricci and transforming to the coefficient frame gives
+\NativeCurrentSourceDisplay
+The resulting $j_\nu$ is the source current in Section~\ref{sec:energy}, with the same connection and metric.
+
+\subsection{Homogeneous curvature and rest-frame stress}
+\label{app:source-stress}
+To evaluate the calibrated stress for the retained source, pass from the induced connection $\beta$ to the torsion-free metric connection $\Omega_g$. Here $\beta$ denotes the induced connection, distinct from the vector pairing in the source assembly. Their difference $\Xi=\Omega_g-\beta$ gives
+\SourceCurvatureExpansionDisplay
+Using the normal derivatives of the column space makes this curvature explicit,
+\SourceOrderedCurvatureDisplay
+The first two products compare the two orders of normal response. The remaining terms differentiate the correction and retain its mixed and quadratic products. All contribute when the full curvature is contracted.
+
+For the homogeneous family, the adapted connection lists spatial directions before the timelike normal. Torsion freedom, $d\theta+\omega\wedge\theta=0$, gives
+\SourceCurvatureReductionDisplay
+Both mixed blocks vanish; the bottom scalar block vanishes because each $\theta^i\wedge\theta^i=0$. The product $\theta\wedge\theta^T$ remains in the spatial block.
+
+Represent this spatial curvature on $(E_2\wedge E_3,E_3\wedge E_1,E_1\wedge E_2)$ by $\mathcal D$, where $E_i$ are dual to $\theta^i$. Its trace is $Q=3+\operatorname{Scal}_\gamma/2$. In the physical orthonormal frame $(n,R^{-1}E_1,R^{-1}E_2,R^{-1}E_3)$, the Ricci and stress contractions become
+\SourceRicciStressReductionDisplay
+Although the normal Ricci entry is zero, scalar trace reversal gives the energy entry $Q/(\kappa R^2)$. In the spatial block the two terms proportional to $QI_3$ cancel, leaving $-\mathcal D/(\kappa R^2)$. Taking that block's trace gives $-\rho$, the relation integrated in Section~\ref{sec:energy}.
+
+\subsection{Reference density and the interior sign}
+\label{app:source-density}
+The scale enters the slice metric as $h_R=R^2\gamma$. Combining its volume element with the measured density gives
+\SourceDensityScalingDisplay
+The product contains one factor of $R$, since volume contributes $R^3$ and curvature contributes $R^{-2}$. Defining $\mathfrak f=Q\sqrt{\det\gamma}$ therefore writes the regional energy directly in source coordinates.
+
+At the reference point, the exact value $\mathfrak f_*=\mathfrak f(q_*)$ is rational,
+\SourceDensityCoefficientDisplay
+The integers $N_*<0$ and $D_*>0$ are given in the supplementary data; the displayed decimal is rounded. Continuity on a regular neighborhood gives $r_0>0$ with $\mathfrak f(q)\le\mathfrak f_*/2$ for $|q-q_*|\le r<r_0$. Integrating over the ball of coordinate volume $4\pi r^3/3$ yields
+\SourceInteriorBoundDisplay
+The metric volume density is already in $\mathfrak f$. This is the negative regional energy used in Section~\ref{sec:energy}; the exterior remains part of the complete accounting.
+
+\subsection{Curvature contraction on the homogeneous geometry}
+Homogeneity explains why curvature has no scale-direction component on this family. Let $\NativeEuler$ be the Euler field generating scaling with degree $\NativeDegree$. Its metric relations are
+\NativeHomothetyDisplay
+The Lie derivative fixes the metric's scale change, while the exact one-form identifies the Euler field's metric pairing. Its negative norm makes the direction timelike.
+
+Because the pairing is exact, its exterior derivative vanishes. For the torsion-free connection, the lowered covariant derivative is therefore symmetric. Combining this symmetry with the scale relation gives
+\EnergyHomothetyExplanationDisplay
+In the next formula, $X,Y$ denote local tangent vector fields, not the coupled response levels. The resulting derivative implies
+\NativeEulerCurvatureDisplay
+The parenthesis is the torsion, so curvature annihilates the Euler direction. Riemann symmetries extend this vanishing to every slot containing it.
+
+Normalize the Euler field to $\NativeEulerNormal$ and complete it to an orthonormal frame. All surviving slots are spatial, where the metric is positive. Hence
+\NativeSpatialEnergyDisplay
+For a real skew matrix,
+\EnergySkewSquareExampleDisplay
+the negative trace of its square is twice the sum of its independent squared entries. Each surviving curvature matrix has this form, giving the displayed nonnegative contraction.
+
+To separate its density and anisotropy, write $\NativeSpatialMetric$ and $\NativeSpatialTracefreeRicci$. Here $h=h_R$ is the spatial metric on the chosen slice, distinct from the Hermitian-line pairing used earlier. In a spatial Ricci eigenframe, let $\NativeRicciEigenvalues$ be its eigenvalues and $\NativeSectionalValues$ the sectional curvatures. Their contractions give
+\NativeRicciSectionalDisplay
+Solving for the sectional values yields
+\NativeSectionalSolutionDisplay
+and substitution in the full contraction gives
+\NativeSpatialRicciEnergyDisplay
+Resolving Ricci into trace and trace-free parts, with $\rho=\operatorname{Scal}_g/(2\kappa)$, therefore gives
+\NativeDensityIdentityDisplay
+The density occurs squared, so this norm identity alone does not select its sign.
+
+For example, equal spatial eigenvalues give
+\SpectrumIsotropicExampleDisplay
+Here $r$ is their common value, not the dividing radius. Changing two eigenvalues by opposite amounts gives
+\SpectrumAnisotropyExampleDisplay
+The trace and density stay fixed while the anisotropic contribution changes. This shows what the curvature norm records beyond measured density.
+
+For a constant density, integration gives
+\SpectrumRegionExampleDisplay
+Here $\mathcal D$ is a region, distinct from the curvature matrix used above. An energy--momentum example gives
+\SpectrumMassExampleDisplay
+illustrating why invariant mass retains both entries. Neither example supplies a numerical value for the constructed source.
+
+\subsection{Regional balance}
+The constructed surface bounds $\Sigma_-$ on the fixed-scale slice; its complement is $\Sigma_+$. Their restrictions of the metric, connection, curvature and stress agree at $S_r$, and their outward normals are opposite. The regional energies are
+\SourceRegionalEnergiesDisplay
+Adding their balances cancels shared-interface fluxes. Moving $S_r$ within a fixed collecting region transfers a common energy between the two integrals without changing their sum.
+
+Changing $R$ is a different operation. For a region transported at fixed normalized source coordinates, the slice has second fundamental form $K_{ij}=h_{R,ij}/R$, and its deformation work is
+\SourceObserverWorkDisplay
+The final equality uses $\operatorname{tr}_{h_R}S=-\rho$. A moving outer boundary adds its transport contribution. This is the same observer-deformation term retained in equation~\eqref{eq:native-charge-balance}.
+
+\newpage
+\subsection{Coordinate bulk and boundary terms}
+To expose the boundary contribution of the density integral, let $\Gamma^k{}_{ij}$ be the Levi-Civita connection of $\gamma$. The scalar-curvature density can be organized as
+\SourceBoundaryReductionDisplay
+Thus $\mathfrak f=\mathfrak w+\tfrac12\partial_k\mathfrak v^k$ separates a bulk density from a coordinate divergence. For a regular coordinate region $U$,
+\SourceBoundaryIntegralDisplay
+The oriented element $dS_k$ is a coordinate surface element; $\mathfrak v^k$ already contains $\sqrt{\det\gamma}$.
+
+Weighting a chart by $\chi$ also differentiates that weight,
+\SourceWeightedBoundaryDisplay
+These overlap terms accompany the weights in the final mass expression. Summing the regional contributions cancels the shared interface and retains the actual outer boundary. This is a decomposition of the already-defined regional energy, with each contribution counted once and the same total-four-momentum qualifications retained.
