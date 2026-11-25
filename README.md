@@ -1,5 +1,7 @@
 <h2 align="center"><strong>Physics for Humanity</strong></h2>
 
+**[Looking for collaborators, see below](#looking-for-collaborators)**
+
 This research program started as an investigation of dynamics and its structures from first principles. It began with phenomenology and numerology and, hopefully, made it past the Dunning–Kruger peaks encountered along the way. Its goal has always been, and will always remain, to help in the continuing development of a coherent physical theory that benefits humanity.
 
 ### Papers
