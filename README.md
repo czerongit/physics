@@ -9,8 +9,8 @@ This research program started as an investigation of dynamics and its structures
 ### Recently Used Models
 
 <p>
-<img src="assets/openai-black-monoblossom.svg#gh-light-mode-only" width="14" height="14" alt="OpenAI"><img src="assets/openai-white-monoblossom.svg#gh-dark-mode-only" width="14" height="14" alt="OpenAI"> Open AI 6.1 Sol<br>
-<img src="assets/openai-black-monoblossom.svg#gh-light-mode-only" width="14" height="14" alt="OpenAI"><img src="assets/openai-white-monoblossom.svg#gh-dark-mode-only" width="14" height="14" alt="OpenAI"> Open AI 6 Astra</p>
+<img src="assets/openai-black-monoblossom.svg#gh-light-mode-only" width="14" height="14" alt="OpenAI"><img src="assets/openai-white-monoblossom.svg#gh-dark-mode-only" width="14" height="14" alt="OpenAI"> Open AI 6.2 Sol<br>
+<img src="assets/openai-black-monoblossom.svg#gh-light-mode-only" width="14" height="14" alt="OpenAI"><img src="assets/openai-white-monoblossom.svg#gh-dark-mode-only" width="14" height="14" alt="OpenAI"> Open AI 6.2 Astra</p>
 
 ### Tooling
 
@@ -55,7 +55,9 @@ Thank you to Anthropic for creating Claude.
 
 Thank you to Claude for helpful insights and discussions that contributed to this work.
 
-Thank you to physics communicators.
+Thank you to physics and mathematics educators (list will grow in coming days):
 
 - [https://www.briangreene.org/](https://www.briangreene.org/)
 - [https://startalkmedia.com/](https://startalkmedia.com/)
+- [https://x.com/mathemetica](https://x.com/mathemetica)
+- [https://x.com/matharium](https://x.com/matharium)
