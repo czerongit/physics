@@ -56,9 +56,12 @@ Thank you to Anthropic for creating Claude.
 
 Thank you to Claude for helpful insights and discussions that contributed to this work.
 
-Thank you to physics and mathematics educators (list will grow in coming days):
+Thank you to physics communicators.
 
 - [https://www.briangreene.org/](https://www.briangreene.org/)
 - [https://startalkmedia.com/](https://startalkmedia.com/)
+
+Thank you to physics and mathematics educators (list will grow in coming days):
+
 - [https://x.com/mathemetica](https://x.com/mathemetica)
 - [https://x.com/matharium](https://x.com/matharium)
