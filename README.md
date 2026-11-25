@@ -38,6 +38,14 @@ If you find any instances, please send me an email describing exactly what you w
 
 Seeking mentorship from researchers in mathematical physics, differential geometry and related fields. Guidance on mathematical rigor, physical interpretation and developing this work for publication would be especially valuable. Constructive criticism and opportunities for sustained research discussion are welcome.
 
+### Looking for Collaborators
+
+If you are a researcher in physics or mathematics and are interested in coauthoring a formal publication based on these preprints, here is the easiest process I could come up with.
+
+1. Please contact me at `sm[at]nullmetric[dot]com` to discuss the collaboration. If you are a leading researcher, your name or website is enough for the initial email.
+2. Please open a pull request to this repository with your proposed changes, contributions, names, and affiliations.
+3. Either you or I can submit the manuscript to an official venue.
+
 ### Versions and Citations
 
 Papers are organized in dated directories under `preprints/`. Each edition supplies its own BibTeX citation and version note. Corrections and revisions receive new dated editions, preserving earlier editions for citation.
