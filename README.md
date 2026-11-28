@@ -1,4 +1,7 @@
-<h2 align="center"><strong>Physics for Humanity</strong></h2>
+<h2 align="center">
+  <strong>Physics for Humanity</strong><br>
+  <sub>Built with ❤️ and OpenAI GPT</sub>
+</h2>
 
 **[Looking for collaborators, see below](#looking-for-collaborators)**
 
