@@ -51,6 +51,10 @@ If you are a researcher in physics or mathematics and are interested in coauthor
 2. Please open a pull request to this repository with your proposed changes, contributions, names, and affiliations.
 3. Either you or I can submit the manuscript to an official venue.
 
+#### Collaboration Timeline
+
+- **Nov 27** — I have not received any emails yet. I reached out to several research teams.
+
 ### Versions and Citations
 
 Papers are organized in dated directories under `preprints/`. Each edition supplies its own BibTeX citation and version note. Corrections and revisions receive new dated editions, preserving earlier editions for citation.
