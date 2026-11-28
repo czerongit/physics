@@ -66,11 +66,11 @@ Repository organization follows the [OpenAI mathematics collection](https://gith
 
 ### Acknowledgments
 
-Thank you to OpenAI for creating the GPT models that made this research possible.
+Thank you to OpenAI for creating the GPT models. GPT has been the main driving force behind this research. This research would have been impossible without the many free resets and credits that OpenAI generously provided to everyone over the past few months.
 
 Thank you to GPT for helping develop this research through sustained reasoning, exploration and collaboration.
 
-Thank you to Anthropic for creating Claude.
+Thank you to Anthropic for creating Claude. I collaborated with Claude less often, and those discussions were extremely valuable.
 
 Thank you to Claude for helpful insights and discussions that contributed to this work.
 
