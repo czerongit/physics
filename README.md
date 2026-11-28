@@ -36,7 +36,7 @@ This research aims to make full use of, and give credit to, the research communi
 1. replace any part of the manuscripts with a citation to your work.
 2. be cited for context, contrast, counterarguments, etc.
 
-This could be from their books, papers, preprints or other material published before November 2025.
+This could be from their books, papers, preprints, or other material published before November 2025. For a result introduced later, the cutoff is the date of the commit that first introduced it.
 
 If you find any instances, please send me an email describing exactly what you would like replaced and/or cited and why.
 
