@@ -76,7 +76,7 @@ Thank you to Claude for helpful insights and discussions that contributed to thi
 Thank you to physics communicators.
 
 - [https://www.briangreene.org/](https://www.briangreene.org/)
-- [https://startalkmedia.com/](https://startalkmedia.com/)
+- [https://startalkmedia.com/](https://startalkmedia.com/) ❤️
 
 Thank you to physics and mathematics educators (list will grow in coming days):
 
