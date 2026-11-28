@@ -83,3 +83,6 @@ Thank you to physics and mathematics educators (list will grow in coming days):
 
 - [https://x.com/mathemetica](https://x.com/mathemetica)
 - [https://x.com/matharium](https://x.com/matharium)
+- [https://x.com/cosmosarcive](https://x.com/cosmosarcive)
+- [https://x.com/TheMathFlow](https://x.com/TheMathFlow)
+- [https://x.com/PhilosophyOfPhy](https://x.com/PhilosophyOfPhy)
