@@ -45,7 +45,7 @@ Seeking mentorship from researchers in mathematical physics, differential geomet
 
 ### Looking for Collaborators
 
-If you are a researcher in physics or mathematics and are interested in coauthoring a formal publication based on these preprints, here is the easiest process I could come up with.
+If you are a physicist or mathematician working on similar problems and are interested in coauthoring a formal publication based on these preprints, here is the easiest process I could come up with.
 
 1. Please contact me at `sm[at]nullmetric[dot]com` to discuss the collaboration. If you are a leading researcher, your name or website is enough for the initial email.
 2. Please open a pull request to this repository with your proposed changes, contributions, names, and affiliations.
