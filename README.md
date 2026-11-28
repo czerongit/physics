@@ -11,6 +11,7 @@ This research program started as an investigation of dynamics and its structures
 
 1. [A Geometric View of Einstein–Yang–Mills Energy and Stress](preprints/A-Geometric-View-of-Einstein-Yang-Mills-Energy-and-Stress-November-25-2026-Revision-2/)
 2. [Prime-Count Laplace Transforms and the Geometry of Zeta Zeros](preprints/Prime-Count-Laplace-Transforms-and-the-Geometry-of-Zeta-Zeros-November-25-2026/)
+3. [Geometric Determination of Variational Dynamics](preprints/Geometric-Determination-of-Variational-Dynamics-October-11-2026-Version-2/)
 
 ### Recently Used Models
 
